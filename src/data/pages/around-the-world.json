@@ -1,0 +1,1185 @@
+{
+ "key": "around-the-world",
+ "stem": "Around_The_World",
+ "slug": "/around-the-world",
+ "htmlAttrs": {
+  "xmlns": "http://www.w3.org/1999/xhtml",
+  "xml:lang": "en",
+  "lang": "en"
+ },
+ "head": {
+  "title": "Around the World Trip",
+  "items": [
+   {
+    "k": "meta",
+    "attrs": {
+     "http-equiv": "Content-Type",
+     "content": "text/html; charset=UTF-8"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "Generator",
+     "content": "iWeb 3.0.4"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "iWeb-Build",
+     "content": "local-build-20130428"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "http-equiv": "X-UA-Compatible",
+     "content": "IE=EmulateIE7"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "viewport",
+     "content": "width=700"
+    }
+   },
+   {
+    "k": "title",
+    "text": "Around the World Trip"
+   },
+   {
+    "k": "link",
+    "attrs": {
+     "rel": "stylesheet",
+     "type": "text/css",
+     "media": "screen,print",
+     "href": "../archive/Around_The_World_files/Around_The_World.css"
+    }
+   },
+   {
+    "k": "comment",
+    "text": "[if lt IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='../archive/Around_The_World_files/Around_The_WorldIE.css'/><![endif]"
+   },
+   {
+    "k": "comment",
+    "text": "[if gte IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='../archive/Media/IE8.css'/><![endif]"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebSite.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/SharedResources/WidgetCommon.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/Navbar/navbar.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebImage.js"
+   },
+   {
+    "k": "script",
+    "src": "/page-js/around-the-world.js"
+   }
+  ]
+ },
+ "body": {
+  "attrs": {
+   "style": "background: rgb(101, 101, 101); margin: 0pt; ",
+   "onload": "onPageLoad();",
+   "onunload": "onPageUnload();"
+  },
+  "wrapperStyle": "text-align: center; ",
+  "contentStyle": "margin-bottom: 10px; margin-left: auto; margin-right: auto; margin-top: 10px; overflow: hidden; position: relative; word-wrap: break-word;  background: rgb(255, 255, 255); text-align: left; width: 700px; ",
+  "nav": {
+   "style": "margin-left: 0px; position: relative; width: 700px; z-index: 0; ",
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "style": "height: 0px; line-height: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "widget",
+     "name": "navbar",
+     "id": "widget0",
+     "cls": "com-apple-iweb-widget-navbar flowDefining",
+     "style": "margin-left: 20px; margin-top: 0px; opacity: 1.00; position: relative; width: 660px; z-index: 1; ",
+     "init": "<!--//--><![CDATA[//><!--\nnew NavBar('widget0', '../archive/Scripts/Widgets/Navbar', '../archive/Scripts/Widgets/SharedResources', '..', {\"path-to-root\": \"\", \"navbar-css\": \".navbar {\\n\\tfont-family: 'Helvetica Neue', Arial, sans-serif;\\n\\tfont-size: .8em;\\n\\tcolor: #666666;\\n\\tline-height: 30px;\\n\\tborder-bottom: 3px solid #ccc;\\n}\\n\\n.navbar-bg {\\n\\ttext-align: right;}\\n\\n.navbar-bg ul {\\n\\tlist-style: none;\\n\\tmargin: 0px;\\n\\tpadding: 0px;\\n}\\n\\n\\nli {\\n\\tlist-style-type: none;\\n\\tdisplay: inline;\\n\\tpadding: 0px 5px 0px 0px;\\n}\\n\\n\\nli a {\\n\\ttext-decoration: none;\\n\\tpadding: 10px;\\n\\tcolor: #666666;\\n\\tfont-weight: bold;\\n}\\n\\nli a:visited {\\n\\ttext-decoration: none;\\n\\tpadding: 10px;\\n\\tcolor: #666666;\\n\\tfont-weight: bold;\\n}\\n\\nli a:hover\\r{\\r\\n \\tcolor: #999999;\\n\\ttext-decoration: none;\\r}\\n\\n\\nli.current-page a\\r{\\r\\t color: #66ABC5;\\n\\ttext-decoration: none;\\r}\\n\", \"current-page-GUID\": \"A7D5A7BA-6745-4FDC-88BA-E254484D129C\", \"isCollectionPage\": \"NO\"});\n//--><!]]>"
+    },
+    {
+     "k": "box",
+     "cls": "spacer",
+     "style": "clear: both; height: 0px; line-height: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  },
+  "header": {
+   "style": "height: 75px; margin-left: 0px; position: relative; width: 700px; z-index: 10; ",
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "style": "height: 0px; line-height: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id1",
+     "cls": "style_SkipStroke shape-with-text",
+     "style": "height: 43px; left: 20px; position: absolute; top: 20px; width: 472px; z-index: 1; ",
+     "contentCls": "text-content Normal_External_472_43",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "Normal"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; padding-top: 0pt; ",
+          "class": "Header"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Around the World Trip"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id2",
+     "cls": "style_SkipStroke_1 shape-with-text",
+     "style": "height: 131px; left: 373px; position: absolute; top: -71px; width: 307px; z-index: 1; ",
+     "contentCls": "text-content style_External_307_131",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; padding-top: 0pt; ",
+          "class": "Heading_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": " May 2007"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    }
+   ]
+  },
+  "body": {
+   "style": "margin-left: 0px; position: relative; width: 700px; z-index: 5; ",
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "style": "height: 0px; line-height: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id3",
+     "cls": "style_SkipStroke_2 shape-with-text",
+     "style": "height: 215px; left: 36px; position: absolute; top: 0px; width: 266px; z-index: 1; ",
+     "contentCls": "text-content Normal_External_266_215",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "Normal"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "style": "line-height: 14px; ",
+            "class": "style_1"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "The trip of a lifetime! I spent three weeks on a National Geographic trip around the world. I joined 88 other travelers on a chartered jet. We started in Washington DC and visited Peru (Machu Picchu), Chile (Easter Island), Samoa, Australia (Great Barrier Reef), China (Chengdu), Tibet (Lhasa), India (Taj Mahal), Tanzania (Serengeti), Egypt (Luxor and Cairo), and Morocco (Marrakech)."
+            },
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3",
+     "style": "height: 196px; width: 360px;  height: 196px; left: 316px; position: absolute; top: -7px; width: 360px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "img",
+       "attrs": {
+        "src": "../archive/Around_The_World_files/ATWRoute.jpg",
+        "alt": "",
+        "style": "border: none; height: 196px; width: 361px; "
+       }
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id4",
+     "cls": "style_SkipStroke_1 shape-with-text",
+     "style": "height: 1618px; left: 32px; position: absolute; top: 200px; width: 480px; z-index: 1; ",
+     "contentCls": "text-content graphic_textbox_layout_style_default_External_480_1618",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "graphic_textbox_layout_style_default"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; padding-top: 0pt; ",
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "The trip was organized by "
+          },
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "http://www.nationalgeographicexpeditions.com/486.html",
+            "href": "http://www.nationalgeographicexpeditions.com/486.html",
+            "class": "style_2"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "National Geographic Expeditions"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": " and Starquest tours. Several National Geographic fellows and a photographer were along for the ride providing lectures, photographic tips, and interesting conversation. The Starquest staff was amazing. They arranged every detail of the trip to maximize efficiency and enjoyability. We stayed in some incredible hotels and were treated like royalty by the local guides and staff. Most of our air travel was by a chartered Boeing 757 that was fitted with first-class seats. The flight staff was incredible."
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "#text",
+           "v": "I saw and experienced so much that it’s difficult to share even the highlights with you, but I’ll try. My photos will have to do some of the story telling for me."
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Washington_DC.html",
+            "href": "/washington-dc",
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "Washington DC"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": " – I started the trip by flying to Washington DC, the headquarters of National Geographic. I spent two days with my aunt Linda and her husband Leo and son William. It was great spending time with them, and they were very gracious hosts. I got to see some of the big highlights of DC (monuments, museums, and government buildings). I was especially impressed by the National Gallery, which I hadn’t been to before. The new Native American museum, which is relatively new, is also really impressive for its architecture."
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Peru.html",
+            "href": "/peru",
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "Peru (Cusco & Machu Picchu)"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": " – The official trip started with a flight to Lima on our chartered jet. We then took a commercial airline flight across the Andes to Cusco, then a bus and train to Machu Picchu, the famous Incan ruins in the Andes. I stayed in an amazing hotel near Machu Picchu (in the village of Aguas Calientes). I highly recommend visiting this part of the world. In fact, I want to go back and spend more time in Cusco and Machu Picchu. The only downside is the altitude (11,000+ feet in Cusco) which can cause headaches and discomfort."
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Easter_Island.html",
+            "href": "/easter-island",
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "Easter Island"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": " – Easter Island (or Rapa Nui to the locals) is the remotest inhabited land in the world. Its claim to fame is the giant moai statues that were constructed in the fifteenth through seventeenth centuries by the Polynesian people who inhabited the island. We met with several archeologists who have dedicated their lives to understanding the mysteries of the island."
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Australia.html",
+            "href": "/australia",
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "Australia (Cairnes & Great Barrier Reef)"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": " – We spent a couple of days in Cairnes (pronounced “cans”), the resort town near the Great Barrier Reef. The hotel was amazing. We took a boat out about 40 miles into the Coral Sea to the reef and moored next to a semi-permanent platform from which we could do snorkeling. I have to say that I was a bit disappointed by this experience. I guess my expectations of the reef were set too high. One of the highlights of this stop: I got to pet a koala!"
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Cambodia.html",
+            "href": "/cambodia",
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "Cambodia (Siem Reap & Angkor Wat)"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": " – This was one of the highlights of the entire trip. We flew into Siem Reap and spent a couple of days exploring the temples around Angkor Wat. While the main Angkor Wat temple was impressive, I enjoyed a couple of other temples even more: the Bayonne Temple, with the massive faces carved into the stone blocks, and Ta Phrom, part of the Angkor Thom complex that was overgrown by massive trees and only recently reclaimed from the jungle. I even got to ride an Asian elephant around the Bayonne Temple! I definitely want to go back to this area at some point in the future. I suspect that the area will change significantly over the next decade as the economy develops. The country has clearly made great strides in recovering from the days of Pol Pot and the “killing fields”."
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "China.html",
+            "href": "/china",
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "China (Chengdu)"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": " – We flew into Chengdu, a city of over 10 million people. Two things struck me there: the air pollution and the massive rate of construction (there were countless numbers of cranes and skyscrapers being built). The highlight of this stop was the giant panda research center. This is the largest panda population in captivity anywhere in the world. We were able to get very close to the eight baby pandas that had been born just six months ago. They’re incredibly cute (but clumsy) animals."
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Tibet.html",
+            "href": "/tibet",
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "Tibet (Lhasa)"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": " – Tibet is an incredibly interesting place from a cultural and political standpoint. We visited an orphanage and talked to the “mothers” and the children. We also toured the major Buddhist monasteries and temples in Lhasa – including the the Potala Palace, the traditional residence of the Dali Lama. My favorite stop was at the Sera Monastery, where we were able to visit with some of the monks. We also witnessed a “monk’s debate” - a daily ritual they perform as an instructional aid for the younger monks. They pair up with one monk standing and the other sitting, and the one who stands fires questions at the other, who must answer immediately. The questioning is accompanied by a series of exaggerated full-body gestures and hand claps, so the spectacle of a hundred monks engaged in this practice is quite impressive. The sad part about this visit is that the Tibetan culture, which is so unique, is slowly being eliminated by the Chinese government through modernization and homogenization. The signs were all around us. New buildings, businesses, and homes were being built around the traditional temples, and the majority of people in Lhasa are now Chinese."
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "India.html",
+            "href": "/india",
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "India (Agra)"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": " – India is a big and diverse country, and I got to see only a small part of it, but it was an interesting experience nonetheless. We flew into Agra and experienced the chaos of the Indian streets on our bus ride to the hotel. The density of people here is difficult to comprehend – and something I’d find very difficult to get used to. Our hotel was amazing (every room had a view of the Taj Mahal!), but it felt like a different world from the one that was just outside of the gates. The Taj Mahal is indeed an impressive monument. Many of my fellow travelers said that this was their favorite stop. I think it’s worth seeing, but it’s not high on my list of places to see again."
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Tanzania.html",
+            "href": "/tanzania",
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "Tanzania (Serengeti)"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": " – This was my favorite part of the trip – by far. We flew into Kilimanjaro airport on our jet and then took smaller (18-person) prop planes to the heart of the Serengeti National Park. The Serengeti Plain is incredibly expansive and beautiful, and the diversity of life that it supports is staggering. Within a few hours after arriving, I had already seen monkeys, elephants, giraffe, hyenas, and antelope. The next day, we saw lions, cheetah, impala, baboons, ostriches, vultures, cranes, buffalo, hippos, leopard, zebras, wildebeests, and a wide variety of beautify birds. Our “hotel” was within the park and was designed to look like a series of traditional thatched huts. I definitely want to return to this area!"
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Egypt.html",
+            "href": "/egypt",
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "Egypt (Luxor and Cairo)"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": " – We spent two days in Luxor and half a day in Cairo – just enough to sample Egypt’s beauty. In Luxor, we visited the Valley of the Kings (including the tomb of King Tut). We also visited the great Karnak Temple and the massive Colossi of Memnon. For lunch, we boarded feluccas, traditional sailing boats on the Nile. In the evening, we were taken to the Temple of Luxor, which was reserved for our party alone. It was completely lit up, and classical music (the theme from Aida) was blaring as we walked down a long broad path to the temple. We were flanked by dozens of torch bearers who were dressed in costumes from the age of the pharos. We were then given a guided tour of the temple and treated to an incredible dinner with a live string quartet. It was a pretty magical experience. The next day, we flew to Cairo and did a whirlwind tour of the great pyramids of Giza and the Sphinx. We then met with Dr. Zahi Hawass, chairman of the Supreme Council of Antiquities – the white-haired archeologist who appears in nearly every History Channel documentary on Egypt."
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Morocco.html",
+            "href": "/morocco",
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "Morocco (Marrakech)"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": " – We spent two days in Marrakech. I especially liked the souks, the traditional shops where you can buy a wide variety of locally-made products from leather to cloth to woodwork and stonework. We also saw the snake charmers in the main square."
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "br"
+          },
+          {
+           "tag": "#text",
+           "v": "This was a whirlwind trip. I think of it as a “sampler” — a way to determine which places I’d like to return to in the future. The top three on my “must return” list are: Tanzania, Cambodia and Peru."
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_4 shadow_0",
+     "style": "height: 100px; width: 150px;  height: 100px; left: 525px; position: absolute; top: 357px; width: 150px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/washington-dc",
+        "title": "Washington_DC.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Around_The_World_files/WashingtonDC-110.jpg",
+          "alt": "",
+          "style": "border: none; height: 101px; width: 150px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_4 shadow_1",
+     "style": "height: 100px; width: 150px;  height: 100px; left: 525px; position: absolute; top: 469px; width: 150px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/peru",
+        "title": "Peru.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Around_The_World_files/Peru-210.jpg",
+          "alt": "",
+          "style": "border: none; height: 101px; width: 150px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_4 shadow_2",
+     "style": "height: 100px; width: 150px;  height: 100px; left: 525px; position: absolute; top: 581px; width: 150px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/easter-island",
+        "title": "Easter_Island.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Around_The_World_files/EasterIsland-154.jpg",
+          "alt": "",
+          "style": "border: none; height: 101px; width: 150px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_4 shadow_3",
+     "style": "height: 113px; width: 150px;  height: 113px; left: 525px; position: absolute; top: 693px; width: 150px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/australia",
+        "title": "Australia.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Around_The_World_files/CIMG1013.jpg",
+          "alt": "",
+          "style": "border: none; height: 113px; width: 150px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_4 shadow_4",
+     "style": "height: 100px; width: 150px;  height: 100px; left: 525px; position: absolute; top: 817px; width: 150px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/cambodia",
+        "title": "Cambodia.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Around_The_World_files/Cambodia-124.jpg",
+          "alt": "",
+          "style": "border: none; height: 101px; width: 150px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_4 shadow_5",
+     "style": "height: 100px; width: 150px;  height: 100px; left: 525px; position: absolute; top: 931px; width: 150px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/china",
+        "title": "China.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Around_The_World_files/China-17.jpg",
+          "alt": "",
+          "style": "border: none; height: 101px; width: 150px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_4 shadow_6",
+     "style": "height: 100px; width: 150px;  height: 100px; left: 525px; position: absolute; top: 1043px; width: 150px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/tibet",
+        "title": "Tibet.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Around_The_World_files/Tibet-78.jpg",
+          "alt": "",
+          "style": "border: none; height: 101px; width: 150px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_4 shadow_7",
+     "style": "height: 100px; width: 150px;  height: 100px; left: 525px; position: absolute; top: 1157px; width: 150px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/tibet",
+        "title": "Tibet.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Around_The_World_files/Tibet-109.jpg",
+          "alt": "",
+          "style": "border: none; height: 101px; width: 150px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_4 shadow_8",
+     "style": "height: 103px; width: 150px;  height: 103px; left: 525px; position: absolute; top: 1271px; width: 150px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/india",
+        "title": "India.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Around_The_World_files/India-15.jpg",
+          "alt": "",
+          "style": "border: none; height: 104px; width: 150px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_4 shadow_9",
+     "style": "height: 100px; width: 150px;  height: 100px; left: 525px; position: absolute; top: 1391px; width: 150px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/tanzania",
+        "title": "Tanzania.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Around_The_World_files/Tanzania-237.jpg",
+          "alt": "",
+          "style": "border: none; height: 101px; width: 150px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_4 shadow_10",
+     "style": "height: 103px; width: 150px;  height: 103px; left: 525px; position: absolute; top: 1506px; width: 150px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/egypt",
+        "title": "Egypt.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Around_The_World_files/Egypt-204.jpg",
+          "alt": "",
+          "style": "border: none; height: 104px; width: 150px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_4 shadow_11",
+     "style": "height: 113px; width: 150px;  height: 113px; left: 525px; position: absolute; top: 1626px; width: 150px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/morocco",
+        "title": "Morocco.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Around_The_World_files/CIMG1147.jpg",
+          "alt": "",
+          "style": "border: none; height: 113px; width: 150px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id5",
+     "cls": "style_SkipStroke_1 shape-with-text",
+     "style": "height: 36px; left: 547px; position: absolute; top: 257px; width: 132px; z-index: 1; ",
+     "contentCls": "text-content graphic_textbox_layout_style_default_External_132_36",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "graphic_textbox_layout_style_default"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Copyright © 2008"
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; ",
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Eric Traut"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "spacer",
+     "style": "height: 1818px; line-height: 1818px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  },
+  "footer": {
+   "style": "height: 75px; margin-left: 0px; position: relative; width: 700px; z-index: 15; ",
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "style": "height: 0px; line-height: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

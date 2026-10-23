@@ -1,0 +1,9 @@
+---
+import Page from '../layouts/Page.astro';
+import welcome from '../data/pages/index.json';
+import type { Page as PageModel } from '../engine/types';
+
+const page = welcome as PageModel;
+---
+
+<Page page={page} />

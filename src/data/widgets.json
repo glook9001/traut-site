@@ -1,0 +1,122 @@
+{
+ "navbar": [
+  {
+   "t": "html",
+   "v": "\n    \n            <div id=\"@@ID@@-navbar\" class=\"navbar\">\n\n      \n              <div id=\"@@ID@@-bg\" class=\"navbar-bg\">\n\n        \n                <ul id=\"@@ID@@-navbar-list\" class=\"navbar-list\">\n <li></li> \n</ul>\n                \n      \n</div>\n              \n    \n</div>\n          "
+  }
+ ],
+ "headerControls": [
+  {
+   "t": "html",
+   "v": "\n            \n            <div class=\"middle\">\n\n                <!-- Header Controls -->\n                \n              <div class=\"header_controls positioned\">\n\n\n                    \n                <div class=\"Comment_Posted_Date\" style=\"text-align: center;  background: transparent;\">\n\n\n                        <!-- media index controls -->\n                        \n                  <div id=\"@@ID@@-media_index_only\" style=\"display: none;\">\n\n                            \n                    <div class=\"positioned\">\n\n                                \n                      <div class=\"right\">\n\n                                    <span class=\"subscribe\"><!--\n                                        --><a href=\"javascript:(void)\"><img class=\"canvas subscribe\" alt=\"subscribe\" src=\"\" /></a><!--\n                                        --><a href=\"javascript:(void)\"><!--\n                                            -->"
+  },
+  {
+   "t": "script",
+   "v": "<!--\n                                                WriteLocalizedString('com-apple-iweb-widget-headercontrols', 'Subscribe');\n                                            -->"
+  },
+  {
+   "t": "html",
+   "v": "<!--\n                                        --></a><!--\n                                    --></span>\n                                \n</div>\n                      \n                            \n</div>\n                    \n                            &nbsp;\n                        \n</div>\n                  \n\n                        <!-- album controls -->\n                        \n                  <div id=\"@@ID@@-album_only\" style=\"display: none;\">\n\n                            \n                    <div class=\"positioned\">\n\n                                \n                      <div class=\"left\">\n\n                                    <span id=\"@@ID@@-back_to_index\"><!--\n                                        --><a href=\"javascript:@@ID@@.setPreferenceForKey(true, 'goToIndexPage')\"><img class=\"canvas back\" alt=\"back\" src=\"\" /></a><!--\n                                        --><a href=\"javascript:@@ID@@.setPreferenceForKey(true, 'goToIndexPage')\"><!--\n                                            -->"
+  },
+  {
+   "t": "script",
+   "v": "<!--\n                                                WriteLocalizedString('com-apple-iweb-widget-headercontrols', 'Back to Index');\n                                            -->"
+  },
+  {
+   "t": "html",
+   "v": "<!--\n                                        --></a><!--\n                                    --></span>\n                                \n</div>\n                      \n                            \n</div>\n                    \n                            \n                            \n                    <div class=\"paginated_only right\" id=\"@@ID@@-pagination_controls\">\n                            </div>\n                    \n\n                            \n                    <div class=\"non_paginated_only right\">\n\n                                <span class=\"subscribe\"><!--\n                                    --><a href=\"javascript:(void)\"><img class=\"canvas subscribe\" alt=\"subscribe\" src=\"\" /></a><!--\n                                    --><a href=\"javascript:(void)\"><!--\n                                        -->"
+  },
+  {
+   "t": "script",
+   "v": "<!--\n                                            WriteLocalizedString('com-apple-iweb-widget-headercontrols', 'Subscribe');\n                                        -->"
+  },
+  {
+   "t": "html",
+   "v": "<!--\n                                    --></a><!--\n                                --></span>\n                            \n</div>\n                    \n        \n                            \n                    <div>\n\n                                <span class=\"subscribe\"><!--\n                                    --><a class=\"paginated_only\" href=\"javascript:(void)\"><img class=\"canvas subscribe\" alt=\"subscribe\" src=\"\" /></a><!--\n                                    --><a class=\"paginated_only\" href=\"javascript:(void)\"><!--\n                                        -->"
+  },
+  {
+   "t": "script",
+   "v": "<!--\n                                            WriteLocalizedString('com-apple-iweb-widget-headercontrols', 'Subscribe');\n                                        -->"
+  },
+  {
+   "t": "html",
+   "v": "<!--\n                                    --></a><!--\n                                --></span>\n                                <span class=\"play_slideshow\"><!--\n                                    --><a href=\"javascript:@@ID@@.playSlideshow()\"><img class=\"canvas play\" alt=\"play\" src=\"\" /></a><!--\n                                    --><a href=\"javascript:@@ID@@.playSlideshow()\"><!--\n                                        -->"
+  },
+  {
+   "t": "script",
+   "v": "<!--\n                                            WriteLocalizedString('com-apple-iweb-widget-headercontrols', 'Play Slideshow');\n                                        -->"
+  },
+  {
+   "t": "html",
+   "v": "<!--\n                                    --></a><!--\n                                --></span>\n                            \n</div>\n                    \n                        \n</div>\n                  \n                    \n</div>\n                \n                \n</div>\n              \n            \n</div>\n          "
+  }
+ ],
+ "detailView": [
+  {
+   "t": "html",
+   "v": "\n            <div id=\"@@ID@@-thumbnails_back\" class=\"thumbnail_arrows thumbnails_back\">\n\n    <img class=\"canvas transport-left-D\" alt=\"back\" src=\"\" />\n    <img class=\"canvas transport-left-N\" alt=\"back\" style=\"display: none; \" src=\"\" />\n            </div>\n            <div id=\"@@ID@@-thumbnails_forward\" class=\"thumbnail_arrows thumbnails_forward\">\n\n    <img class=\"canvas transport-right-D\" alt=\"forward\" style=\"display: none; \" src=\"\" />\n    <img class=\"canvas transport-right-N\" alt=\"forward\" src=\"\" />\n            </div>\n            <div id=\"@@ID@@-middle\" class=\"middle\" style=\"position: relative;\">\n              <!-- Header Controls -->\n    \n              <div class=\"header_controls positioned\">\n\n        \n                <div class=\"Comment_Posted_Date positioned\" style=\"text-align: center; margin: 0px;\">\n\n            \n                  <div class=\"positioned\">\n\n                \n                    <div class=\"left\">\n\n                    <a href=\"#grid\" onclick=\"javascript:@@ID@@.exitDetailView()\"><!--\n                        --><img class=\"canvas back\" alt=\"back\" src=\"\" /><!--\n                    --></a>\n                    <a href=\"#grid\" onclick=\"javascript:@@ID@@.exitDetailView()\"><!--\n                        -->"
+  },
+  {
+   "t": "script",
+   "v": "<!--\n              \t            WriteLocalizedString('com-apple-iweb-widget-detailview', 'Back to Album');\n                        -->"
+  },
+  {
+   "t": "html",
+   "v": "<!--\n                    --></a>\n                \n</div>\n                    \n                \n                    <div class=\"right\" id=\"@@ID@@-download\" style=\"visibility: hidden;\">\n\n                    <a href=\"javascript:@@ID@@.downloadPhoto()\"><!--\n                        --><img class=\"canvas download\" alt=\"download\" src=\"\" /><!--\n                    --></a>\n                    <a href=\"javascript:@@ID@@.downloadPhoto()\"><!--\n                        -->"
+  },
+  {
+   "t": "script",
+   "v": "<!--\n              \t            WriteLocalizedString('com-apple-iweb-widget-detailview', 'Download');\n                        -->"
+  },
+  {
+   "t": "html",
+   "v": "<!--\n                    --></a>\n                \n</div>\n                    \n            \n</div>\n                  \n            \n                  <div>\n\n                <span id=\"@@ID@@-view\" class=\"view\">\n                    <a href=\"javascript:@@ID@@.toggleThumbnails()\"><!--\n                        --><img class=\"canvas thumbs_on-S thumbs_on_only\" alt=\"thumbnails on\" style=\"display: none; \" src=\"\" /><!--\n                        --><img class=\"canvas thumbs_on-N thumbs_off_only\" alt=\"thumbnails on\" src=\"\" /><!--\n                    --></a>\n                    <a href=\"javascript:@@ID@@.toggleThumbnails()\"><!--\n                        --><img class=\"canvas thumbs_off-S thumbs_off_only\" alt=\"thumbnails off\" src=\"\" /><!--\n                        --><img class=\"canvas thumbs_off-N thumbs_on_only\" alt=\"thumbnails off\" style=\"display: none; \" src=\"\" /><!--\n                    --></a>\n                </span>\n                <span class=\"play_slideshow\">\n                    <a href=\"javascript:@@ID@@.playSlideshow()\"><!--\n                        --><img class=\"canvas play\" alt=\"play\" src=\"\" /><!--\n                    --></a>\n                    <a href=\"javascript:@@ID@@.playSlideshow()\"><!--\n                        -->"
+  },
+  {
+   "t": "script",
+   "v": "<!--\n                            WriteLocalizedString('com-apple-iweb-widget-detailview', 'Play Slideshow');\n                        -->"
+  },
+  {
+   "t": "html",
+   "v": "<!--\n                    --></a>\n                </span>\n            \n</div>\n                  \n        \n</div>\n                \n    \n</div>\n              <!-- Thumbnails -->\n    \n              <div id=\"@@ID@@-thumbnail_view\" class=\"thumbnail_view\">\n\n        \n                <div class=\"thumbnails_wrapper\">\n\n            \n                  <div id=\"@@ID@@-thumbnails\" class=\"thumbnails\">\n            </div>\n                  \n        \n</div>\n                \n    \n</div>\n              <!-- Main Slideshow -->\n    \n              <div style=\"width: 100%; position: relative; height: 440px; \">\n\n        \n                <div id=\"@@ID@@-slideshow_placeholder\" class=\"slideshow_placeholder\" style=\"position: absolute; width: 100%; overflow: hidden; \">\n        </div>\n                \n        <a id=\"@@ID@@-slideshow_anchor\" class=\"slideshow_anchor\" href=\"javascript:void(0)\"></a>\n    \n</div>\n              <!-- Footer Controls -->\n    \n              <div id=\"@@ID@@-footer_controls\" class=\"footer_controls\">\n\n        \n                <div class=\"Comment_Posted_Date\" style=\"position: relative;\">\n\n            \n                  <div id=\"@@ID@@-previous\" style=\"float: left; \">\n\n                <span style=\"display: none; \" class=\"noselect\"><!--\n                    --><img class=\"canvas arrow-left-D\" alt=\"previous\" src=\"\" /><!--\n                    -->"
+  },
+  {
+   "t": "script",
+   "v": "<!--\n                        WriteLocalizedString('com-apple-iweb-widget-detailview', 'Previous');\n                    -->"
+  },
+  {
+   "t": "html",
+   "v": "<!--\n                --></span>\n                <span><!--\n                    --><a href=\"javascript:void(0)\"><img class=\"canvas arrow-left\" alt=\"previous\" src=\"\" /></a><!--\n                    --><a href=\"javascript:void(0)\"><!--\n                        -->"
+  },
+  {
+   "t": "script",
+   "v": "<!--\n                            WriteLocalizedString('com-apple-iweb-widget-detailview', 'Previous');\n                        -->"
+  },
+  {
+   "t": "html",
+   "v": "<!--\n                    --></a><!--\n                --></span>\n            \n</div>\n                  \n            \n                  <div id=\"@@ID@@-next\" style=\"float: right; \">\n\n                <span style=\"display: none; \" class=\"noselect\"><!--\n                    -->"
+  },
+  {
+   "t": "script",
+   "v": "<!--\n                        WriteLocalizedString('com-apple-iweb-widget-detailview', 'Next');\n                    -->"
+  },
+  {
+   "t": "html",
+   "v": "<!--\n                    --><img class=\"canvas arrow-right-D\" alt=\"next\" src=\"\" /><!--\n                --></span>\n                <span><!--\n                    --><a href=\"javascript:void(0)\"><!--\n                        -->"
+  },
+  {
+   "t": "script",
+   "v": "<!--\n                            WriteLocalizedString('com-apple-iweb-widget-detailview', 'Next');\n                        -->"
+  },
+  {
+   "t": "html",
+   "v": "<!--\n                    --></a><!--\n                    --><a href=\"javascript:void(0)\"><img class=\"canvas arrow-right\" alt=\"next\" src=\"\" /></a><!--\n                --></span>\n            \n</div>\n                  \n        \n</div>\n                \n        \n                <p class=\"Caption\" style=\"text-align: center; position: relative; margin-left: 100px; margin-right: 100px; \">\n        </p>\n                \n    \n</div>\n            </div>\n          "
+  }
+ ],
+ "footerControls": [
+  {
+   "t": "html",
+   "v": "\n            <!-- Footer Controls -->\n            <div class=\"footer_middle\">\n\n    \n              <div class=\"positioned\">\n\n        \n                <div class=\"Comment_Posted_Date paginated_only right\" id=\"@@ID@@-pagination_controls\">\n        </div>\n                \n    \n</div>\n              \n    &nbsp;\n\n</div>\n          "
+  }
+ ]
+}

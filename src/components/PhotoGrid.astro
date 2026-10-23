@@ -1,0 +1,13 @@
+---
+// The empty, positioned div that the page's own iWeb script fills with the
+// photo grid (IWLayoutPhotoGrid). Its geometry lives in the archive's page
+// script and in this inline style.
+interface Props {
+  id: string;
+  style: string;
+}
+
+const { id, style } = Astro.props;
+---
+
+<div id={id} style={style}></div>

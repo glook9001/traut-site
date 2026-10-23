@@ -1,0 +1,28 @@
+---
+// The page <head>, in the archive's own order: metas, title, per-page CSS,
+// IE conditional comments, the three widget @import blocks, the RSS link and
+// the shared iWeb scripts (ending with this page's ported script).
+import type { Page } from '../engine/types';
+
+interface Props {
+  head: Page['head'];
+}
+
+const { head } = Astro.props;
+---
+
+{head.items.map((item) =>
+  item.k === 'meta' ? (
+    <meta {...item.attrs} />
+  ) : item.k === 'title' ? (
+    <title>{item.text}</title>
+  ) : item.k === 'link' ? (
+    <link {...item.attrs} />
+  ) : item.k === 'comment' ? (
+    <Fragment set:html={`<!--${item.text}-->`} />
+  ) : item.k === 'style' ? (
+    <style {...item.attrs} set:html={item.text} />
+  ) : (
+    <script type="text/javascript" src={item.src} is:inline></script>
+  )
+)}

@@ -1,0 +1,24 @@
+---
+import Page from '../layouts/Page.astro';
+import type { Page as PageModel } from '../engine/types';
+
+// One route per archive page. The models are generated from Traut.com by
+// scripts/extract_pages.py; nothing here is hand-written per page.
+const models = import.meta.glob<PageModel>('../data/pages/*.json', {
+  eager: true,
+  import: 'default',
+});
+
+export function getStaticPaths() {
+  return Object.keys(import.meta.glob('../data/pages/*.json'))
+    .map((file) => file.split('/').pop()!.replace(/\.json$/, ''))
+    .filter((key) => key !== 'index')
+    .map((slug) => ({ params: { slug } }));
+}
+
+const key = Astro.params.slug!;
+const page = models[`../data/pages/${key}.json`];
+if (!page) throw new Error(`no ported archive page for ${key}`);
+---
+
+<Page page={page} />

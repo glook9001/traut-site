@@ -1,0 +1,912 @@
+{
+ "key": "antarctica-2011",
+ "stem": "Antarctica_2011",
+ "slug": "/antarctica-2011",
+ "htmlAttrs": {
+  "xmlns": "http://www.w3.org/1999/xhtml",
+  "xml:lang": "en",
+  "lang": "en"
+ },
+ "head": {
+  "title": "Falklands, South Georgia and Antarctica",
+  "items": [
+   {
+    "k": "meta",
+    "attrs": {
+     "http-equiv": "Content-Type",
+     "content": "text/html; charset=UTF-8"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "Generator",
+     "content": "iWeb 3.0.4"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "iWeb-Build",
+     "content": "local-build-20130428"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "http-equiv": "X-UA-Compatible",
+     "content": "IE=EmulateIE7"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "viewport",
+     "content": "width=700"
+    }
+   },
+   {
+    "k": "title",
+    "text": "Falklands, South Georgia and Antarctica"
+   },
+   {
+    "k": "link",
+    "attrs": {
+     "rel": "stylesheet",
+     "type": "text/css",
+     "media": "screen,print",
+     "href": "../archive/Antarctica_2011_files/Antarctica_2011.css"
+    }
+   },
+   {
+    "k": "comment",
+    "text": "[if lt IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='../archive/Antarctica_2011_files/Antarctica_2011IE.css'/><![endif]"
+   },
+   {
+    "k": "comment",
+    "text": "[if gte IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='../archive/Media/IE8.css'/><![endif]"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebSite.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/SharedResources/WidgetCommon.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/Navbar/navbar.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebImage.js"
+   },
+   {
+    "k": "script",
+    "src": "/page-js/antarctica-2011.js"
+   }
+  ]
+ },
+ "body": {
+  "attrs": {
+   "style": "background: rgb(101, 101, 101); margin: 0pt; ",
+   "onload": "onPageLoad();",
+   "onunload": "onPageUnload();"
+  },
+  "wrapperStyle": "text-align: center; ",
+  "contentStyle": "margin-bottom: 10px; margin-left: auto; margin-right: auto; margin-top: 10px; overflow: hidden; position: relative; word-wrap: break-word;  background: rgb(255, 255, 255); text-align: left; width: 700px; ",
+  "nav": {
+   "style": "margin-left: 0px; position: relative; width: 700px; z-index: 0; ",
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "style": "height: 0px; line-height: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "widget",
+     "name": "navbar",
+     "id": "widget0",
+     "cls": "com-apple-iweb-widget-navbar flowDefining",
+     "style": "margin-left: 20px; margin-top: 0px; opacity: 1.00; position: relative; width: 660px; z-index: 1; ",
+     "init": "<!--//--><![CDATA[//><!--\nnew NavBar('widget0', '../archive/Scripts/Widgets/Navbar', '../archive/Scripts/Widgets/SharedResources', '..', {\"path-to-root\": \"\", \"navbar-css\": \".navbar {\\n\\tfont-family: 'Helvetica Neue', Arial, sans-serif;\\n\\tfont-size: .8em;\\n\\tcolor: #666666;\\n\\tline-height: 30px;\\n\\tborder-bottom: 3px solid #ccc;\\n}\\n\\n.navbar-bg {\\n\\ttext-align: right;}\\n\\n.navbar-bg ul {\\n\\tlist-style: none;\\n\\tmargin: 0px;\\n\\tpadding: 0px;\\n}\\n\\n\\nli {\\n\\tlist-style-type: none;\\n\\tdisplay: inline;\\n\\tpadding: 0px 5px 0px 0px;\\n}\\n\\n\\nli a {\\n\\ttext-decoration: none;\\n\\tpadding: 10px;\\n\\tcolor: #666666;\\n\\tfont-weight: bold;\\n}\\n\\nli a:visited {\\n\\ttext-decoration: none;\\n\\tpadding: 10px;\\n\\tcolor: #666666;\\n\\tfont-weight: bold;\\n}\\n\\nli a:hover\\r{\\r\\n \\tcolor: #999999;\\n\\ttext-decoration: none;\\r}\\n\\n\\nli.current-page a\\r{\\r\\t color: #66ABC5;\\n\\ttext-decoration: none;\\r}\\n\", \"current-page-GUID\": \"26D7ED68-C7E9-4468-BBC3-182C7956B21E\", \"isCollectionPage\": \"NO\"});\n//--><!]]>"
+    },
+    {
+     "k": "box",
+     "cls": "spacer",
+     "style": "clear: both; height: 0px; line-height: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  },
+  "header": {
+   "style": "height: 107px; margin-left: 0px; position: relative; width: 700px; z-index: 10; ",
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "style": "height: 0px; line-height: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id1",
+     "cls": "style_SkipStroke shape-with-text",
+     "style": "height: 87px; left: 20px; position: absolute; top: 20px; width: 472px; z-index: 1; ",
+     "contentCls": "text-content Normal_External_472_87",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "Normal"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "Header"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Falklands, South Georgia "
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; ",
+          "class": "Header"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "and Antarctica"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id2",
+     "cls": "style_SkipStroke_1 shape-with-text",
+     "style": "height: 131px; left: 373px; position: absolute; top: -71px; width: 307px; z-index: 1; ",
+     "contentCls": "text-content style_External_307_131",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; padding-top: 0pt; ",
+          "class": "Heading_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": " Nov 2011"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    }
+   ]
+  },
+  "body": {
+   "style": "margin-left: 0px; position: relative; width: 700px; z-index: 5; ",
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "style": "height: 0px; line-height: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id3",
+     "cls": "style_SkipStroke_2 shape-with-text",
+     "style": "height: 238px; left: 27px; position: absolute; top: 22px; width: 266px; z-index: 1; ",
+     "contentCls": "text-content Normal_External_266_238",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "Normal"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "style": "line-height: 14px; ",
+            "class": "style_1"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "For nearly a month, I was on the expedition ship "
+            }
+           ]
+          },
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_2"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "Ushuaia"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": " with about 80 fellow passengers. We departed from Ushuaia, Argentina and visited the Falkland Islands, South Georgia Island and the Antarctic Peninsula. All of these places are magical destinations — amazing scenery and wildlife. I feel very privileged to have had the opportunity to visit these locations."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "The tour was arranged by "
+            }
+           ]
+          },
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "http://www.photosafaris.com",
+            "href": "http://www.photosafaris.com"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "Joseph Van Os Photo Safaris"
+            }
+           ]
+          },
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": ". Joe, along with his staff and the ship’s crew, did a great job keeping us safe, giving us great photographic opportunities, and educating us along the way."
+            },
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; ",
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "Click on the photos below to view galleries from each of the locations."
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id4",
+     "cls": "style_SkipStroke_1 shape-with-text",
+     "style": "height: 330px; left: 181px; position: absolute; top: 290px; width: 344px; z-index: 1; ",
+     "contentCls": "text-content graphic_textbox_layout_style_default_External_344_330",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "graphic_textbox_layout_style_default"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Falkland_Islands.html",
+            "href": "/falkland-islands"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "Falkland Islands"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": " — I expected that this would be a boring stop on the way to South Georgia, but I was pleasantly surprised to see that the Falklands (referred to as the Malvinas by Argentinians) offered some amazing scenery and wildlife of its own."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "South_Georgia.html",
+            "href": "/south-georgia"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "South Georgia Island"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": " — This was the part of the trip that I was most eagerly anticipating, and I was not disappointed. In many respects, this was the most wild place we visited. It was definitely the most rich in wildlife."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; ",
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Antarctic_Peninsula.html",
+            "href": "/antarctic-peninsula"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "Antarctic Peninsula"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": " — I had visited the peninsula several years earlier, so I knew what to expect for this part of the trip, but I was once again struck by the beauty of the place."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id5",
+     "cls": "style_SkipStroke_1 shape-with-text",
+     "style": "height: 22px; left: 24px; position: absolute; top: 664px; width: 248px; z-index: 1; ",
+     "contentCls": "text-content graphic_textbox_layout_style_default_External_248_22",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "graphic_textbox_layout_style_default"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; padding-top: 0pt; ",
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Copyright © 2011 Eric Traut"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3",
+     "style": "height: 239px; width: 326px;  height: 239px; left: 338px; position: absolute; top: 21px; width: 326px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "img",
+       "attrs": {
+        "src": "../archive/Antarctica_2011_files/droppedImage.jpg",
+        "alt": "",
+        "style": "border: none; height: 240px; width: 326px; "
+       }
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_4 shadow_0",
+     "style": "height: 96px; width: 128px;  height: 96px; left: 29px; position: absolute; top: 290px; width: 128px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/falkland-islands",
+        "title": "Falkland_Islands.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Antarctica_2011_files/Falklands-21.jpg",
+          "alt": "",
+          "style": "border: none; height: 96px; width: 128px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_4 shadow_1",
+     "style": "height: 96px; width: 128px;  height: 96px; left: 29px; position: absolute; top: 408px; width: 128px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/south-georgia",
+        "title": "South_Georgia.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Antarctica_2011_files/SouthGeorgia-32.jpg",
+          "alt": "",
+          "style": "border: none; height: 96px; width: 128px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_4 shadow_2",
+     "style": "height: 96px; width: 128px;  height: 96px; left: 29px; position: absolute; top: 529px; width: 128px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/antarctic-peninsula",
+        "title": "Antarctic_Peninsula.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Antarctica_2011_files/Antarctica-162.jpg",
+          "alt": "",
+          "style": "border: none; height: 96px; width: 128px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "spacer",
+     "style": "height: 686px; line-height: 686px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  },
+  "footer": {
+   "style": "height: 75px; margin-left: 0px; position: relative; width: 700px; z-index: 15; ",
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "style": "height: 0px; line-height: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

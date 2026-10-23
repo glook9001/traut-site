@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.astro/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Generated on every build by scripts/mirror_archive.py: the rewritten page
+# scripts, the photo feeds, the redirect stubs and the symlink to the archive.
+public/

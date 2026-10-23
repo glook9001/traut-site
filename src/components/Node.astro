@@ -1,0 +1,15 @@
+---
+// Renders one node of an iWeb rich-text block, recursing into inline elements.
+// Everything stays on a single line so that no template whitespace is emitted
+// between runs (a stray space would change the text).
+import type { RichNode } from '../engine/types';
+
+interface Props {
+  node: RichNode;
+}
+
+const { node } = Astro.props;
+const kids = 'c' in node && node.c ? node.c : [];
+---
+
+{node.tag === '#text' ? node.v : node.tag === 'br' ? <br /> : node.tag === 'img' ? <img {...node.attrs} /> : node.tag === 'a' ? <a {...node.attrs}>{kids.map((child) => <Astro.self node={child} />)}</a> : node.tag === 'span' ? <span {...node.attrs}>{kids.map((child) => <Astro.self node={child} />)}</span> : node.tag === 'em' ? <em {...node.attrs}>{kids.map((child) => <Astro.self node={child} />)}</em> : node.tag === 'strong' ? <strong {...node.attrs}>{kids.map((child) => <Astro.self node={child} />)}</strong> : node.tag === 'b' ? <b {...node.attrs}>{kids.map((child) => <Astro.self node={child} />)}</b> : node.tag === 'i' ? <i {...node.attrs}>{kids.map((child) => <Astro.self node={child} />)}</i> : node.tag === 'u' ? <u {...node.attrs}>{kids.map((child) => <Astro.self node={child} />)}</u> : node.tag === 'div' ? <div {...node.attrs}>{kids.map((child) => <Astro.self node={child} />)}</div> : node.tag === 'p' ? <p {...node.attrs}>{kids.map((child) => <Astro.self node={child} />)}</p> : null}

@@ -1,0 +1,23 @@
+---
+// The iWeb page shell: <html> attributes, the head, and the centred
+// #body_content box holding the four layers (nav, header, body, footer).
+import type { Page } from '../engine/types';
+import Head from '../components/Head.astro';
+import Layer from '../components/Layer.astro';
+
+interface Props {
+  page: Page;
+}
+
+const { page } = Astro.props;
+---
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html {...page.htmlAttrs}>
+  <head>
+    <Head head={page.head} />
+  </head>
+  <body {...page.body.attrs}>
+    <div style={page.body.wrapperStyle}><div id="body_content" style={page.body.contentStyle}><Layer id="nav_layer" layer={page.body.nav} /><Layer id="header_layer" layer={page.body.header} /><Layer id="body_layer" layer={page.body.body} /><Layer id="footer_layer" layer={page.body.footer} /></div></div>
+  </body>
+</html>

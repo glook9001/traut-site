@@ -1,0 +1,14 @@
+---
+// An iWeb `shape-with-text` block: a positioned box around a `.text-content`
+// div, which holds the page's real rich text (title, date, prose, footer note).
+import type { TextItem } from '../engine/types';
+import Node from './Node.astro';
+
+interface Props {
+  block: TextItem;
+}
+
+const { block } = Astro.props;
+---
+
+<div id={block.id} class={block.cls} style={block.style}><div class={block.contentCls} style={block.contentStyle}>{block.nodes.map((node) => <Node node={node} />)}</div></div>

@@ -1,0 +1,18 @@
+{
+  "name": "traut-site",
+  "version": "2.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Astro mirror of traut.com: every page is the archive's own iWeb HTML, served from clean URLs",
+  "scripts": {
+    "prebuild": "python3 scripts/extract_pages.py && python3 scripts/mirror_archive.py",
+    "build": "astro build",
+    "postbuild": "python3 -c \"import sys; sys.path.insert(0,'scripts'); from mirror_archive import relink_dist_archive, publish_welcome_alias; relink_dist_archive(); publish_welcome_alias()\"",
+    "dev": "astro dev",
+    "preview": "astro preview",
+    "test": "python3 scripts/test_site.py"
+  },
+  "dependencies": {
+    "astro": "^7.3.1"
+  }
+}

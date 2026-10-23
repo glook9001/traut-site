@@ -1,0 +1,19 @@
+---
+// An iWeb widget instance. The chrome (NavBar, HeaderControls, DetailView,
+// FooterControls) is identical on every page and is transcribed verbatim from
+// the archive into src/data/widgets.json, split at its inline <script> nodes so
+// those stay real script elements (scripts injected via innerHTML never run, and
+// they write the widget's localized labels). Only the instance id, position and
+// the page's own `new Widget(...)` call differ, and those come from the model.
+import chrome from '../data/widgets.json';
+import type { WidgetItem, WidgetChrome } from '../engine/types';
+
+interface Props {
+  item: WidgetItem;
+}
+
+const { item } = Astro.props;
+const segments = (chrome as WidgetChrome)[item.name].map((seg) => ({ t: seg.t, v: seg.v.replaceAll('@@ID@@', item.id) }));
+---
+
+<div class={item.cls} id={item.id} style={item.style}>{segments.map((seg) => (seg.t === 'script' ? <script type="text/javascript" set:html={seg.v} /> : <Fragment set:html={seg.v} />))}</div><script type="text/javascript" set:html={item.init} />

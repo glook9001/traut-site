@@ -1,0 +1,977 @@
+{
+ "key": "antarctic-peninsula",
+ "stem": "Antarctic_Peninsula",
+ "slug": "/antarctic-peninsula",
+ "htmlAttrs": {
+  "xmlns": "http://www.w3.org/1999/xhtml",
+  "xml:lang": "en",
+  "lang": "en"
+ },
+ "head": {
+  "title": "Antarctic Peninsula",
+  "items": [
+   {
+    "k": "meta",
+    "attrs": {
+     "http-equiv": "Content-Type",
+     "content": "text/html; charset=UTF-8"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "Generator",
+     "content": "iWeb 3.0.4"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "iWeb-Build",
+     "content": "local-build-20130428"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "http-equiv": "X-UA-Compatible",
+     "content": "IE=EmulateIE7"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "viewport",
+     "content": "width=700"
+    }
+   },
+   {
+    "k": "title",
+    "text": "Antarctic Peninsula"
+   },
+   {
+    "k": "link",
+    "attrs": {
+     "rel": "stylesheet",
+     "type": "text/css",
+     "media": "screen,print",
+     "href": "../archive/Antarctic_Peninsula_files/Antarctic_Peninsula.css"
+    }
+   },
+   {
+    "k": "comment",
+    "text": "[if lt IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='../archive/Antarctic_Peninsula_files/Antarctic_PeninsulaIE.css'/><![endif]"
+   },
+   {
+    "k": "comment",
+    "text": "[if gte IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='../archive/Media/IE8.css'/><![endif]"
+   },
+   {
+    "k": "comment",
+    "text": " No code to add to head "
+   },
+   {
+    "k": "style",
+    "attrs": {
+     "type": "text/css"
+    },
+    "text": "<!--\n    @import \"../archive/Scripts/Widgets/HeaderControls/HeaderControls.css\";\n-->"
+   },
+   {
+    "k": "comment",
+    "text": " No code to add to head "
+   },
+   {
+    "k": "style",
+    "attrs": {
+     "type": "text/css"
+    },
+    "text": "<!--\n    @import \"../archive/Scripts/Widgets/DetailView/DetailView.css\";\n-->"
+   },
+   {
+    "k": "comment",
+    "text": " No code to add to head "
+   },
+   {
+    "k": "style",
+    "attrs": {
+     "type": "text/css"
+    },
+    "text": "<!--\n    @import \"../archive/Scripts/Widgets/FooterControls/FooterControls.css\";\n-->"
+   },
+   {
+    "k": "link",
+    "attrs": {
+     "rel": "alternate",
+     "type": "application/rss+xml",
+     "title": "RSS",
+     "href": "/feeds/antarctic-peninsula.xml"
+    }
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebSite.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/SharedResources/WidgetCommon.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/Navbar/navbar.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/HeaderControls/localizedStrings.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/HeaderControls/HeaderControls.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebDebug.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebImage.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebMediaGrid.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/DetailView/localizedStrings.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/DetailView/DetailView.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/FooterControls/FooterControls.js"
+   },
+   {
+    "k": "script",
+    "src": "/page-js/antarctic-peninsula.js"
+   }
+  ]
+ },
+ "body": {
+  "attrs": {
+   "style": "background: rgb(101, 101, 101); margin: 0pt; ",
+   "onload": "onPageLoad();",
+   "onunload": "onPageUnload();"
+  },
+  "wrapperStyle": "text-align: center; ",
+  "contentStyle": "margin-bottom: 10px; margin-left: auto; margin-right: auto; margin-top: 10px; overflow: hidden; position: relative; word-wrap: break-word;  background: rgb(255, 255, 255); text-align: left; width: 700px; ",
+  "nav": {
+   "style": "margin-left: 0px; position: relative; width: 700px; z-index: 0; ",
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "style": "height: 0px; line-height: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "widget",
+     "name": "navbar",
+     "id": "widget0",
+     "cls": "com-apple-iweb-widget-navbar flowDefining",
+     "style": "margin-left: 20px; margin-top: 0px; opacity: 1.00; position: relative; width: 660px; z-index: 1; ",
+     "init": "<!--//--><![CDATA[//><!--\nnew NavBar('widget0', '../archive/Scripts/Widgets/Navbar', '../archive/Scripts/Widgets/SharedResources', '..', {\"path-to-root\": \"\", \"navbar-css\": \".navbar {\\n\\tfont-family: 'Helvetica Neue', Arial, sans-serif;\\n\\tfont-size: .8em;\\n\\tcolor: #666666;\\n\\tline-height: 30px;\\n\\tborder-bottom: 3px solid #ccc;\\n}\\n\\n.navbar-bg {\\n\\ttext-align: right;}\\n\\n.navbar-bg ul {\\n\\tlist-style: none;\\n\\tmargin: 0px;\\n\\tpadding: 0px;\\n}\\n\\n\\nli {\\n\\tlist-style-type: none;\\n\\tdisplay: inline;\\n\\tpadding: 0px 5px 0px 0px;\\n}\\n\\n\\nli a {\\n\\ttext-decoration: none;\\n\\tpadding: 10px;\\n\\tcolor: #666666;\\n\\tfont-weight: bold;\\n}\\n\\nli a:visited {\\n\\ttext-decoration: none;\\n\\tpadding: 10px;\\n\\tcolor: #666666;\\n\\tfont-weight: bold;\\n}\\n\\nli a:hover\\r{\\r\\n \\tcolor: #999999;\\n\\ttext-decoration: none;\\r}\\n\\n\\nli.current-page a\\r{\\r\\t color: #66ABC5;\\n\\ttext-decoration: none;\\r}\", \"current-page-GUID\": \"06B69DD9-5902-4DD5-9457-1B68E98F0C28\", \"isCollectionPage\": \"NO\"});\n//--><!]]>"
+    },
+    {
+     "k": "box",
+     "cls": "spacer",
+     "style": "clear: both; height: 0px; line-height: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  },
+  "header": {
+   "style": "height: 75px; margin-left: 0px; position: relative; width: 700px; z-index: 10; ",
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "style": "height: 0px; line-height: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id1",
+     "cls": "style_SkipStroke shape-with-text",
+     "style": "height: 40px; left: 17px; position: absolute; top: 18px; width: 333px; z-index: 1; ",
+     "contentCls": "text-content style_External_333_40",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; padding-top: 0pt; ",
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Antarctic Peninsula"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    }
+   ]
+  },
+  "body": {
+   "style": "margin-left: 0px; position: relative; width: 700px; z-index: 5; ",
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "style": "height: 0px; line-height: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText",
+     "style": "height: 1px; line-height: 1px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": null,
+     "cls": "style_SkipStroke_1 shape-with-text flowDefining",
+     "style": "margin-left: 33px; margin-top: 2px; position: relative; width: 285px; z-index: 1; ",
+     "contentCls": "text-content style_External_285_307",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style_1"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "We spent a full week exploring the Antarctic Peninsula. The highlight for me were the beautiful diversity of ice bergs."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_2"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Paulet Island"
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Our first landing in Antarctica was at Paulet Island, which features an Adelie penguin colony and cormorant nesting ground. We were lucky to see a beautiful arched berg floating just off the island, so we spent some time in the zodiac exploring the ice."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_2"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Brown Bluff"
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; ",
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Our first true mainland landing was on Brown Bluff, a mile-long beach that featured an Adelie penguin colony and namesake red-brown volcanic boulders. We watched penguins launching themselves out of the water onto ice bergs, sometimes getting four feet or more of air."
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "style": "height: 5px; line-height: 5px; ",
+        "class": "tinyText"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": " "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "grid",
+     "id": "id2",
+     "style": "height: 0px; left: 29px; position: absolute; top: 989px; width: 642px; z-index: 1; "
+    },
+    {
+     "k": "widget",
+     "name": "headerControls",
+     "id": "widget1",
+     "cls": "com-apple-iweb-widget-headercontrols",
+     "style": "height: 27px; left: 29px; position: absolute; top: 989px; width: 642px; z-index: 1; ",
+     "init": "<!--//--><![CDATA[//><!--\nnew HeaderControls('widget1', '../archive/Scripts/Widgets/HeaderControls', '../archive/Scripts/Widgets/SharedResources', '.', {\"showSubscribe\": true, \"gridID\": \"id2\", \"showBackToIndex\": false, \"showSlideshow\": true, \"feedURL\": \"/feeds/antarctic-peninsula.xml\", \"entryCount\": \"0\", \"canvas controls\": {\"canvas_transport-left-N\": \"../archive/Media\\/canvas_transport-left-N_03.png\", \"canvas_transport-right-D\": \"../archive/Media\\/canvas_transport-right-D_03.png\", \"canvas_thumbs_off-S\": \"../archive/Media\\/canvas_thumbs_off-S_03.png\", \"canvas_back\": \"../archive/Media\\/canvas_back_03.png\", \"canvas_thumbs_off-N\": \"../archive/Media\\/canvas_thumbs_off-N_03.png\", \"canvas_transport-right-N\": \"../archive/Media\\/canvas_transport-right-N_03.png\", \"canvas_arrow-left-D\": \"../archive/Media\\/canvas_arrow-left-D_03.png\", \"canvas_arrow-right\": \"../archive/Media\\/canvas_arrow-right_03.png\", \"canvas_play\": \"../archive/Media\\/canvas_play_03.png\", \"canvas_arrow-left\": \"../archive/Media\\/canvas_arrow-left_03.png\", \"canvas_download\": \"../archive/Media\\/canvas_download_03.png\", \"canvas_thumbs_on-S\": \"../archive/Media\\/canvas_thumbs_on-S_03.png\", \"canvas_thumbs_on-N\": \"../archive/Media\\/canvas_thumbs_on-N_03.png\", \"canvas_arrow-right-D\": \"../archive/Media\\/canvas_arrow-right-D_03.png\", \"canvas_transport-left-D\": \"../archive/Media\\/canvas_transport-left-D_03.png\", \"canvas_add\": \"../archive/Media\\/canvas_add_03.png\", \"canvas_subscribe\": \"../archive/Media\\/canvas_subscribe_03.png\"}, \"entriesPerPage\": 110});\n//--><!]]>"
+    },
+    {
+     "k": "widget",
+     "name": "detailView",
+     "id": "widget2",
+     "cls": "com-apple-iweb-widget-detailview",
+     "style": "height: 1925px; left: 29px; position: absolute; top: 989px; width: 642px; z-index: 1; ",
+     "init": "<!--//--><![CDATA[//><!--\nnew DetailView('widget2', '../archive/Scripts/Widgets/DetailView', '../archive/Scripts/Widgets/SharedResources', '.', {\"showSlideshow\": true, \"gridID\": \"id2\", \"showThumbnails\": true, \"canvas controls\": {\"canvas_transport-left-N\": \"../archive/Media\\/canvas_transport-left-N_03.png\", \"canvas_transport-right-D\": \"../archive/Media\\/canvas_transport-right-D_03.png\", \"canvas_thumbs_off-S\": \"../archive/Media\\/canvas_thumbs_off-S_03.png\", \"canvas_back\": \"../archive/Media\\/canvas_back_03.png\", \"canvas_thumbs_off-N\": \"../archive/Media\\/canvas_thumbs_off-N_03.png\", \"canvas_transport-right-N\": \"../archive/Media\\/canvas_transport-right-N_03.png\", \"canvas_arrow-left-D\": \"../archive/Media\\/canvas_arrow-left-D_03.png\", \"canvas_arrow-right\": \"../archive/Media\\/canvas_arrow-right_03.png\", \"canvas_play\": \"../archive/Media\\/canvas_play_03.png\", \"canvas_arrow-left\": \"../archive/Media\\/canvas_arrow-left_03.png\", \"canvas_download\": \"../archive/Media\\/canvas_download_03.png\", \"canvas_thumbs_on-S\": \"../archive/Media\\/canvas_thumbs_on-S_03.png\", \"canvas_thumbs_on-N\": \"../archive/Media\\/canvas_thumbs_on-N_03.png\", \"canvas_arrow-right-D\": \"../archive/Media\\/canvas_arrow-right-D_03.png\", \"canvas_transport-left-D\": \"../archive/Media\\/canvas_transport-left-D_03.png\", \"canvas_add\": \"../archive/Media\\/canvas_add_03.png\", \"canvas_subscribe\": \"../archive/Media\\/canvas_subscribe_03.png\"}, \"color\": \"transparent\", \"photoSize\": 1});\n//--><!]]>"
+    },
+    {
+     "k": "widget",
+     "name": "footerControls",
+     "id": "widget3",
+     "cls": "com-apple-iweb-widget-footercontrols",
+     "style": "height: 27px; left: 29px; position: absolute; top: 989px; width: 642px; z-index: 1; ",
+     "init": "<!--//--><![CDATA[//><!--\nnew FooterControls('widget3', '../archive/Scripts/Widgets/FooterControls', '../archive/Scripts/Widgets/SharedResources', '.', {\"gridID\": \"id2\"});\n//--><!]]>"
+    },
+    {
+     "k": "text",
+     "id": "id3",
+     "cls": "style_SkipStroke_2 shape-with-text",
+     "style": "height: 104px; left: 341px; position: absolute; top: 205px; width: 314px; z-index: 1; ",
+     "contentCls": "text-content graphic_textbox_layout_style_default_External_314_104",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "graphic_textbox_layout_style_default"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Photos on this page were taken with a Canon 5D Mark II or Canon 1D Mark IV camera. High-res versions of the photos can be found "
+          },
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "http://erictraut.smugmug.com/Travel/Antarctica",
+            "href": "http://erictraut.smugmug.com/Travel/Antarctica"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "here"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": "."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; ",
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Copyright © 2011 Eric Traut"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3",
+     "style": "height: 184px; width: 318px;  height: 184px; left: 341px; position: absolute; top: 0px; width: 318px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "img",
+       "attrs": {
+        "src": "../archive/Antarctic_Peninsula_files/droppedImage.jpg",
+        "alt": "",
+        "style": "border: none; height: 185px; width: 319px; "
+       }
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id4",
+     "cls": "style_SkipStroke_1 shape-with-text",
+     "style": "height: 176px; left: 33px; position: absolute; top: 321px; width: 627px; z-index: 1; ",
+     "contentCls": "text-content style_External_627_176",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style_1"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "paragraph_style_2"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Hydrurgra Rocks"
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "This bluff is named after the latin term for leopard seals. While we didn’t see any of the location’s namesake, we did see Weddell seals and lots of (very dirty) chinstrap penguins."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id5",
+     "cls": "style_SkipStroke_1 shape-with-text",
+     "style": "height: 330px; left: 382px; position: absolute; top: 409px; width: 279px; z-index: 1; ",
+     "contentCls": "text-content style_External_279_330",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style_1"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "paragraph_style_2"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Cuverville Island"
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Cuverville features gentoo colonies on a snow-covered hillside, a narrow rocky beach, rugged mountains in the background, and a wide variety of ice bergs floating in the bay. I spent most of the time on a zodiac exploring the ice. "
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "style": "line-height: 21px; ",
+            "class": "style_2"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "Lemaire Channel"
+            },
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "The Lemaire Channel is a narrow body of water surrounded on both sides with steep black snow-covered peaks. The south portion of the channel was plugged with ice, so we needed to turn around before we reached the bottom. Here we reached our furthest point south — 65 degrees 4 minutes, just shy of the Antarctic Circle. We sailed past the distinctive 3000 ft “Una’s Tits”, a pair of peaks named in honor of a woman who worked in the Antarctic Survey offices in the 1950’s. "
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id6",
+     "cls": "style_SkipStroke_1 shape-with-text",
+     "style": "height: 259px; left: 38px; position: absolute; top: 725px; width: 618px; z-index: 1; ",
+     "contentCls": "text-content style_External_618_259",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style_1"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "paragraph_style_2"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Paradise Bay"
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "This aptly-named harbor is breathtakingly beautiful. We were lucky enough to visit on a day with little or no wind, allowing for reflections of bergs, mountains and glaciers in the water. We climbed a snow-covered hill several hundred feet above a shuttered Argentine research station and slid down on our butts. The  shore below the station was covered with intricately sculpted boulder-sized blocks of ice, making for an interesting photographic subject. The highlight of this landing was a zodiac ride in the bay where we spotted a 12 ft female leopard seal hunting penguins. We spent nearly an hour watching her and vice versa. She charged the zodiac multiple times and even bit it at one point (see photo gallery below). We were never in any real danger, but it was exhilarating to watch such an aggressive hunter at close range."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_2"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Half Moon Island"
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; ",
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Our final landing on the peninsula was at Half Moon Island, which featured several chinstrap colonies and interesting rock formations covered with rust-colored lichens. "
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id7",
+     "cls": "style_SkipStroke_1 shape-with-text",
+     "style": "height: 72px; left: 33px; position: absolute; top: 645px; width: 330px; z-index: 1; ",
+     "contentCls": "text-content style_External_330_72",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style_1"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "paragraph_style_3"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "The photo above shows a typical Zodiac landing in Antarctica. This particular landing was at Cuverville Island. The ship can be seen in the upper right."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3",
+     "style": "height: 217px; width: 326px;  height: 217px; left: 34px; position: absolute; top: 410px; width: 326px; z-index: 1; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "img",
+       "attrs": {
+        "src": "../archive/Antarctic_Peninsula_files/IMG_1449.jpg",
+        "alt": "",
+        "style": "border: none; height: 218px; width: 326px; "
+       }
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "spacer",
+     "style": "height: 674px; line-height: 674px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  },
+  "footer": {
+   "style": "height: 75px; margin-left: 0px; position: relative; width: 700px; z-index: 15; ",
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "style": "height: 0px; line-height: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
