@@ -8,6 +8,10 @@ reports `bbox=None` (no differing pixel).
     python3 scripts/verify_pixels.py            # all 31 pages
     python3 scripts/verify_pixels.py peru tibet # just these routes
 
+The screenshots are **full page** (scripts/shot.mjs clips to the document's real
+content size), not viewport-sized: an album page is ~2900 px tall, and comparing
+only the top 1400 px would miss most of the photo grid.
+
 Chromium is looked up in $CHROME, then in the usual Playwright cache; pass
 `--chrome /path/to/chrome` to override.  Needs Pillow.
 """
@@ -30,11 +34,13 @@ from mirror_archive import STEM_TO_SLUG, TRAUT  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
 OUT = Path("/tmp/traut-pixels")
-SIZE = (800, 1400)
-BUDGET = "8000"
+# How long to let iWeb's scripts lay the page out before the shot.
+BUDGET = "3000"
+SHOT = ROOT / "scripts" / "shot.mjs"
 
 
-def find_chrome(explicit: str | None) -> str:
+def find_chrome(explicit: str | None) -> str | None:
+    """Only used for the error message; scripts/shot.mjs does the real lookup."""
     if explicit:
         return explicit
     if os.environ.get("CHROME"):
@@ -47,23 +53,13 @@ def find_chrome(explicit: str | None) -> str:
         found = which(name)
         if found:
             hits.append(found)
-    if not hits:
-        raise SystemExit("no Chromium found; pass --chrome /path/to/chrome")
-    return hits[-1]
+    return hits[-1] if hits else None
 
 
-def shot(chrome: str, url: str, dest: Path) -> None:
+def shot(url: str, dest: Path) -> None:
+    """Full-page screenshot through the DevTools protocol (see shot.mjs)."""
     subprocess.run(
-        [
-            chrome,
-            "--headless",
-            "--disable-gpu",
-            "--hide-scrollbars",
-            f"--virtual-time-budget={BUDGET}",
-            f"--window-size={SIZE[0]},{SIZE[1]}",
-            f"--screenshot={dest}",
-            url,
-        ],
+        ["node", str(SHOT), url, str(dest), BUDGET],
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
         check=False,
@@ -76,7 +72,10 @@ def main() -> int:
     ap.add_argument("--chrome", default=None)
     args = ap.parse_args()
 
-    chrome = find_chrome(args.chrome)
+    if args.chrome:
+        os.environ["CHROME"] = args.chrome
+    if not find_chrome(args.chrome):
+        raise SystemExit("no Chromium found; pass --chrome /path/to/chrome")
     if not DIST.is_dir():
         raise SystemExit("run `npm run build` first")
     OUT.mkdir(parents=True, exist_ok=True)
@@ -103,8 +102,8 @@ def main() -> int:
             name = slug or "index"
             archive_png = OUT / f"archive_{name}.png"
             mirror_png = OUT / f"mirror_{name}.png"
-            shot(chrome, f"http://127.0.0.1:8231/{stem}.html", archive_png)
-            shot(chrome, f"http://127.0.0.1:8232{'/' if not slug else '/' + slug + '/'}", mirror_png)
+            shot(f"http://127.0.0.1:8231/{stem}.html", archive_png)
+            shot(f"http://127.0.0.1:8232{'/' if not slug else '/' + slug + '/'}", mirror_png)
             a = Image.open(archive_png).convert("RGB")
             b = Image.open(mirror_png).convert("RGB")
             if a.size != b.size:

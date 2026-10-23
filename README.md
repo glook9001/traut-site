@@ -9,9 +9,10 @@ running on the archive's own iWeb JavaScript.
 ```bash
 npm install
 npm run build      # extract models -> mirror assets -> astro build
-npm test           # 14 structural checks
-python3 scripts/verify_pixels.py   # 31/31 pages, zero differing pixels
-npx astro preview
+npm test           # 14 structural checks (markup, URLs, assets, feeds)
+npm run pixels     # 31/31 pages, full-page, zero differing pixels
+npm run audit      # 31/31 pages, identical DOM *after* iWeb's JS has run
+npm run dev        # predev generates public/ first, so the grids work
 ```
 
 The archive itself (`Traut.com/`, 285 MB of iWeb HTML, CSS, JS and photos) is
@@ -148,9 +149,9 @@ will not let a template control.
 
 | Step | Command | What it does |
 | --- | --- | --- |
-| `prebuild` | `scripts/extract_pages.py` | archive → `src/data/pages/*.json`, `src/data/widgets.json` |
-| `prebuild` | `scripts/mirror_archive.py` | writes `public/page-js/*.js`, `public/feeds/*.xml`, `public/feed.xml`, `public/archive` symlink and the 31 redirect stubs |
-| `prebuild` | `scripts/sync_styles.py --check` | fails the build if `src/styles/**` drifted from the archive's CSS |
+| `predev` / `prebuild` | `scripts/extract_pages.py` | archive → `src/data/pages/*.json`, `src/data/widgets.json` |
+| `predev` / `prebuild` | `scripts/mirror_archive.py` | writes `public/page-js/*.js`, `public/feeds/*.xml`, `public/feed.xml`, `public/archive` symlink and the 31 redirect stubs |
+| `predev` / `prebuild` | `scripts/sync_styles.py --check` | fails the build if `src/styles/**` drifted from the archive's CSS |
 | `build` | `astro build` | renders the 31 routes and bundles the stylesheets; `integrations/iweb-doctype.mjs` restores the doctype |
 | `postbuild` | `mirror_archive.relink_dist_archive()` | turns `dist/archive` back into a symlink (Astro would copy 285 MB by value) |
 | `postbuild` | `mirror_archive.publish_welcome_alias()` | `dist/Welcome.html` as a copy of `dist/index.html` |
@@ -329,15 +330,31 @@ archive byte for byte. Byte equality is not the bar: Astro rewrites the
 doctype, self-closing tags and inter-element whitespace by design. The bar is
 the DOM plus the pixels.
 
-Pixel verification (headless Chromium, `--virtual-time-budget=8000`,
-800 × 1400) against `Traut.com/*.html` served from a local static server: all 31
-pages are pixel-identical (zero differing pixels), including the detail view at
-`#0`. Reproduce it with:
+Pixel verification (headless Chromium, 800 px wide, **full page**) against
+`Traut.com/*.html` served from a local static server: all 31 pages are
+pixel-identical (zero differing pixels). Reproduce it with:
 
 ```bash
 npm run build
 python3 scripts/verify_pixels.py          # all 31 routes
 python3 scripts/verify_pixels.py peru     # or a subset
+```
+
+The screenshots used to be viewport-sized (`--screenshot` with an 800 × 1400
+window), which silently compared only the top 1400 px of pages up to 2905 px
+tall. `scripts/shot.mjs` now drives the DevTools protocol and clips to the
+document's real content size, so the whole photo grid is compared.
+
+`npm run audit` (`scripts/audit_runtime.mjs`) closes the other half of the gap:
+`test_site.py` compares the markup Astro emits, but the photo grid, the
+`.framedImage` wrappers and their shadows, the captions and the widget labels
+only exist *after* iWeb's JavaScript runs. The audit loads both versions in
+Chromium, waits for the scripts, and compares the resulting DOM — every element,
+class, id, inline `style` and text node — plus the document height and the
+`.framedImage`/`img` counts:
+
+```
+peru                     ok    framedImage 38/38  img 1926/1926  height 2336/2336
 ```
 
 `scripts/probe_layout.mjs` is the debugging companion used when a page differed:
@@ -377,7 +394,9 @@ src/engine/types.ts       the model types the components consume
 scripts/extract_pages.py  archive -> models (strict)
 scripts/sync_styles.py    archive CSS -> src/styles (byte-equal, --check)
 scripts/mirror_archive.py URL plumbing, page scripts, feeds, stubs, oracle
-scripts/verify_pixels.py  screenshot diff against the archive
+scripts/verify_pixels.py  full-page screenshot diff against the archive
+scripts/shot.mjs          full-page screenshot via the DevTools protocol
+scripts/audit_runtime.mjs post-JS DOM diff against the archive (npm run audit)
 scripts/test_site.py      structural tests (npm test)
 scripts/probe_layout.mjs  headless-Chromium expression probe
 ```
