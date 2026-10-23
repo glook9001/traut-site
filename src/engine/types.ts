@@ -12,6 +12,7 @@ export interface TextItem {
   k: 'text';
   id: string | null;
   cls: string;
+  /** The archive's inline style, verbatim: iWeb's runtime reads it back. */
   style: string;
   contentCls: string;
   contentStyle: string;
@@ -62,6 +63,10 @@ export interface Layer {
 export type HeadItem =
   | { k: 'meta'; attrs: Attrs }
   | { k: 'title'; text: string }
+  /** The page's own iWeb stylesheet (src/styles/pages/<key>.css). */
+  | { k: 'pageCss'; attrs: Attrs }
+  /** One of the shared widget stylesheets, kept as its own @import block. */
+  | { k: 'widgetCss'; name: WidgetName; attrs: Attrs }
   | { k: 'link'; attrs: Attrs }
   | { k: 'comment'; text: string }
   | { k: 'style'; attrs: Attrs; text: string }

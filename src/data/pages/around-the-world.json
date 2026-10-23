@@ -50,12 +50,11 @@
     "text": "Around the World Trip"
    },
    {
-    "k": "link",
+    "k": "pageCss",
     "attrs": {
      "rel": "stylesheet",
      "type": "text/css",
-     "media": "screen,print",
-     "href": "../archive/Around_The_World_files/Around_The_World.css"
+     "media": "screen,print"
     }
    },
    {

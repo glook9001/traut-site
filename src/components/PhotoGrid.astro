@@ -1,13 +1,15 @@
 ---
 // The empty, positioned div that the page's own iWeb script fills with the
-// photo grid (IWLayoutPhotoGrid). Its geometry lives in the archive's page
-// script and in this inline style.
+// photo grid (IWLayoutPhotoGrid). Its geometry is inline and load-bearing: the
+// grid script reads `photogrid.style.top` and writes `style.height` back, and
+// IWSetSpacerHeight() grows the layer's last `.spacer` to match.
+import type { GridItem } from '../engine/types';
+
 interface Props {
-  id: string;
-  style: string;
+  item: GridItem;
 }
 
-const { id, style } = Astro.props;
+const { item } = Astro.props;
 ---
 
-<div id={id} style={style}></div>
+<div id={item.id} style={item.style}></div>

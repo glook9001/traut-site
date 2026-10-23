@@ -50,12 +50,11 @@
     "text": "Southern Africa"
    },
    {
-    "k": "link",
+    "k": "pageCss",
     "attrs": {
      "rel": "stylesheet",
      "type": "text/css",
-     "media": "screen,print",
-     "href": "../archive/Southern_Africa_files/Southern_Africa.css"
+     "media": "screen,print"
     }
    },
    {

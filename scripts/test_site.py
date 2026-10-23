@@ -156,6 +156,22 @@ class Skeleton(HTMLParser):
         }
 
 
+CSS_REF_RE = re.compile(
+    r"""(href=|@import\s+)(["'])((?:/_astro/[^"']+\.css|\.\./archive/[^"']+\.css))\2"""
+)
+
+
+def canonical_css(html: str) -> str:
+    """Replace stylesheet URLs (bundled or archive) with one token.
+
+    Astro emits the page's iWeb stylesheet and the three widget stylesheets as
+    content-hashed assets, so their URLs cannot match the archive's byte for
+    byte. `test_stylesheets` checks the links themselves; the DOM comparison
+    only cares that the same link/import blocks are present, in the same order.
+    """
+    return CSS_REF_RE.sub(lambda m: f'{m.group(1)}{m.group(2)}CSS{m.group(2)}', html)
+
+
 def skeleton(html: str) -> list:
     parser = Skeleton()
     parser.feed(html)
@@ -250,8 +266,8 @@ def test_dist_routes() -> None:
 def test_dom_matches_archive() -> None:
     """Generated DOM == the archive's DOM (the mirror is the oracle)."""
     for stem, slug in STEM_TO_SLUG.items():
-        expected = skeleton(rewrite_page_html(archive_html(stem), stem, page_key(stem)))
-        actual = skeleton(dist_page(slug).read_text(encoding="utf-8"))
+        expected = skeleton(canonical_css(rewrite_page_html(archive_html(stem), stem, page_key(stem))))
+        actual = skeleton(canonical_css(dist_page(slug).read_text(encoding="utf-8")))
         diff = first_difference(expected, actual)
         if diff:
             fail(f"{stem}: DOM differs from the archive: {diff}")
@@ -265,6 +281,33 @@ def test_doctype() -> None:
         if not head.startswith(XHTML_DOCTYPE):
             fail(f"{stem}: page does not start with the archive's XHTML doctype")
     print("ok doctype: XHTML 1.0 Transitional on every page")
+
+
+def test_stylesheets() -> None:
+    """The archive's stylesheets are imported through Astro and bundled."""
+    check = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "sync_styles.py"), "--check"],
+        capture_output=True,
+        text=True,
+    )
+    if check.returncode != 0:
+        fail(check.stdout.strip() or check.stderr.strip())
+    for stem, slug in STEM_TO_SLUG.items():
+        html = dist_page(slug).read_text(encoding="utf-8")
+        hrefs = re.findall(r'href="(/_astro/[^"]+\.css)"', html)
+        if len(hrefs) != 1:
+            fail(f"{stem}: expected one bundled page stylesheet, found {hrefs}")
+        if not (DIST / hrefs[0].lstrip("/")).is_file():
+            fail(f"{stem}: {hrefs[0]} was not emitted")
+        model = json.loads((MODELS / f"{page_key(stem)}.json").read_text(encoding="utf-8"))
+        wanted = sum(1 for item in model["head"]["items"] if item["k"] == "widgetCss")
+        imports = re.findall(r'@import "(/_astro/[^"]+\.css)"', html)
+        if len(imports) != wanted:
+            fail(f"{stem}: expected {wanted} widget stylesheets, found {imports}")
+        for url in imports:
+            if not (DIST / url.lstrip("/")).is_file():
+                fail(f"{stem}: {url} was not emitted")
+    print(f"ok stylesheets: {len(STEM_TO_SLUG)} page sheets + widget sheets, bundled")
 
 
 def test_visible_text() -> None:

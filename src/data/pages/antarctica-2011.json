@@ -50,12 +50,11 @@
     "text": "Falklands, South Georgia and Antarctica"
    },
    {
-    "k": "link",
+    "k": "pageCss",
     "attrs": {
      "rel": "stylesheet",
      "type": "text/css",
-     "media": "screen,print",
-     "href": "../archive/Antarctica_2011_files/Antarctica_2011.css"
+     "media": "screen,print"
     }
    },
    {

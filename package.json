@@ -3,9 +3,9 @@
   "version": "2.0.0",
   "type": "module",
   "private": true,
-  "description": "Astro mirror of traut.com: every page is the archive's own iWeb HTML, served from clean URLs",
+  "description": "Eric Traut's archived iWeb travel site, ported to Astro: 31 pixel-identical routes rendered by real Astro layouts and components",
   "scripts": {
-    "prebuild": "python3 scripts/extract_pages.py && python3 scripts/mirror_archive.py",
+    "prebuild": "python3 scripts/extract_pages.py && python3 scripts/mirror_archive.py && python3 scripts/sync_styles.py --check",
     "build": "astro build",
     "postbuild": "python3 -c \"import sys; sys.path.insert(0,'scripts'); from mirror_archive import relink_dist_archive, publish_welcome_alias; relink_dist_archive(); publish_welcome_alias()\"",
     "dev": "astro dev",

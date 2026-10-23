@@ -37,6 +37,14 @@ ROOT = Path(__file__).resolve().parent.parent
 PAGES_DIR = ROOT / "src" / "data" / "pages"
 WIDGETS_JSON = ROOT / "src" / "data" / "widgets.json"
 
+# `<style><!-- @import "Scripts/Widgets/HeaderControls/HeaderControls.css"; --></style>`
+WIDGET_CSS_RE = re.compile(r"Widgets/(HeaderControls|DetailView|FooterControls)/\1\.css")
+WIDGET_CSS_NAMES = {
+    "HeaderControls": "headerControls",
+    "DetailView": "detailView",
+    "FooterControls": "footerControls",
+}
+
 WIDGET_CLASSES = {
     "com-apple-iweb-widget-navbar": "navbar",
     "com-apple-iweb-widget-headercontrols": "headerControls",
@@ -131,6 +139,50 @@ def norm_ws(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
 
+# iWeb writes a page's whole layout as inline `style` attributes, and its own
+# runtime reads them back off the DOM: `spacer.style.height` in
+# IWSetSpacerHeight(), `textBlock.style.height` in adjustLineHeightIfTooBig(),
+# `photogrid.style.top` in the media grid. The port therefore keeps the geometry
+# inline, verbatim -- a stylesheet or a custom property would be invisible to
+# those reads and the page would not lay out. Anything outside this vocabulary
+# aborts the extraction.
+GEOM_KEYS = {
+    "position": "pos",
+    "left": "left",
+    "top": "top",
+    "width": "width",
+    "height": "height",
+    "z-index": "z",
+    "margin-left": "ml",
+    "margin-top": "mt",
+    "opacity": "opacity",
+    "line-height": "lh",
+    "float": "float",
+    "clear": "clear",
+}
+
+
+def checked_style(style: str, where: str) -> str:
+    """Validate an inline style and return it unchanged, for the template."""
+    geom(style, where)
+    return style
+
+
+def geom(style: str, where: str) -> dict[str, Any]:
+    """`"height: 40px; left: 19px; …"` -> `{"height": "40px", "left": "19px", …}`."""
+    out: dict[str, Any] = {}
+    for declaration in style.split(";"):
+        if not declaration.strip():
+            continue
+        name, _, value = declaration.partition(":")
+        name, value = name.strip(), value.strip()
+        key = GEOM_KEYS.get(name)
+        if key is None:
+            raise SystemExit(f"unsupported style declaration {name!r} in {where}")
+        out[key] = True if key == "clear" else value
+    return out
+
+
 # --------------------------------------------------------------------------- #
 # rich text
 
@@ -187,21 +239,48 @@ def port_head(head: Node, stem: str, key: str) -> dict[str, Any]:
         elif child.tag == "link":
             attrs = dict(child.attrs)
             rel = attrs.get("rel", "")
-            if rel == "stylesheet":
+            if rel == "stylesheet" and re.search(r"[^/]+_files/[^/]+\.css$", attrs.get("href", "")):
+                # The page's own iWeb stylesheet: it lives in src/styles/pages/
+                # and is bundled by Astro, so the model only keeps its attributes.
+                items.append(
+                    {
+                        "k": "pageCss",
+                        "attrs": {k: v for k, v in attrs.items() if k != "href"},
+                    }
+                )
+            elif rel == "stylesheet":
                 attrs["href"] = rewrite_url(attrs.get("href", ""))
+                items.append({"k": "link", "attrs": attrs})
             elif rel == "alternate":
                 attrs["href"] = f"/feeds/{key}.xml"
+                items.append({"k": "link", "attrs": attrs})
             else:
                 raise SystemExit(f"{stem}: unsupported <link rel={rel!r}>")
-            items.append({"k": "link", "attrs": attrs})
         elif child.tag == "style":
             text = text_of(child)
-            text = re.sub(
-                r"(@import\s+)([\"'])([^\"']+)\2",
-                lambda m: f"{m.group(1)}{m.group(2)}{rewrite_url(m.group(3))}{m.group(2)}",
-                text,
-            )
-            items.append({"k": "style", "attrs": dict(child.attrs), "text": text})
+            widget = WIDGET_CSS_RE.search(text)
+            if widget:
+                # `<style><!-- @import "…/HeaderControls.css"; --></style>`
+                # iWeb's per-widget stylesheet, kept as its own import block.
+                items.append(
+                    {
+                        "k": "widgetCss",
+                        "name": WIDGET_CSS_NAMES[widget.group(1)],
+                        "attrs": dict(child.attrs),
+                    }
+                )
+            else:
+                items.append(
+                    {
+                        "k": "style",
+                        "attrs": dict(child.attrs),
+                        "text": re.sub(
+                            r"(@import\s+)([\"'])([^\"']+)\2",
+                            lambda m: f"{m.group(1)}{m.group(2)}{rewrite_url(m.group(3))}{m.group(2)}",
+                            text,
+                        ),
+                    }
+                )
         elif child.tag == "script":
             src = child.attrs.get("src", "")
             if not src:
@@ -234,7 +313,7 @@ def port_text_block(node: Node) -> dict[str, Any]:
         "k": "text",
         "id": node.attrs.get("id") or None,
         "cls": node.attrs.get("class", ""),
-        "style": node.attrs.get("style", ""),
+        "style": checked_style(node.attrs.get("style", ""), f"text block {node.attrs.get('id')}"),
         "contentCls": content.attrs.get("class", ""),
         "contentStyle": content.attrs.get("style", ""),
         "nodes": [n for n in (rich_node(c) for c in children(content)) if n],
@@ -261,7 +340,7 @@ def port_widget(node: Node, init: str) -> dict[str, Any]:
         "name": name,
         "id": node.attrs["id"],
         "cls": node.attrs.get("class", ""),
-        "style": node.attrs.get("style", ""),
+        "style": checked_style(node.attrs.get("style", ""), f"widget {node.attrs['id']}"),
         "init": init,
         "segments": segments,
     }
@@ -324,7 +403,7 @@ def port_layer(node: Node, stem: str, feed_key: str) -> dict[str, Any]:
                 {
                     "k": "box",
                     "cls": cls,
-                    "style": child.attrs.get("style", ""),
+                    "style": checked_style(child.attrs.get("style", ""), f"box {cls}"),
                     "nodes": [n for n in (rich_node(c) for c in children(child)) if n],
                 }
             )
@@ -335,12 +414,21 @@ def port_layer(node: Node, stem: str, feed_key: str) -> dict[str, Any]:
             items.append(widget)
             pending = widget
         elif child.attrs.get("id") and not cls:
-            items.append({"k": "grid", "id": child.attrs["id"], "style": child.attrs.get("style", "")})
+            items.append(
+                {
+                    "k": "grid",
+                    "id": child.attrs["id"],
+                    "style": checked_style(child.attrs.get("style", ""), f"grid {child.attrs['id']}"),
+                }
+            )
         else:
             raise SystemExit(f"{stem}: unsupported div in layer {node.attrs.get('id')}: {child.attrs}")
     if pending is not None:
         raise SystemExit(f"{stem}: widget {pending['id']} has no init script")
-    return {"style": node.attrs.get("style", ""), "items": items}
+    return {
+        "style": checked_style(node.attrs.get("style", ""), f"layer {node.attrs.get('id')}"),
+        "items": items,
+    }
 
 
 def port_body(body: Node, stem: str, key: str) -> dict[str, Any]:

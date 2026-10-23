@@ -50,12 +50,11 @@
     "text": "South Georgia"
    },
    {
-    "k": "link",
+    "k": "pageCss",
     "attrs": {
      "rel": "stylesheet",
      "type": "text/css",
-     "media": "screen,print",
-     "href": "../archive/South_Georgia_files/South_Georgia.css"
+     "media": "screen,print"
     }
    },
    {
@@ -71,33 +70,33 @@
     "text": " No code to add to head "
    },
    {
-    "k": "style",
+    "k": "widgetCss",
+    "name": "headerControls",
     "attrs": {
      "type": "text/css"
-    },
-    "text": "<!--\n    @import \"../archive/Scripts/Widgets/HeaderControls/HeaderControls.css\";\n-->"
+    }
    },
    {
     "k": "comment",
     "text": " No code to add to head "
    },
    {
-    "k": "style",
+    "k": "widgetCss",
+    "name": "detailView",
     "attrs": {
      "type": "text/css"
-    },
-    "text": "<!--\n    @import \"../archive/Scripts/Widgets/DetailView/DetailView.css\";\n-->"
+    }
    },
    {
     "k": "comment",
     "text": " No code to add to head "
    },
    {
-    "k": "style",
+    "k": "widgetCss",
+    "name": "footerControls",
     "attrs": {
      "type": "text/css"
-    },
-    "text": "<!--\n    @import \"../archive/Scripts/Widgets/FooterControls/FooterControls.css\";\n-->"
+    }
    },
    {
     "k": "link",

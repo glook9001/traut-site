@@ -9,7 +9,7 @@ running on the archive's own iWeb JavaScript.
 ```bash
 npm install
 npm run build      # extract models -> mirror assets -> astro build
-npm test           # 13 structural checks
+npm test           # 14 structural checks
 python3 scripts/verify_pixels.py   # 31/31 pages, zero differing pixels
 npx astro preview
 ```
@@ -66,10 +66,57 @@ Welcome page. Both hand the model to `layouts/Page.astro`, which renders the
 `<html>` shell, `Head.astro`, and the four layers through `Layer.astro` →
 `TextBlock` / `Widget` / `PhotoGrid` / boxes.
 
+**4. The CSS is the archive's, imported through Astro.** iWeb generated one
+stylesheet per page (`Peru_files/Peru.css`) plus three widget stylesheets; those
+files *are* the site's typography and layout, so `scripts/sync_styles.py` copies
+them into `src/styles/pages/*.css` and `src/styles/widgets/*.css` (byte-for-byte,
+with a one-line provenance header) and the build imports them the Astro way:
+
+* `src/engine/styles.ts` maps each stylesheet through
+  `import.meta.glob('…/*.css', { query: '?url' })`, so Vite emits it as a
+  content-hashed asset and `Head.astro` links exactly one per route
+  (`/_astro/peru.<hash>.css`);
+* the three widget stylesheets stay the archive's own
+  `<style><!-- @import "…"; --></style>` blocks, in the archive's order, so the
+  cascade order (page sheet first, then HeaderControls, DetailView,
+  FooterControls) is unchanged;
+* `scripts/sync_styles.py --check` runs in `prebuild` and `npm test`, so a copy
+  can never silently drift from the archive.
+
 Everything else — the photo grid layout, captions, slideshow, detail view,
 navbar, pagination, text auto-fit — is the archive's own `Scripts/*.js` and each
 page's own script, loaded from `/page-js/<key>.js`. This is a port of the
 markup, not a re-implementation of iWeb.
+
+### Why the geometry stays an inline `style`
+
+Every layer, text block, spacer and photo grid carries the archive's original
+inline `style` attribute verbatim, and the components render it as-is. That is
+not laziness: iWeb's runtime *reads it back off the DOM*.
+
+```js
+// Scripts/iWebMediaGrid.js -- grow the layer's last spacer to fit the grid
+initialSpacerHeight = parseInt(spacer.style.height);
+spacerHeight = Math.max(parseInt(photogrid.style.top) + height - spacer.offsetTop,
+                        initialSpacerHeight);
+
+// Scripts/iWebSite.js -- the height the text has to fit in
+if (oTextBoxOuterDiv.style.height !== "")
+  specifiedHeight = parseFloat(oTextBoxOuterDiv.style.height);
+```
+
+An earlier revision of this port moved the geometry into CSS custom properties
+(`--iw-height: 40px`) with the rules in component `<style>` blocks. It looked
+tidier, and every album page collapsed: `style.height` read back as `""`,
+`parseInt("")` is `NaN`, and the spacer that should have grown to 2035 px stayed
+at its initial 382 px. The same applies to text auto-fit, which then never
+shrinks anything.
+
+So the split is: **geometry stays inline** (it is data, and the runtime's input);
+**everything that is CSS stays CSS** (the archive's stylesheets, imported and
+bundled through Astro). Components still own the structure — they decide what a
+layer, text block, widget or grid *is* — but they do not re-declare the numbers
+the original scripts depend on.
 
 ### URL plumbing
 
@@ -103,7 +150,8 @@ will not let a template control.
 | --- | --- | --- |
 | `prebuild` | `scripts/extract_pages.py` | archive → `src/data/pages/*.json`, `src/data/widgets.json` |
 | `prebuild` | `scripts/mirror_archive.py` | writes `public/page-js/*.js`, `public/feeds/*.xml`, `public/feed.xml`, `public/archive` symlink and the 31 redirect stubs |
-| `build` | `astro build` | renders the 31 routes; `integrations/iweb-doctype.mjs` restores the doctype |
+| `prebuild` | `scripts/sync_styles.py --check` | fails the build if `src/styles/**` drifted from the archive's CSS |
+| `build` | `astro build` | renders the 31 routes and bundles the stylesheets; `integrations/iweb-doctype.mjs` restores the doctype |
 | `postbuild` | `mirror_archive.relink_dist_archive()` | turns `dist/archive` back into a symlink (Astro would copy 285 MB by value) |
 | `postbuild` | `mirror_archive.publish_welcome_alias()` | `dist/Welcome.html` as a copy of `dist/index.html` |
 
@@ -266,6 +314,7 @@ ok models: 31 page models
 ok scripts/feeds: 31 page scripts, 27 feeds
 ok redirect stubs: 31 old filenames still work
 ok navbar: sitePath '..' -> /feed.xml
+ok stylesheets: 31 page sheets + widget sheets, bundled
 ok text: 31 pages show the archive's own words
 ok welcome alias: /Welcome.html == /
 ```
@@ -273,7 +322,10 @@ ok welcome alias: /Welcome.html == /
 `test_site.py` compares each built page's DOM against
 `mirror_archive.rewrite_page_html()` — the archive HTML with only the URL
 plumbing applied — so a dropped block, changed class, lost caption or mangled
-script fails the build. Byte equality is not the bar: Astro rewrites the
+script fails the build. The only attributes it normalises are the stylesheet
+URLs Astro content-hashes (`/_astro/peru.<hash>.css`); `test_stylesheets` checks
+those links and imports separately, plus that `src/styles/**` still matches the
+archive byte for byte. Byte equality is not the bar: Astro rewrites the
 doctype, self-closing tags and inter-element whitespace by design. The bar is
 the DOM plus the pixels.
 
@@ -316,10 +368,14 @@ integrations/             iweb-doctype.mjs — restore the XHTML doctype
 src/pages/                index.astro (Welcome), [slug].astro (one per model)
 src/layouts/Page.astro    html/head/body shell, four layers
 src/components/           Head, Layer, TextBlock, Node, Widget, PhotoGrid
+src/styles/pages/*.css    the archive's per-page stylesheets (generated copies)
+src/styles/widgets/*.css  the three archive widget stylesheets (generated copies)
+src/engine/styles.ts      ?url globs: page/widget stylesheet -> bundled asset URL
 src/data/pages/*.json     one model per archive page (generated)
 src/data/widgets.json     the four widget chrome blocks (generated)
 src/engine/types.ts       the model types the components consume
 scripts/extract_pages.py  archive -> models (strict)
+scripts/sync_styles.py    archive CSS -> src/styles (byte-equal, --check)
 scripts/mirror_archive.py URL plumbing, page scripts, feeds, stubs, oracle
 scripts/verify_pixels.py  screenshot diff against the archive
 scripts/test_site.py      structural tests (npm test)

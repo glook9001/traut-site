@@ -50,12 +50,11 @@
     "text": "Eric’s Home on the Web"
    },
    {
-    "k": "link",
+    "k": "pageCss",
     "attrs": {
      "rel": "stylesheet",
      "type": "text/css",
-     "media": "screen,print",
-     "href": "../archive/Welcome_files/Welcome.css"
+     "media": "screen,print"
     }
    },
    {

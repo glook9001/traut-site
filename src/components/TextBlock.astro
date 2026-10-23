@@ -1,6 +1,10 @@
 ---
 // An iWeb `shape-with-text` block: a positioned box around a `.text-content`
 // div, which holds the page's real rich text (title, date, prose, footer note).
+//
+// The geometry stays an inline `style` attribute, exactly as the archive wrote
+// it: iWeb's own text auto-fit reads it back (`adjustLineHeightIfTooBig()` uses
+// `textBlock.style.height` as the height the text must fit in).
 import type { TextItem } from '../engine/types';
 import Node from './Node.astro';
 
@@ -11,4 +15,7 @@ interface Props {
 const { block } = Astro.props;
 ---
 
-<div id={block.id} class={block.cls} style={block.style}><div class={block.contentCls} style={block.contentStyle}>{block.nodes.map((node) => <Node node={node} />)}</div></div>
+<div id={block.id} class={block.cls} style={block.style}><div
+  class={block.contentCls}
+  style={block.contentStyle}
+>{block.nodes.map((node) => <Node node={node} />)}</div></div>

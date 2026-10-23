@@ -2,6 +2,10 @@
 // One iWeb layer (#nav_layer, #header_layer, #body_layer, #footer_layer):
 // a positioned 700px-wide band holding spacers, text blocks, widgets and the
 // empty div that the page's own script turns into the photo grid.
+//
+// Everything keeps the archive's inline `style`: iWeb's layout scripts read the
+// geometry back off the DOM (see TextBlock.astro and PhotoGrid.astro), so the
+// numbers cannot move into a stylesheet.
 import type { Layer as LayerModel } from '../engine/types';
 import TextBlock from './TextBlock.astro';
 import Node from './Node.astro';
@@ -22,7 +26,7 @@ const { id, layer } = Astro.props;
   ) : item.k === 'widget' ? (
     <Widget item={item} />
   ) : item.k === 'grid' ? (
-    <PhotoGrid id={item.id} style={item.style} />
+    <PhotoGrid item={item} />
   ) : (
     <div class={item.cls} style={item.style}>{item.nodes.map((node) => <Node node={node} />)}</div>
   )
