@@ -10,8 +10,9 @@ tags and inter-element whitespace); it is:
     text, only the URL plumbing rewritten (see mirror_archive.rewrite_page_html,
     which stays the oracle);
   * every visible word is the archive's own;
-  * every asset, page script and feed resolves, and the ones the archive is
-    missing stay missing;
+  * every asset, page script and feed resolves -- from the archive, or from the
+    `restored/` overlay that stands in for the files the local archive copy lost
+    (scripts/restore_assets.py);
   * the XHTML doctype survives, because it puts the browser in almost standards
     mode and that changes the layout by a few pixels (see iweb-doctype.mjs);
   * `Traut.com/` was never touched.
@@ -32,6 +33,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from mirror_archive import (  # noqa: E402
     ASSET_PREFIX,
     FILENAME_ALIASES,
+    RESTORED_DIR,
+    RESTORED_PREFIX,
+    RESTORED_REFS,
     STEM_TO_SLUG,
     TRAUT,
     clean_route,
@@ -44,9 +48,11 @@ ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
 MODELS = ROOT / "src" / "content" / "pages"
 
-# Assets the archive itself is missing (its <img> tags 404 on traut.com too).
-# They must stay missing -- we never invent files the original never had.
-KNOWN_MISSING = {"Watercolor_iweb_", "Media/transparent.gif"}
+# Archive assets the local snapshot lost but traut.com still serves. They are
+# not invented: `restored/` holds the live bytes, and the manifest names the
+# exact paths they stand in for (see scripts/restore_assets.py).
+KNOWN_MISSING: set[str] = set()
+MIRROR_PREFIXES = (ASSET_PREFIX, RESTORED_PREFIX)
 
 XHTML_DOCTYPE = (
     '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" '
@@ -233,18 +239,20 @@ def archive_refs(html: str) -> list[str]:
 
 
 def mirror_refs(html: str) -> list[str]:
-    return [m.group(2) for m in ATTR_RE.finditer(html) if m.group(2).startswith(ASSET_PREFIX)]
+    return [m.group(2) for m in ATTR_RE.finditer(html) if m.group(2).startswith(MIRROR_PREFIXES)]
 
 
 def on_disk(ref: str) -> bool:
     path = unquote(ref.split("?")[0])
+    if path.startswith(RESTORED_PREFIX):
+        return (RESTORED_DIR / path[len(RESTORED_PREFIX) :]).is_file()
     if path.startswith(ASSET_PREFIX):
         path = path[len(ASSET_PREFIX) :]
     return (TRAUT / path).is_file()
 
 
 JS_REF_RE = re.compile(
-    r"[\"']((?:\.\./archive/)?(?:Media|Scripts|[A-Za-z0-9_%&.\-]+_files)/[^\"']*)[\"']"
+    r"[\"']((?:\.\./(?:archive|restored)/)?(?:Media|Scripts|[A-Za-z0-9_%&.\-]+_files)/[^\"']*)[\"']"
 )
 
 
@@ -391,10 +399,52 @@ def test_assets_exist() -> None:
     if not missing_mirror <= missing_archive:
         extra = sorted(missing_mirror - missing_archive)
         fail(f"the port references assets the archive does not have: {extra[:5]}")
-    unexplained = [ref for ref in missing_archive if not any(k in ref for k in KNOWN_MISSING)]
+    unexplained = [
+        ref for ref in missing_archive if ref not in RESTORED_REFS and not any(k in ref for k in KNOWN_MISSING)
+    ]
     if unexplained:
-        fail(f"archive refs missing on disk (not a known 404): {sorted(unexplained)[:5]}")
-    print(f"ok assets: all refs resolve ({len(missing_archive)} known 404s, same as archive)")
+        fail(f"archive refs missing on disk (no restored/ entry): {sorted(unexplained)[:5]}")
+    print("ok assets: every referenced asset resolves (archive + restored overlay)")
+
+
+def test_restored_assets() -> None:
+    """The overlay is intact, published, and used only for what the archive lost."""
+    manifest_path = RESTORED_DIR / "manifest.json"
+    if not manifest_path.is_file():
+        fail("restored/manifest.json missing")
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    check = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "restore_assets.py"), "--check"],
+        capture_output=True,
+        text=True,
+    )
+    if check.returncode != 0:
+        fail(check.stdout.strip() or check.stderr.strip())
+    for name in manifest["files"]:
+        src = RESTORED_DIR / name
+        out = DIST / "restored" / name
+        if not out.is_file():
+            fail(f"restored/{name} was not published to dist")
+        if out.read_bytes() != src.read_bytes():
+            fail(f"dist/restored/{name} is not the restored file")
+    used = 0
+    for stem in STEM_TO_SLUG:
+        js_src = TRAUT / f"{stem}_files" / f"{stem}.js"
+        if not js_src.is_file():
+            continue
+        raw = js_src.read_text(encoding="utf-8", errors="replace")
+        port = (DIST / "page-js" / f"{page_key(stem)}.js").read_text(encoding="utf-8")
+        for ref, url in RESTORED_REFS.items():
+            if ref not in raw:
+                continue
+            used += 1
+            if url not in port:
+                fail(f"{page_key(stem)}.js does not use {url} for the missing {ref}")
+            if ASSET_PREFIX + ref in port:
+                fail(f"{page_key(stem)}.js still points {ref} at the archive")
+    if not used:
+        fail("no page script uses the restored overlay")
+    print(f"ok restored: {len(manifest['files'])} files, {used} refs in page scripts")
 
 
 def test_page_scripts_and_feeds() -> None:

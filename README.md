@@ -143,8 +143,39 @@ The only changes made to the original markup:
 | `Peru.html` → `/peru` | Clean routes. |
 | `<page>_files/<page>.js` → `/page-js/<key>.js` | A rewritten copy of the page's own script, so its relative asset paths resolve. |
 | `<page>_files/rss.xml` → `/feeds/<key>.xml` | A rewritten copy of the page's photo feed (enclosures, thumbnails, `<link>`s). |
+| `Morocco_files/Watercolor_iweb_01.png` → `../restored/Watercolor_iweb_01.png` | Only for the eight photo-frame tiles the local archive copy lost (see below). |
 | `new NavBar(…, '.', …)` → `new NavBar(…, '..', …)` | The navbar fetches `<sitePath>/feed.xml`. The archive sat at the site root; these routes are one level down. |
 | `<!DOCTYPE html>` → the XHTML 1.0 Transitional doctype | See below. |
+
+### Restoring the assets the local copy lost
+
+The `Traut.com/` snapshot this port was built from is missing exactly eight
+files: the watercolour tiles that iWeb's runtime composites around every photo
+(`Watercolor_iweb_01, 02, 04, 05, 08, 13, 14, 16.png`). Sixteen album page
+directories reference them — 128 references to eight byte-identical files — and
+without them the grid renders bare photos where traut.com renders framed ones.
+A comment in an earlier version of this README claimed they 404 upstream. They
+do not: `https://traut.com/Traut.com/Morocco_files/Watercolor_iweb_01.png`
+returns 200.
+
+So the port restores them rather than reproducing a hole in the copy:
+
+* `restored/` is committed: the eight PNGs plus `manifest.json`, which records
+  each file's sha256 and the exact archive paths it stands in for;
+* `scripts/restore_assets.py --fetch` (re)builds that directory from traut.com;
+  `--check` verifies the hashes, verifies every manifest path is still missing
+  from `Traut.com/` (so the overlay never shadows a file the archive has), and
+  fails if the archive lost an asset the overlay does not cover;
+* `scripts/mirror_archive.py` rewrites **only those exact paths** to
+  `../restored/…` and copies the files to `public/restored/`. Nothing else is
+  touched, and `Traut.com/` is still never written to;
+* the verification tools serve the same overlay on the archive side, so the
+  local oracle is "the archive as traut.com serves it".
+
+`npm run assets` (`scripts/find_missing_assets.py --live`) is the inventory that
+found this: it walks every reference the archive makes — HTML attributes, CSS
+`url()`/`@import`, quoted paths in page JavaScript, RSS enclosures — and reports
+which ones have no local file and what traut.com says about them.
 
 ### The doctype is load-bearing
 
@@ -164,7 +195,8 @@ will not let a template control.
 | Step | Command | What it does |
 | --- | --- | --- |
 | `predev` / `prebuild` | `scripts/extract_pages.py` | archive → `src/content/pages/*.json`, `src/data/widgets.json` |
-| `predev` / `prebuild` | `scripts/mirror_archive.py` | writes `public/page-js/*.js`, `public/feeds/*.xml`, `public/feed.xml`, `public/archive` symlink and the 31 redirect stubs |
+| `predev` / `prebuild` | `scripts/mirror_archive.py` | writes `public/page-js/*.js`, `public/feeds/*.xml`, `public/feed.xml`, `public/restored/*.png`, `public/archive` symlink and the 31 redirect stubs |
+| `predev` / `prebuild` | `scripts/restore_assets.py --check` | fails the build if `restored/` drifted, or if the archive lost an asset the overlay does not cover |
 | `predev` / `prebuild` | `scripts/sync_styles.py --check` | fails the build if `src/styles/**` drifted from the archive's CSS |
 | `build` | `astro build` | renders the 31 routes and bundles the stylesheets; `integrations/iweb-doctype.mjs` restores the doctype |
 | `postbuild` | `mirror_archive.relink_dist_archive()` | turns `dist/archive` back into a symlink (Astro would copy 285 MB by value) |
@@ -320,12 +352,12 @@ above is present by construction. `npm test` pins it down:
 ```
 ok archive: Traut.com untouched
 ok asset prefix: all archive refs are relative
-ok assets: all refs resolve (0 known 404s, same as archive)
-ok routes: / + 30 slugs
+ok assets: every referenced asset resolves (archive + restored overlay)
 ok doctype: XHTML 1.0 Transitional on every page
 ok dom: 31 pages rebuild the archive's own markup
 ok header blocks: iWeb text content preserved
 ok models: 31 page models
+ok restored: 8 files, 128 refs in page scripts
 ok scripts/feeds: 31 page scripts, 27 feeds
 ok redirect stubs: 31 old filenames still work
 ok navbar: sitePath '..' -> /feed.xml
@@ -346,14 +378,23 @@ doctype, self-closing tags and inter-element whitespace by design. The bar is
 the DOM plus the pixels.
 
 Pixel verification (headless Chromium, 800 px wide, **full page**) against
-`Traut.com/*.html` served from a local static server: all 31 pages are
-pixel-identical (zero differing pixels). Reproduce it with:
+`Traut.com/*.html` served from a local static server with the `restored/`
+overlay applied: all 31 pages are pixel-identical (zero differing pixels).
+Reproduce it with:
 
 ```bash
 npm run build
-python3 scripts/verify_pixels.py          # all 31 routes
+python3 scripts/verify_pixels.py          # all 31 routes, local oracle
 python3 scripts/verify_pixels.py peru     # or a subset
+python3 scripts/verify_pixels.py --live   # oracle = traut.com itself
 ```
+
+`--live` renders the reference page from `https://traut.com/Traut.com/<Stem>.html`
+instead. Run for the sixteen pages that use the photo frames, it reports 15/16
+identical; `/northern-namibia` differs because the *live* album is broken: its
+feed lists enclosures as absolute `http://www.traut.com/…` URLs, which the
+browser blocks as mixed content on the https page, so traut.com shows that grid
+empty while the port shows all 48 photos.
 
 The screenshots used to be viewport-sized (`--screenshot` with an 800 × 1400
 window), which silently compared only the top 1400 px of pages up to 2905 px
@@ -378,10 +419,15 @@ in headless Chromium via the DevTools protocol.
 
 ## Known archive quirks, kept as-is
 
-* `Peru_files/Watercolor_iweb_01.png` and friends are referenced by the grid
-  frames but do not exist in the archive; they 404 on traut.com too. The grid
-  still lays out identically, so they stay broken here as well — inventing them
-  would be a change to the original design.
+* The local `Traut.com/` copy is missing the eight `Watercolor_iweb_*.png`
+  photo-frame tiles. traut.com still serves them, so they are restored from
+  there into `restored/` and those paths are rewritten to `../restored/…` (see
+  "Restoring the assets the local copy lost"). Nothing is invented: the bytes
+  are the live site's, and the manifest records where each came from.
+* traut.com's own `/northern-namibia` album renders an empty grid: its feed uses
+  absolute `http://www.traut.com/…` enclosure URLs that the https page blocks as
+  mixed content. The port serves the archive's relative URLs, so its photos
+  render — that is the archive as authored, not a deviation.
 * `Utah_&_Arizona.html` is the real file; `Utah_%26_Arizona.html` and
   `Utah_%26_Arizona_files` are symlinks in the archive. Both stems map to
   `/utah-arizona`, and its page script is matched by directory pattern rather
@@ -408,9 +454,12 @@ src/content/pages/*.json  one model per archive page (generated)
 src/data/widgets.json     the four widget chrome blocks (generated)
 src/engine/types.ts       the model types the components consume
 src/engine/geometry.ts    box (declarations as data) -> inline style attribute
+restored/                 archive assets the local copy lost, + manifest.json
 scripts/extract_pages.py  archive -> models (strict)
 scripts/sync_styles.py    archive CSS -> src/styles (byte-equal, --check)
 scripts/mirror_archive.py URL plumbing, page scripts, feeds, stubs, oracle
+scripts/find_missing_assets.py  inventory refs with no local file (npm run assets)
+scripts/restore_assets.py archive assets lost locally -> restored/ (--fetch/--check)
 scripts/verify_pixels.py  full-page screenshot diff against the archive
 scripts/shot.mjs          full-page screenshot via the DevTools protocol
 scripts/audit_runtime.mjs post-JS DOM diff against the archive (npm run audit)

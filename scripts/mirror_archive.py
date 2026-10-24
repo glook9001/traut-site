@@ -15,6 +15,11 @@ The only edits are URL plumbing:
     `public/page-js/` and `public/feeds/` so their relative URLs resolve too
   * the site navbar feed stays at `/feed.xml`, exactly like the original
 
+One class of asset is the exception to "no asset is copied": the local archive
+snapshot lost the eight watercolour photo-frame tiles that traut.com still
+serves, so `restored/` (committed, with a manifest) holds them and those exact
+paths are rewritten to `../restored/…`. See scripts/restore_assets.py.
+
 `Traut.com/` is never modified.
 """
 from __future__ import annotations
@@ -69,6 +74,28 @@ STEM_TO_SLUG = {
 # Extra archive filenames that must keep working (aliases on disk).
 FILENAME_ALIASES = {"Utah_%26_Arizona": "utah-arizona"}
 
+# Archive assets the local snapshot lost but traut.com still serves: a manifest
+# of the exact archive paths, and the restored copy of each file. Rewriting only
+# those paths keeps the overlay from shadowing anything the archive does have.
+RESTORED_DIR = ROOT / "restored"
+RESTORED_PREFIX = "../restored/"
+
+
+def load_restored() -> dict[str, str]:
+    """`{"Morocco_files/Watercolor_iweb_01.png": "../restored/Watercolor_iweb_01.png"}`"""
+    manifest = RESTORED_DIR / "manifest.json"
+    if not manifest.is_file():
+        return {}
+    data = json.loads(manifest.read_text(encoding="utf-8"))
+    return {
+        ref: RESTORED_PREFIX + name
+        for name, meta in data.get("files", {}).items()
+        for ref in meta.get("restores", [])
+    }
+
+
+RESTORED_REFS = load_restored()
+
 # iWeb's String#toAbsoluteURL() prepends the document's directory to every URL
 # that lacks ":/", so a root-absolute "/archive/…" would become
 # "/peru//archive/…" and 404.  A relative "../archive/…" survives that: it
@@ -113,6 +140,8 @@ def rewrite_url(value: str) -> str:
             stem = stem[2:]
         if stem in STEM_TO_SLUG:
             return clean_route(stem) + (sep + frag if sep else "")
+    if path in RESTORED_REFS:
+        return RESTORED_REFS[path] + (sep + frag if sep else "")
     if ASSET_PREFIX_RE.match(path):
         return ASSET_PREFIX + path + (sep + frag if sep else "")
     return value
@@ -134,6 +163,21 @@ def rewrite_css_refs(html: str) -> str:
         lambda m: f"{m.group(1)}{m.group(2)}{rewrite_url(m.group(3))}{m.group(2)}{m.group(4)}",
         html,
     )
+
+
+def rewrite_restored(text: str) -> str:
+    r"""Quoted references to a restored asset -> ../restored/…
+
+    Runs before the generic asset rewrite, so the paths that the archive lost
+    never grow an `../archive/` prefix. iWeb escapes slashes in inline JS, so a
+    reference may be written `X_files\/file.png`.
+    """
+    for ref, url in RESTORED_REFS.items():
+        pattern = re.compile(
+            r"([\"'])" + re.escape(ref).replace("/", r"\\?/") + r"([\"'])"
+        )
+        text = pattern.sub(lambda m: m.group(1) + url + m.group(2), text)
+    return text
 
 
 def rewrite_js_paths(text: str) -> str:
@@ -160,6 +204,7 @@ def retarget_page_js(html: str, stem: str, key: str) -> str:
 
 
 def rewrite_page_html(html: str, stem: str, key: str) -> str:
+    html = rewrite_restored(html)
     html = rewrite_attrs(html)
     html = rewrite_css_refs(html)
     html = rewrite_js_paths(html)
@@ -169,6 +214,7 @@ def rewrite_page_html(html: str, stem: str, key: str) -> str:
 
 
 def rewrite_page_js(js: str, key: str) -> str:
+    js = rewrite_restored(js)
     js = rewrite_js_paths(js)
     return FEED_RE.sub(f"/feeds/{key}.xml", js)
 
@@ -260,6 +306,22 @@ def write_page_assets() -> int:
     return count
 
 
+def publish_restored() -> int:
+    """Copy the restored overlay into public/restored/ (a few KB, every build)."""
+    if not RESTORED_REFS:
+        return 0
+    target = PUBLIC / "restored"
+    if target.exists():
+        shutil.rmtree(target)
+    target.mkdir(parents=True)
+    count = 0
+    for url in sorted(set(RESTORED_REFS.values())):
+        name = url[len(RESTORED_PREFIX) :]
+        shutil.copyfile(RESTORED_DIR / name, target / name)
+        count += 1
+    return count
+
+
 def publish_welcome_alias() -> None:
     """Keep the archive's filename working: /Welcome.html serves the landing page."""
     dist = ROOT / "dist"
@@ -291,6 +353,7 @@ def main() -> int:
         print("missing Traut.com archive", file=sys.stderr)
         return 1
     ensure_archive_link()
+    restored = publish_restored()
     pages = write_page_assets()
     stubs = write_redirect_stubs()
     publish_site_feed()
@@ -298,6 +361,7 @@ def main() -> int:
         f"mirror_archive: {pages} pages, "
         f"{len(list((PUBLIC / 'page-js').glob('*.js')))} page scripts, "
         f"{len(list((PUBLIC / 'feeds').glob('*.xml')))} feeds, "
+        f"{restored} restored assets, "
         f"{stubs} redirect stubs -> {PUBLIC}"
     )
     return 0

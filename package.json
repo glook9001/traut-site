@@ -5,15 +5,16 @@
   "private": true,
   "description": "Eric Traut's archived iWeb travel site, ported to Astro: 31 pixel-identical routes rendered by real Astro layouts and components",
   "scripts": {
-    "predev": "python3 scripts/extract_pages.py && python3 scripts/mirror_archive.py && python3 scripts/sync_styles.py --check",
+    "predev": "python3 scripts/extract_pages.py && python3 scripts/mirror_archive.py && python3 scripts/restore_assets.py --check && python3 scripts/sync_styles.py --check",
     "dev": "astro dev",
-    "prebuild": "python3 scripts/extract_pages.py && python3 scripts/mirror_archive.py && python3 scripts/sync_styles.py --check",
+    "prebuild": "python3 scripts/extract_pages.py && python3 scripts/mirror_archive.py && python3 scripts/restore_assets.py --check && python3 scripts/sync_styles.py --check",
     "build": "astro build",
     "postbuild": "python3 -c \"import sys; sys.path.insert(0,'scripts'); from mirror_archive import relink_dist_archive, publish_welcome_alias; relink_dist_archive(); publish_welcome_alias()\"",
     "preview": "astro preview",
     "test": "python3 scripts/test_site.py",
     "audit": "node scripts/audit_runtime.mjs",
-    "pixels": "python3 scripts/verify_pixels.py"
+    "pixels": "python3 scripts/verify_pixels.py",
+    "assets": "python3 scripts/find_missing_assets.py --live"
   },
   "dependencies": {
     "astro": "^7.3.1"

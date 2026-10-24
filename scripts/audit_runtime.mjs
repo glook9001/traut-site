@@ -8,6 +8,11 @@
  * shadows, the widget labels, the detail view. This script loads both versions
  * in headless Chromium, waits for the scripts, and compares the resulting DOM.
  *
+ * The archive side is served with the `restored/` overlay on top: the eight
+ * watercolour photo-frame tiles the local copy lost (traut.com still serves
+ * them). They are `<img>` elements inside every `.framedImage`, so without the
+ * overlay the archive would have broken images where the port has frames.
+ *
  *   node scripts/audit_runtime.mjs                 # all routes
  *   node scripts/audit_runtime.mjs peru index      # a subset
  *
@@ -22,6 +27,18 @@ import { fileURLToPath } from 'node:url';
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const TRAUT = join(ROOT, '..', 'Traut.com');
 const DIST = join(ROOT, 'dist');
+
+// Archive asset paths the local snapshot lost -> the restored file that stands
+// in for them (scripts/restore_assets.py writes the manifest).
+const OVERLAY = await readFile(join(ROOT, 'restored', 'manifest.json'), 'utf8')
+  .then((text) =>
+    Object.fromEntries(
+      Object.entries(JSON.parse(text).files).flatMap(([name, meta]) =>
+        meta.restores.map((ref) => [ref, join(ROOT, 'restored', name)]),
+      ),
+    ),
+  )
+  .catch(() => ({}));
 
 // Archive stem -> route slug (kept in step with scripts/mirror_archive.py).
 const ROUTES = JSON.parse(
@@ -47,12 +64,19 @@ const TYPES = {
   '.svg': 'image/svg+xml',
 };
 
-function serve(root, port) {
+function serve(root, port, overlay = {}) {
   const server = createServer(async (req, res) => {
     try {
       const url = decodeURIComponent((req.url || '/').split('?')[0].split('#')[0]);
       let file = normalize(join(root, url));
       if (!file.startsWith(root)) throw new Error('outside root');
+      try {
+        await stat(file);
+      } catch {
+        const ref = file.slice(root.length).replace(/^\/+/, '');
+        if (!overlay[ref]) throw new Error('not found');
+        file = overlay[ref];
+      }
       if ((await stat(file)).isDirectory()) file = join(file, 'index.html');
       const body = await readFile(file);
       res.writeHead(200, { 'content-type': TYPES[extname(file)] ?? 'application/octet-stream' });
@@ -220,7 +244,7 @@ function firstDiff(a, b, path = '') {
   return a === b ? null : `${path}: ${JSON.stringify(a).slice(0, 100)} != ${JSON.stringify(b).slice(0, 100)}`;
 }
 
-const archiveServer = await serve(TRAUT, 8271);
+const archiveServer = await serve(TRAUT, 8271, OVERLAY);
 const portServer = await serve(DIST, 8272);
 
 let failed = 0;

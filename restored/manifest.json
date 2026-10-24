@@ -1,0 +1,182 @@
+{
+  "source": "https://traut.com/Traut.com/",
+  "note": "Archive assets the local Traut.com snapshot is missing. traut.com still serves them; mirror_archive.py rewrites these exact paths to ../restored/<file>.",
+  "files": {
+    "Watercolor_iweb_01.png": {
+      "sha256": "0e7ff6ce2b2aeb5b45d5cf3b585e52a9996e78130c1bb0308b3cdf00fd592485",
+      "bytes": 317,
+      "restores": [
+        "Australia_files/Watercolor_iweb_01.png",
+        "Cambodia_files/Watercolor_iweb_01.png",
+        "China_files/Watercolor_iweb_01.png",
+        "Easter_Island_files/Watercolor_iweb_01.png",
+        "Egypt_files/Watercolor_iweb_01.png",
+        "India_files/Watercolor_iweb_01.png",
+        "Mediterranean_Cruise_files/Watercolor_iweb_01.png",
+        "Morocco_files/Watercolor_iweb_01.png",
+        "Northern_Namibia_files/Watercolor_iweb_01.png",
+        "Okavango_Delta_files/Watercolor_iweb_01.png",
+        "Peru_files/Watercolor_iweb_01.png",
+        "Tanzania_files/Watercolor_iweb_01.png",
+        "Tibet_files/Watercolor_iweb_01.png",
+        "Washington_DC_files/Watercolor_iweb_01.png",
+        "Windhoek_and_Sossusvlei_files/Watercolor_iweb_01.png",
+        "Zambia_and_Chobe_files/Watercolor_iweb_01.png"
+      ]
+    },
+    "Watercolor_iweb_02.png": {
+      "sha256": "86c11f41209026c9224d8ba8f16854f14c73db9f69012e3b2e38dbfcf31e4e73",
+      "bytes": 295,
+      "restores": [
+        "Australia_files/Watercolor_iweb_02.png",
+        "Cambodia_files/Watercolor_iweb_02.png",
+        "China_files/Watercolor_iweb_02.png",
+        "Easter_Island_files/Watercolor_iweb_02.png",
+        "Egypt_files/Watercolor_iweb_02.png",
+        "India_files/Watercolor_iweb_02.png",
+        "Mediterranean_Cruise_files/Watercolor_iweb_02.png",
+        "Morocco_files/Watercolor_iweb_02.png",
+        "Northern_Namibia_files/Watercolor_iweb_02.png",
+        "Okavango_Delta_files/Watercolor_iweb_02.png",
+        "Peru_files/Watercolor_iweb_02.png",
+        "Tanzania_files/Watercolor_iweb_02.png",
+        "Tibet_files/Watercolor_iweb_02.png",
+        "Washington_DC_files/Watercolor_iweb_02.png",
+        "Windhoek_and_Sossusvlei_files/Watercolor_iweb_02.png",
+        "Zambia_and_Chobe_files/Watercolor_iweb_02.png"
+      ]
+    },
+    "Watercolor_iweb_04.png": {
+      "sha256": "f1cfc4c0e55ad0803636486146aa84f83010327713199c944a2a8a9d0e5e3edf",
+      "bytes": 319,
+      "restores": [
+        "Australia_files/Watercolor_iweb_04.png",
+        "Cambodia_files/Watercolor_iweb_04.png",
+        "China_files/Watercolor_iweb_04.png",
+        "Easter_Island_files/Watercolor_iweb_04.png",
+        "Egypt_files/Watercolor_iweb_04.png",
+        "India_files/Watercolor_iweb_04.png",
+        "Mediterranean_Cruise_files/Watercolor_iweb_04.png",
+        "Morocco_files/Watercolor_iweb_04.png",
+        "Northern_Namibia_files/Watercolor_iweb_04.png",
+        "Okavango_Delta_files/Watercolor_iweb_04.png",
+        "Peru_files/Watercolor_iweb_04.png",
+        "Tanzania_files/Watercolor_iweb_04.png",
+        "Tibet_files/Watercolor_iweb_04.png",
+        "Washington_DC_files/Watercolor_iweb_04.png",
+        "Windhoek_and_Sossusvlei_files/Watercolor_iweb_04.png",
+        "Zambia_and_Chobe_files/Watercolor_iweb_04.png"
+      ]
+    },
+    "Watercolor_iweb_05.png": {
+      "sha256": "667a17dcd4439b1c344861ba0eb32dda93329627548ee00f9bc17176c3255070",
+      "bytes": 337,
+      "restores": [
+        "Australia_files/Watercolor_iweb_05.png",
+        "Cambodia_files/Watercolor_iweb_05.png",
+        "China_files/Watercolor_iweb_05.png",
+        "Easter_Island_files/Watercolor_iweb_05.png",
+        "Egypt_files/Watercolor_iweb_05.png",
+        "India_files/Watercolor_iweb_05.png",
+        "Mediterranean_Cruise_files/Watercolor_iweb_05.png",
+        "Morocco_files/Watercolor_iweb_05.png",
+        "Northern_Namibia_files/Watercolor_iweb_05.png",
+        "Okavango_Delta_files/Watercolor_iweb_05.png",
+        "Peru_files/Watercolor_iweb_05.png",
+        "Tanzania_files/Watercolor_iweb_05.png",
+        "Tibet_files/Watercolor_iweb_05.png",
+        "Washington_DC_files/Watercolor_iweb_05.png",
+        "Windhoek_and_Sossusvlei_files/Watercolor_iweb_05.png",
+        "Zambia_and_Chobe_files/Watercolor_iweb_05.png"
+      ]
+    },
+    "Watercolor_iweb_08.png": {
+      "sha256": "51b614097788458a9534a0d3323bb79614879835116276bc4f164bd32072fca9",
+      "bytes": 291,
+      "restores": [
+        "Australia_files/Watercolor_iweb_08.png",
+        "Cambodia_files/Watercolor_iweb_08.png",
+        "China_files/Watercolor_iweb_08.png",
+        "Easter_Island_files/Watercolor_iweb_08.png",
+        "Egypt_files/Watercolor_iweb_08.png",
+        "India_files/Watercolor_iweb_08.png",
+        "Mediterranean_Cruise_files/Watercolor_iweb_08.png",
+        "Morocco_files/Watercolor_iweb_08.png",
+        "Northern_Namibia_files/Watercolor_iweb_08.png",
+        "Okavango_Delta_files/Watercolor_iweb_08.png",
+        "Peru_files/Watercolor_iweb_08.png",
+        "Tanzania_files/Watercolor_iweb_08.png",
+        "Tibet_files/Watercolor_iweb_08.png",
+        "Washington_DC_files/Watercolor_iweb_08.png",
+        "Windhoek_and_Sossusvlei_files/Watercolor_iweb_08.png",
+        "Zambia_and_Chobe_files/Watercolor_iweb_08.png"
+      ]
+    },
+    "Watercolor_iweb_13.png": {
+      "sha256": "effb10cc7fb717b575b329255e59f4974f8b871140008f35a6084a0124bacf79",
+      "bytes": 327,
+      "restores": [
+        "Australia_files/Watercolor_iweb_13.png",
+        "Cambodia_files/Watercolor_iweb_13.png",
+        "China_files/Watercolor_iweb_13.png",
+        "Easter_Island_files/Watercolor_iweb_13.png",
+        "Egypt_files/Watercolor_iweb_13.png",
+        "India_files/Watercolor_iweb_13.png",
+        "Mediterranean_Cruise_files/Watercolor_iweb_13.png",
+        "Morocco_files/Watercolor_iweb_13.png",
+        "Northern_Namibia_files/Watercolor_iweb_13.png",
+        "Okavango_Delta_files/Watercolor_iweb_13.png",
+        "Peru_files/Watercolor_iweb_13.png",
+        "Tanzania_files/Watercolor_iweb_13.png",
+        "Tibet_files/Watercolor_iweb_13.png",
+        "Washington_DC_files/Watercolor_iweb_13.png",
+        "Windhoek_and_Sossusvlei_files/Watercolor_iweb_13.png",
+        "Zambia_and_Chobe_files/Watercolor_iweb_13.png"
+      ]
+    },
+    "Watercolor_iweb_14.png": {
+      "sha256": "2ececc4f7a5b16acbc36bdd1f77476d4d6b870230a7791f2e2ae0bf945dfe23f",
+      "bytes": 283,
+      "restores": [
+        "Australia_files/Watercolor_iweb_14.png",
+        "Cambodia_files/Watercolor_iweb_14.png",
+        "China_files/Watercolor_iweb_14.png",
+        "Easter_Island_files/Watercolor_iweb_14.png",
+        "Egypt_files/Watercolor_iweb_14.png",
+        "India_files/Watercolor_iweb_14.png",
+        "Mediterranean_Cruise_files/Watercolor_iweb_14.png",
+        "Morocco_files/Watercolor_iweb_14.png",
+        "Northern_Namibia_files/Watercolor_iweb_14.png",
+        "Okavango_Delta_files/Watercolor_iweb_14.png",
+        "Peru_files/Watercolor_iweb_14.png",
+        "Tanzania_files/Watercolor_iweb_14.png",
+        "Tibet_files/Watercolor_iweb_14.png",
+        "Washington_DC_files/Watercolor_iweb_14.png",
+        "Windhoek_and_Sossusvlei_files/Watercolor_iweb_14.png",
+        "Zambia_and_Chobe_files/Watercolor_iweb_14.png"
+      ]
+    },
+    "Watercolor_iweb_16.png": {
+      "sha256": "783c06a610264ee517589a7a0a3c4265bd6b72e839fa809434068520eaf2cbfe",
+      "bytes": 318,
+      "restores": [
+        "Australia_files/Watercolor_iweb_16.png",
+        "Cambodia_files/Watercolor_iweb_16.png",
+        "China_files/Watercolor_iweb_16.png",
+        "Easter_Island_files/Watercolor_iweb_16.png",
+        "Egypt_files/Watercolor_iweb_16.png",
+        "India_files/Watercolor_iweb_16.png",
+        "Mediterranean_Cruise_files/Watercolor_iweb_16.png",
+        "Morocco_files/Watercolor_iweb_16.png",
+        "Northern_Namibia_files/Watercolor_iweb_16.png",
+        "Okavango_Delta_files/Watercolor_iweb_16.png",
+        "Peru_files/Watercolor_iweb_16.png",
+        "Tanzania_files/Watercolor_iweb_16.png",
+        "Tibet_files/Watercolor_iweb_16.png",
+        "Washington_DC_files/Watercolor_iweb_16.png",
+        "Windhoek_and_Sossusvlei_files/Watercolor_iweb_16.png",
+        "Zambia_and_Chobe_files/Watercolor_iweb_16.png"
+      ]
+    }
+  }
+}
