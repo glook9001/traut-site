@@ -97,14 +97,26 @@ def find_chrome(explicit: str | None) -> str | None:
     return hits[-1] if hits else None
 
 
-def shot(url: str, dest: Path, budget: str = BUDGET) -> None:
-    """Full-page screenshot through the DevTools protocol (see shot.mjs)."""
-    subprocess.run(
-        ["node", str(SHOT), url, str(dest), budget],
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.DEVNULL,
-        check=False,
-    )
+def shot(url: str, dest: Path, budget: str = BUDGET, timeout: float = 150) -> bool:
+    """Full-page screenshot through the DevTools protocol (see shot.mjs).
+
+    A hung Chromium used to hang the whole run; `shot.mjs` has its own watchdog,
+    and this is the outer one. A failed shot leaves no file, which the caller
+    reports as a failed page rather than crashing on `Image.open`.
+    """
+    dest.unlink(missing_ok=True)
+    try:
+        subprocess.run(
+            ["node", str(SHOT), url, str(dest), budget],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=False,
+            timeout=timeout,
+        )
+    except subprocess.TimeoutExpired:
+        print(f"  shot timed out after {timeout:g}s: {url}", flush=True)
+        dest.unlink(missing_ok=True)
+    return dest.is_file()
 
 
 def main() -> int:
@@ -141,20 +153,25 @@ def main() -> int:
     time.sleep(1.5)
 
     differing: list[str] = []
+    print(f"comparing {len(pairs)} page(s), full page", flush=True)
     try:
         for stem, slug in pairs:
             name = slug or "index"
             archive_png = OUT / f"archive_{name}.png"
             mirror_png = OUT / f"mirror_{name}.png"
             if args.live:
-                shot(LIVE + f"{stem}.html", archive_png, BUDGET_LIVE)
+                ok = shot(LIVE + f"{stem}.html", archive_png, BUDGET_LIVE, 240)
             else:
-                shot(f"http://127.0.0.1:8231/{stem}.html", archive_png)
-            shot(f"http://127.0.0.1:8232{'/' if not slug else '/' + slug + '/'}", mirror_png)
+                ok = shot(f"http://127.0.0.1:8231/{stem}.html", archive_png)
+            ok = shot(f"http://127.0.0.1:8232{'/' if not slug else '/' + slug + '/'}", mirror_png) and ok
+            if not ok:
+                differing.append(name)
+                print(f"{name:24s} FAIL could not screenshot the page", flush=True)
+                continue
             a = Image.open(archive_png).convert("RGB")
             b = Image.open(mirror_png).convert("RGB")
             if a.size != b.size:
-                print(f"{name:24s} SIZE {a.size} != {b.size}")
+                print(f"{name:24s} SIZE {a.size} != {b.size}", flush=True)
                 differing.append(name)
                 continue
             diff = ImageChops.difference(a, b)
@@ -162,7 +179,7 @@ def main() -> int:
             mean = [round(v, 3) for v in ImageStat.Stat(diff).mean]
             if bbox is not None:
                 differing.append(name)
-            print(f"{name:24s} {'DIFF' if bbox else 'ok':4s} bbox={bbox} mean={mean}")
+            print(f"{name:24s} {'DIFF' if bbox else 'ok':4s} bbox={bbox} mean={mean}", flush=True)
     finally:
         dist_server.terminate()
         if archive_server is not None:

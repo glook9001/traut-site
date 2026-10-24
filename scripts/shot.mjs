@@ -18,6 +18,9 @@ if (!url || !out) {
   process.exit(2);
 }
 
+// Watchdog: the wait budget plus room for Chromium to start, navigate and paint.
+const SHOT_TIMEOUT_MS = Number(process.env.SHOT_TIMEOUT_MS ?? Number(waitMs) + 90_000);
+
 const chrome =
   process.env.CHROME ??
   execSync('ls -d ~/.cache/ms-playwright/chromium_headless_shell-*/*/chrome-headless-shell 2>/dev/null | tail -1', {
@@ -37,6 +40,14 @@ const proc = spawn(chrome, [
   '--window-size=800,1400',
   'about:blank',
 ]);
+
+// A Chromium that stops answering would otherwise hang the caller forever (a
+// whole pixel run sat on one page overnight). Give up, kill it, fail loudly.
+const watchdog = setTimeout(() => {
+  console.error(`shot: ${url} did not finish within ${SHOT_TIMEOUT_MS} ms`);
+  proc.kill('SIGKILL');
+  process.exit(1);
+}, SHOT_TIMEOUT_MS);
 
 async function endpoint() {
   for (let i = 0; i < 100; i++) {
@@ -90,6 +101,7 @@ try {
   );
   await writeFile(out, Buffer.from(shot.data, 'base64'));
 } finally {
+  clearTimeout(watchdog);
   ws.close();
   proc.kill();
 }

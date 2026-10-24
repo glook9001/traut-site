@@ -109,47 +109,47 @@
    },
    {
     "k": "script",
-    "src": "../archive/Scripts/iWebSite.js"
+    "src": "../formatted/Scripts/iWebSite.js"
    },
    {
     "k": "script",
-    "src": "../archive/Scripts/Widgets/SharedResources/WidgetCommon.js"
+    "src": "../formatted/Scripts/Widgets/SharedResources/WidgetCommon.js"
    },
    {
     "k": "script",
-    "src": "../archive/Scripts/Widgets/Navbar/navbar.js"
+    "src": "../formatted/Scripts/Widgets/Navbar/navbar.js"
    },
    {
     "k": "script",
-    "src": "../archive/Scripts/Widgets/HeaderControls/localizedStrings.js"
+    "src": "../formatted/Scripts/Widgets/HeaderControls/localizedStrings.js"
    },
    {
     "k": "script",
-    "src": "../archive/Scripts/Widgets/HeaderControls/HeaderControls.js"
+    "src": "../formatted/Scripts/Widgets/HeaderControls/HeaderControls.js"
    },
    {
     "k": "script",
-    "src": "../archive/Scripts/iWebDebug.js"
+    "src": "../formatted/Scripts/iWebDebug.js"
    },
    {
     "k": "script",
-    "src": "../archive/Scripts/iWebImage.js"
+    "src": "../formatted/Scripts/iWebImage.js"
    },
    {
     "k": "script",
-    "src": "../archive/Scripts/iWebMediaGrid.js"
+    "src": "../formatted/Scripts/iWebMediaGrid.js"
    },
    {
     "k": "script",
-    "src": "../archive/Scripts/Widgets/DetailView/localizedStrings.js"
+    "src": "../formatted/Scripts/Widgets/DetailView/localizedStrings.js"
    },
    {
     "k": "script",
-    "src": "../archive/Scripts/Widgets/DetailView/DetailView.js"
+    "src": "../formatted/Scripts/Widgets/DetailView/DetailView.js"
    },
    {
     "k": "script",
-    "src": "../archive/Scripts/Widgets/FooterControls/FooterControls.js"
+    "src": "../formatted/Scripts/Widgets/FooterControls/FooterControls.js"
    },
    {
     "k": "script",

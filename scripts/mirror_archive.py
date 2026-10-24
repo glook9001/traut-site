@@ -20,6 +20,12 @@ snapshot lost the eight watercolour photo-frame tiles that traut.com still
 serves, so `restored/` (committed, with a manifest) holds them and those exact
 paths are rewritten to `../restored/…`. See scripts/restore_assets.py.
 
+JavaScript is the other: iWeb's scripts ship minified, so `formatted/` (also
+committed) holds the same programs printed readably by esbuild and every `.js`
+reference is rewritten to `../formatted/…`. See scripts/format_js.mjs. The one
+script that is not a valid program in the local snapshot is left exactly as the
+archive has it; nothing in the port loads it.
+
 `Traut.com/` is never modified.
 """
 from __future__ import annotations
@@ -96,6 +102,24 @@ def load_restored() -> dict[str, str]:
 
 RESTORED_REFS = load_restored()
 
+# The archive's JavaScript, deminified by scripts/format_js.mjs into the same
+# paths under `formatted/`. Every `.js` reference is served from there.
+FORMATTED_DIR = ROOT / "formatted"
+FORMATTED_PREFIX = "../formatted/"
+
+
+def load_formatted() -> set[str]:
+    """Archive-relative paths of every deminified script."""
+    if not FORMATTED_DIR.is_dir():
+        return set()
+    return {
+        path.relative_to(FORMATTED_DIR).as_posix()
+        for path in FORMATTED_DIR.rglob("*.js")
+    }
+
+
+FORMATTED_REFS = load_formatted()
+
 # iWeb's String#toAbsoluteURL() prepends the document's directory to every URL
 # that lacks ":/", so a root-absolute "/archive/…" would become
 # "/peru//archive/…" and 404.  A relative "../archive/…" survives that: it
@@ -127,7 +151,7 @@ def page_key(stem: str) -> str:
 
 
 def rewrite_url(value: str) -> str:
-    """One URL: page link -> clean route, archive asset -> ../archive/…"""
+    """One URL: page link -> clean route, script -> ../formatted/…, asset -> ../archive/…"""
     raw = value.strip()
     if not raw or raw.startswith(
         ("http://", "https://", "mailto:", "javascript:", "data:", "#", "/", "//")
@@ -140,6 +164,8 @@ def rewrite_url(value: str) -> str:
             stem = stem[2:]
         if stem in STEM_TO_SLUG:
             return clean_route(stem) + (sep + frag if sep else "")
+    if path in FORMATTED_REFS:
+        return FORMATTED_PREFIX + path + (sep + frag if sep else "")
     if path in RESTORED_REFS:
         return RESTORED_REFS[path] + (sep + frag if sep else "")
     if ASSET_PREFIX_RE.match(path):
@@ -188,15 +214,16 @@ def rewrite_js_paths(text: str) -> str:
 def retarget_page_js(html: str, stem: str, key: str) -> str:
     """Load the rewritten copy of the page's own JS, not the archive original."""
     names = {
-        f"{ASSET_PREFIX}{stem}_files/{stem}.js",
-        f"{ASSET_PREFIX}{stem}_files/{stem.replace('&', '&amp;')}.js",
+        f"{prefix}{name}_files/{name}.js"
+        for prefix in (ASSET_PREFIX, FORMATTED_PREFIX)
+        for name in (stem, stem.replace("&", "&amp;"))
     }
     for name in names:
         if name in html:
             return html.replace(name, f"/page-js/{key}.js")
     # Utah's directory is reachable through its percent-encoded symlink.
     return re.sub(
-        r"\.\./archive/[A-Za-z0-9_%&.\-]+_files/[A-Za-z0-9_%&.\-]+\.js(?=[\"'])",
+        r"\.\./(?:archive|formatted)/[A-Za-z0-9_%&.\-]+_files/[A-Za-z0-9_%&.\-]+\.js(?=[\"'])",
         f"/page-js/{key}.js",
         html,
         count=1,
@@ -211,6 +238,16 @@ def rewrite_page_html(html: str, stem: str, key: str) -> str:
     html = retarget_page_js(html, stem, key)
     html = FEED_RE.sub(f"/feeds/{key}.xml", html)
     return NAVBAR_SITE_PATH_RE.sub(r"\1'..'", html)
+
+
+def page_script_source(stem: str) -> Path | None:
+    """The page's own script: the deminified copy when there is one."""
+    ref = f"{stem}_files/{stem}.js"
+    formatted = FORMATTED_DIR / ref
+    if formatted.is_file():
+        return formatted
+    archive = TRAUT / ref
+    return archive if archive.is_file() else None
 
 
 def rewrite_page_js(js: str, key: str) -> str:
@@ -291,8 +328,8 @@ def write_page_assets() -> int:
         if not src.is_file():
             raise SystemExit(f"missing archive page {src}")
         count += 1
-        js_src = TRAUT / f"{stem}_files" / f"{stem}.js"
-        if js_src.is_file():
+        js_src = page_script_source(stem)
+        if js_src is not None:
             (page_js / f"{key}.js").write_text(
                 rewrite_page_js(js_src.read_text(encoding="utf-8", errors="replace"), key),
                 encoding="utf-8",
@@ -320,6 +357,17 @@ def publish_restored() -> int:
         shutil.copyfile(RESTORED_DIR / name, target / name)
         count += 1
     return count
+
+
+def publish_formatted() -> int:
+    """Publish the deminified scripts at /formatted/ (the site loads them there)."""
+    target = PUBLIC / "formatted"
+    if target.exists():
+        shutil.rmtree(target)
+    if not FORMATTED_DIR.is_dir():
+        return 0
+    shutil.copytree(FORMATTED_DIR, target)
+    return len(list(target.rglob("*.js")))
 
 
 def publish_welcome_alias() -> None:
@@ -354,6 +402,7 @@ def main() -> int:
         return 1
     ensure_archive_link()
     restored = publish_restored()
+    scripts = publish_formatted()
     pages = write_page_assets()
     stubs = write_redirect_stubs()
     publish_site_feed()
@@ -361,6 +410,7 @@ def main() -> int:
         f"mirror_archive: {pages} pages, "
         f"{len(list((PUBLIC / 'page-js').glob('*.js')))} page scripts, "
         f"{len(list((PUBLIC / 'feeds').glob('*.xml')))} feeds, "
+        f"{scripts} formatted scripts, "
         f"{restored} restored assets, "
         f"{stubs} redirect stubs -> {PUBLIC}"
     )

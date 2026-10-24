@@ -33,6 +33,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from mirror_archive import (  # noqa: E402
     ASSET_PREFIX,
     FILENAME_ALIASES,
+    FORMATTED_DIR,
+    FORMATTED_PREFIX,
     RESTORED_DIR,
     RESTORED_PREFIX,
     RESTORED_REFS,
@@ -40,6 +42,7 @@ from mirror_archive import (  # noqa: E402
     TRAUT,
     clean_route,
     page_key,
+    page_script_source,
     rewrite_page_html,
     rewrite_page_js,
 )
@@ -52,7 +55,7 @@ MODELS = ROOT / "src" / "content" / "pages"
 # not invented: `restored/` holds the live bytes, and the manifest names the
 # exact paths they stand in for (see scripts/restore_assets.py).
 KNOWN_MISSING: set[str] = set()
-MIRROR_PREFIXES = (ASSET_PREFIX, RESTORED_PREFIX)
+MIRROR_PREFIXES = (ASSET_PREFIX, RESTORED_PREFIX, FORMATTED_PREFIX)
 
 XHTML_DOCTYPE = (
     '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" '
@@ -244,15 +247,27 @@ def mirror_refs(html: str) -> list[str]:
 
 def on_disk(ref: str) -> bool:
     path = unquote(ref.split("?")[0])
-    if path.startswith(RESTORED_PREFIX):
-        return (RESTORED_DIR / path[len(RESTORED_PREFIX) :]).is_file()
+    for prefix, root in (
+        (FORMATTED_PREFIX, FORMATTED_DIR),
+        (RESTORED_PREFIX, RESTORED_DIR),
+    ):
+        if path.startswith(prefix):
+            return (root / path[len(prefix) :]).is_file()
     if path.startswith(ASSET_PREFIX):
         path = path[len(ASSET_PREFIX) :]
     return (TRAUT / path).is_file()
 
 
+def archive_rel(ref: str) -> str:
+    """`../formatted/Scripts/x.js` -> `Scripts/x.js` (mirror URL -> archive path)."""
+    for prefix in MIRROR_PREFIXES:
+        if ref.startswith(prefix):
+            return ref[len(prefix) :]
+    return ref
+
+
 JS_REF_RE = re.compile(
-    r"[\"']((?:\.\./(?:archive|restored)/)?(?:Media|Scripts|[A-Za-z0-9_%&.\-]+_files)/[^\"']*)[\"']"
+    r"[\"']((?:\.\./(?:archive|restored|formatted)/)?(?:Media|Scripts|[A-Za-z0-9_%&.\-]+_files)/[^\"']*)[\"']"
 )
 
 
@@ -429,8 +444,8 @@ def test_restored_assets() -> None:
             fail(f"dist/restored/{name} is not the restored file")
     used = 0
     for stem in STEM_TO_SLUG:
-        js_src = TRAUT / f"{stem}_files" / f"{stem}.js"
-        if not js_src.is_file():
+        js_src = page_script_source(stem)
+        if js_src is None:
             continue
         raw = js_src.read_text(encoding="utf-8", errors="replace")
         port = (DIST / "page-js" / f"{page_key(stem)}.js").read_text(encoding="utf-8")
@@ -454,19 +469,18 @@ def test_page_scripts_and_feeds() -> None:
         fail(f"expected {len(STEM_TO_SLUG)} page scripts, found {len(page_js)}")
     for stem, slug in STEM_TO_SLUG.items():
         key = page_key(stem)
-        js_src = TRAUT / f"{stem}_files" / f"{stem}.js"
-        if not js_src.is_file():
+        js_src = page_script_source(stem)
+        if js_src is None:
             continue
-        expected = rewrite_page_js(js_src.read_text(encoding="utf-8", errors="replace"), key)
+        source = js_src.read_text(encoding="utf-8", errors="replace")
+        expected = rewrite_page_js(source, key)
         actual = (DIST / "page-js" / f"{key}.js").read_text(encoding="utf-8")
         if actual != expected:
             fail(f"{key}.js does not match the rewritten archive script")
         if "/archive/" in actual and ASSET_PREFIX not in actual:
             fail(f"{key}.js still uses root-absolute /archive/ paths")
-        missing_mirror = {r[len(ASSET_PREFIX) :] for r in js_refs(actual) if not on_disk(r)}
-        missing_archive = {
-            r for r in js_refs(js_src.read_text(encoding="utf-8", errors="replace")) if not on_disk(r)
-        }
+        missing_mirror = {archive_rel(r) for r in js_refs(actual) if not on_disk(r)}
+        missing_archive = {archive_rel(r) for r in js_refs(source) if not on_disk(r)}
         if not missing_mirror <= missing_archive:
             fail(
                 f"{key}.js references assets the archive does not have: "
@@ -492,6 +506,37 @@ def test_page_scripts_and_feeds() -> None:
             if path not in ("", "/") and not path.startswith("/"):
                 fail(f"{feed.name}: unexpected link {link}")
     print(f"ok scripts/feeds: {len(page_js)} page scripts, {len(feeds)} feeds")
+
+
+def test_formatted_scripts() -> None:
+    """The shipped JavaScript is the archive's own, deminified (scripts/format_js.mjs)."""
+    check = subprocess.run(
+        ["node", str(ROOT / "scripts" / "format_js.mjs"), "--check"],
+        capture_output=True,
+        text=True,
+    )
+    if check.returncode != 0:
+        fail(check.stdout.strip() or check.stderr.strip())
+    for stem, slug in STEM_TO_SLUG.items():
+        html = dist_page(slug).read_text(encoding="utf-8")
+        for src in re.findall(r'<script[^>]*\bsrc="([^"]+\.js)"', html):
+            if src.startswith(ASSET_PREFIX):
+                fail(f"{stem} still loads the archive's minified {src}")
+            if not (src.startswith(FORMATTED_PREFIX) or src.startswith("/page-js/")):
+                fail(f"{stem} loads an unexpected script {src}")
+            if not on_disk(src) and not src.startswith("/page-js/"):
+                fail(f"{stem} loads {src}, which is not published")
+    published = sorted(
+        p.relative_to(DIST / "formatted").as_posix()
+        for p in (DIST / "formatted").rglob("*.js")
+    )
+    committed = sorted(p.relative_to(FORMATTED_DIR).as_posix() for p in FORMATTED_DIR.rglob("*.js"))
+    if published != committed:
+        fail(f"dist/formatted does not mirror formatted/: {sorted(set(committed) - set(published))[:5]}")
+    for ref in committed:
+        if (DIST / "formatted" / ref).read_bytes() != (FORMATTED_DIR / ref).read_bytes():
+            fail(f"dist/formatted/{ref} is not the deminified file")
+    print(f"ok formatted: {len(committed)} scripts deminified and published, none minified")
 
 
 def test_site_feed_and_navbar() -> None:

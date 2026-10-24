@@ -67,11 +67,11 @@
    },
    {
     "k": "script",
-    "src": "../archive/Scripts/iWebSite.js"
+    "src": "../formatted/Scripts/iWebSite.js"
    },
    {
     "k": "script",
-    "src": "../archive/Scripts/iWebImage.js"
+    "src": "../formatted/Scripts/iWebImage.js"
    },
    {
     "k": "script",

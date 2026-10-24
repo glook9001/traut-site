@@ -9,9 +9,10 @@ running on the archive's own iWeb JavaScript.
 ```bash
 npm install
 npm run build      # extract models -> mirror assets -> astro build
-npm test           # 14 structural checks (markup, URLs, assets, feeds)
+npm test           # 16 structural checks (markup, URLs, assets, scripts, feeds)
 npm run pixels     # 31/31 pages, full-page, zero differing pixels
 npm run audit      # 31/31 pages, identical DOM *after* iWeb's JS has run
+npm run format     # regenerate formatted/ (the deminified scripts)
 npm run dev        # predev generates public/ first, so the grids work
 ```
 
@@ -90,8 +91,9 @@ with a one-line provenance header) and the build imports them the Astro way:
 
 Everything else — the photo grid layout, captions, slideshow, detail view,
 navbar, pagination, text auto-fit — is the archive's own `Scripts/*.js` and each
-page's own script, loaded from `/page-js/<key>.js`. This is a port of the
-markup, not a re-implementation of iWeb.
+page's own script, loaded from `/formatted/Scripts/…` and `/page-js/<key>.js`
+(the same programs, deminified — see "Deminifying the JavaScript" below). This is
+a port of the markup, not a re-implementation of iWeb.
 
 ### Why the geometry stays an inline `style`
 
@@ -139,9 +141,10 @@ The only changes made to the original markup:
 
 | Change | Why |
 | --- | --- |
-| `Peru_files/…`, `Media/…`, `Scripts/…` → `../archive/…` | Assets stay in `Traut.com/`, served through the `public/archive` symlink. The prefix **must be relative**: iWeb's `String#toAbsoluteURL()` prepends the document directory to any URL without `:/`, so `/archive/…` would be fetched as `/peru//archive/…` and every photo grid would come up empty. |
+| `Peru_files/…`, `Media/…` → `../archive/…` | Assets stay in `Traut.com/`, served through the `public/archive` symlink. The prefix **must be relative**: iWeb's `String#toAbsoluteURL()` prepends the document directory to any URL without `:/`, so `/archive/…` would be fetched as `/peru//archive/…` and every photo grid would come up empty. |
+| `Scripts/…`, `<page>_files/<page>.js` → `../formatted/…` | The deminified copy of the same script (see below). |
 | `Peru.html` → `/peru` | Clean routes. |
-| `<page>_files/<page>.js` → `/page-js/<key>.js` | A rewritten copy of the page's own script, so its relative asset paths resolve. |
+| `<page>_files/<page>.js` → `/page-js/<key>.js` | A rewritten copy of the page's own script (deminified), so its relative asset paths resolve. |
 | `<page>_files/rss.xml` → `/feeds/<key>.xml` | A rewritten copy of the page's photo feed (enclosures, thumbnails, `<link>`s). |
 | `Morocco_files/Watercolor_iweb_01.png` → `../restored/Watercolor_iweb_01.png` | Only for the eight photo-frame tiles the local archive copy lost (see below). |
 | `new NavBar(…, '.', …)` → `new NavBar(…, '..', …)` | The navbar fetches `<sitePath>/feed.xml`. The archive sat at the site root; these routes are one level down. |
@@ -177,6 +180,44 @@ found this: it walks every reference the archive makes — HTML attributes, CSS
 `url()`/`@import`, quoted paths in page JavaScript, RSS enclosures — and reports
 which ones have no local file and what traut.com says about them.
 
+### Deminifying the JavaScript
+
+The archive ships iWeb's scripts as 2008 build output: `WidgetCommon.js` is 36 KB
+in 422 lines, `iWebSite.js` 146 KB in 1024, and each page's own script is 2 KB of
+unbroken lines. That is not part of the site, it is just minification, so the
+port ships the same programs printed readably.
+
+* `scripts/format_js.mjs` walks `Traut.com/**/*.js` (43 files, 437 KB) and
+  prints each one with esbuild — the parser Astro already depends on, declared
+  here as a devDependency — into `formatted/<archive path>`, committed.
+  `npm run format` regenerates it.
+* `scripts/mirror_archive.py` rewrites every `.js` reference to
+  `../formatted/…`, publishes `formatted/` at `/formatted/`, and builds each
+  `/page-js/<key>.js` from the deminified page script rather than the archive's
+  minified one.
+* The output is the *same program*: esbuild parses and reprints with its default
+  `esnext` target, so nothing is bundled, downlevelled or tree-shaken. The only
+  thing the printer drops is the leading `//` banner (it keeps legal comments
+  only), which the script re-attaches byte for byte.
+* Equivalence is checked twice. The printer is idempotent, so
+  `format(format(x)) === format(x)`; `format_js.mjs --check` re-derives every
+  file and fails the build (`prebuild`/`predev`) and `npm test` on any drift.
+  And `npm run audit` loads the deminified scripts in Chromium and compares the
+  DOM they produce with the archive's own — 31/31 pages identical.
+
+The result is 488 KB of source instead of the archive's 437 KB, and gzips to
+90 KB instead of 88 KB: one statement per line costs almost nothing once
+compressed.
+
+One script is left exactly as archived. `Scripts/iWPopUpSlideshow.js` is not a
+valid program in the local snapshot — it lost the first half of
+`checkBrowser()`, leaving `function checkBrowser(){return true;}else if(…)` — so
+printing it would mean inventing the missing code. It belongs to the slideshow
+popup, which is broken in the archive itself, and nothing in the port loads it;
+`format_js.mjs` skips it by name and `--check` keeps it out of `formatted/`.
+References to it still resolve to `/archive/Scripts/…`, exactly as the archive
+serves it.
+
 ### The doctype is load-bearing
 
 Astro always writes `<!DOCTYPE html>`, whatever the template declares. That
@@ -194,8 +235,9 @@ will not let a template control.
 
 | Step | Command | What it does |
 | --- | --- | --- |
+| `predev` / `prebuild` | `scripts/format_js.mjs --check` | fails the build if `formatted/` drifted from the archive's `.js` files |
 | `predev` / `prebuild` | `scripts/extract_pages.py` | archive → `src/content/pages/*.json`, `src/data/widgets.json` |
-| `predev` / `prebuild` | `scripts/mirror_archive.py` | writes `public/page-js/*.js`, `public/feeds/*.xml`, `public/feed.xml`, `public/restored/*.png`, `public/archive` symlink and the 31 redirect stubs |
+| `predev` / `prebuild` | `scripts/mirror_archive.py` | writes `public/page-js/*.js`, `public/feeds/*.xml`, `public/feed.xml`, `public/formatted/*.js`, `public/restored/*.png`, `public/archive` symlink and the 31 redirect stubs |
 | `predev` / `prebuild` | `scripts/restore_assets.py --check` | fails the build if `restored/` drifted, or if the archive lost an asset the overlay does not cover |
 | `predev` / `prebuild` | `scripts/sync_styles.py --check` | fails the build if `src/styles/**` drifted from the archive's CSS |
 | `build` | `astro build` | renders the 31 routes and bundles the stylesheets; `integrations/iweb-doctype.mjs` restores the doctype |
@@ -332,7 +374,9 @@ download) with their N/D/S variants. The re-theme had a flat white page.
 * the per-page RSS photo feed (`Peru_files/rss.xml`) and the subscribe button
   that opens it;
 * the slideshow popup (`Media/slideshow.html` + `Scripts/iWPopUpSlideshow.js`,
-  `Media/iWPopUpSlideshow.css`) with its own full-screen chrome;
+  `Media/iWPopUpSlideshow.css`) with its own full-screen chrome — the port keeps
+  the archive's popup and its links intact, though the popup itself does not work
+  in the archive either (see "Known archive quirks");
 * `#N` fragment deep links into the detail view;
 * the site navbar feed `feed.xml` — without it the navbar renders no link at
   all (that was the last 58 × 9 px of difference at the top right of every
@@ -355,6 +399,7 @@ ok asset prefix: all archive refs are relative
 ok assets: every referenced asset resolves (archive + restored overlay)
 ok doctype: XHTML 1.0 Transitional on every page
 ok dom: 31 pages rebuild the archive's own markup
+ok formatted: 42 scripts deminified and published, none minified
 ok header blocks: iWeb text content preserved
 ok models: 31 page models
 ok restored: 8 files, 128 refs in page scripts
@@ -437,6 +482,15 @@ in headless Chromium via the DevTools protocol.
 * URLs have no trailing slash (`/peru`); the build emits `peru/index.html`, so
   a static host should serve `peru/index.html` for `/peru`. Relative asset
   paths (`../archive/…`) resolve the same with or without the trailing slash.
+* The slideshow popup (`Media/slideshow.html`, "Play Slideshow") is broken in
+  the archive itself, and is left broken: the port serves the archive's popup
+  and scripts unchanged, and does not repair or extend them. That is also why
+  `Scripts/iWPopUpSlideshow.js` — a syntax error in the local snapshot — is left
+  as archived rather than deminified.
+* Four pages (`Welcome`, `Antarctica_2011`, `Around_The_World`,
+  `Southern_Africa`) have no photo grid at all, so they produce no
+  `.framedImage` elements at runtime. That is the archive's own markup, not a
+  missing frame set.
 
 ## Layout
 
@@ -455,7 +509,9 @@ src/data/widgets.json     the four widget chrome blocks (generated)
 src/engine/types.ts       the model types the components consume
 src/engine/geometry.ts    box (declarations as data) -> inline style attribute
 restored/                 archive assets the local copy lost, + manifest.json
+formatted/                the archive's scripts, deminified (Traut.com's paths)
 scripts/extract_pages.py  archive -> models (strict)
+scripts/format_js.mjs     archive .js -> formatted/ (esbuild printer, --check)
 scripts/sync_styles.py    archive CSS -> src/styles (byte-equal, --check)
 scripts/mirror_archive.py URL plumbing, page scripts, feeds, stubs, oracle
 scripts/find_missing_assets.py  inventory refs with no local file (npm run assets)

@@ -67,19 +67,19 @@
    },
    {
     "k": "script",
-    "src": "../archive/Scripts/iWebSite.js"
+    "src": "../formatted/Scripts/iWebSite.js"
    },
    {
     "k": "script",
-    "src": "../archive/Scripts/Widgets/SharedResources/WidgetCommon.js"
+    "src": "../formatted/Scripts/Widgets/SharedResources/WidgetCommon.js"
    },
    {
     "k": "script",
-    "src": "../archive/Scripts/Widgets/Navbar/navbar.js"
+    "src": "../formatted/Scripts/Widgets/Navbar/navbar.js"
    },
    {
     "k": "script",
-    "src": "../archive/Scripts/iWebImage.js"
+    "src": "../formatted/Scripts/iWebImage.js"
    },
    {
     "k": "script",
