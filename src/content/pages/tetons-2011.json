@@ -1,0 +1,697 @@
+{
+ "key": "tetons-2011",
+ "stem": "Tetons_2011",
+ "slug": "/tetons-2011",
+ "htmlAttrs": {
+  "xmlns": "http://www.w3.org/1999/xhtml",
+  "xml:lang": "en",
+  "lang": "en"
+ },
+ "head": {
+  "title": "Grand Teton National Park",
+  "items": [
+   {
+    "k": "meta",
+    "attrs": {
+     "http-equiv": "Content-Type",
+     "content": "text/html; charset=UTF-8"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "Generator",
+     "content": "iWeb 3.0.4"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "iWeb-Build",
+     "content": "local-build-20130428"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "http-equiv": "X-UA-Compatible",
+     "content": "IE=EmulateIE7"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "viewport",
+     "content": "width=700"
+    }
+   },
+   {
+    "k": "title",
+    "text": "Grand Teton National Park"
+   },
+   {
+    "k": "pageCss",
+    "attrs": {
+     "rel": "stylesheet",
+     "type": "text/css",
+     "media": "screen,print"
+    }
+   },
+   {
+    "k": "comment",
+    "text": "[if lt IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='../archive/Tetons_2011_files/Tetons_2011IE.css'/><![endif]"
+   },
+   {
+    "k": "comment",
+    "text": "[if gte IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='../archive/Media/IE8.css'/><![endif]"
+   },
+   {
+    "k": "comment",
+    "text": " No code to add to head "
+   },
+   {
+    "k": "widgetCss",
+    "name": "headerControls",
+    "attrs": {
+     "type": "text/css"
+    }
+   },
+   {
+    "k": "comment",
+    "text": " No code to add to head "
+   },
+   {
+    "k": "widgetCss",
+    "name": "detailView",
+    "attrs": {
+     "type": "text/css"
+    }
+   },
+   {
+    "k": "comment",
+    "text": " No code to add to head "
+   },
+   {
+    "k": "widgetCss",
+    "name": "footerControls",
+    "attrs": {
+     "type": "text/css"
+    }
+   },
+   {
+    "k": "link",
+    "attrs": {
+     "rel": "alternate",
+     "type": "application/rss+xml",
+     "title": "RSS",
+     "href": "/feeds/tetons-2011.xml"
+    }
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebSite.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/SharedResources/WidgetCommon.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/Navbar/navbar.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/HeaderControls/localizedStrings.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/HeaderControls/HeaderControls.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebDebug.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebImage.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebMediaGrid.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/DetailView/localizedStrings.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/DetailView/DetailView.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/FooterControls/FooterControls.js"
+   },
+   {
+    "k": "script",
+    "src": "/page-js/tetons-2011.js"
+   }
+  ]
+ },
+ "body": {
+  "attrs": {
+   "style": "background: rgb(101, 101, 101); margin: 0pt; ",
+   "onload": "onPageLoad();",
+   "onunload": "onPageUnload();"
+  },
+  "wrapperStyle": "text-align: center; ",
+  "contentStyle": "margin-bottom: 10px; margin-left: auto; margin-right: auto; margin-top: 10px; overflow: hidden; position: relative; word-wrap: break-word;  background: rgb(255, 255, 255); text-align: left; width: 700px; ",
+  "nav": {
+   "box": {
+    "margin-left": "0px",
+    "position": "relative",
+    "width": "700px",
+    "z-index": "0"
+   },
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "box": {
+      "height": "0px",
+      "line-height": "0px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "widget",
+     "name": "navbar",
+     "id": "widget0",
+     "cls": "com-apple-iweb-widget-navbar flowDefining",
+     "box": {
+      "margin-left": "20px",
+      "margin-top": "0px",
+      "opacity": "1.00",
+      "position": "relative",
+      "width": "660px",
+      "z-index": "1"
+     },
+     "init": "<!--//--><![CDATA[//><!--\nnew NavBar('widget0', '../archive/Scripts/Widgets/Navbar', '../archive/Scripts/Widgets/SharedResources', '..', {\"path-to-root\": \"\", \"navbar-css\": \".navbar {\\n\\tfont-family: 'Helvetica Neue', Arial, sans-serif;\\n\\tfont-size: .8em;\\n\\tcolor: #666666;\\n\\tline-height: 30px;\\n\\tborder-bottom: 3px solid #ccc;\\n}\\n\\n.navbar-bg {\\n\\ttext-align: right;}\\n\\n.navbar-bg ul {\\n\\tlist-style: none;\\n\\tmargin: 0px;\\n\\tpadding: 0px;\\n}\\n\\n\\nli {\\n\\tlist-style-type: none;\\n\\tdisplay: inline;\\n\\tpadding: 0px 5px 0px 0px;\\n}\\n\\n\\nli a {\\n\\ttext-decoration: none;\\n\\tpadding: 10px;\\n\\tcolor: #666666;\\n\\tfont-weight: bold;\\n}\\n\\nli a:visited {\\n\\ttext-decoration: none;\\n\\tpadding: 10px;\\n\\tcolor: #666666;\\n\\tfont-weight: bold;\\n}\\n\\nli a:hover\\r{\\r\\n \\tcolor: #999999;\\n\\ttext-decoration: none;\\r}\\n\\n\\nli.current-page a\\r{\\r\\t color: #66ABC5;\\n\\ttext-decoration: none;\\r}\", \"current-page-GUID\": \"583E1777-7032-42CB-BDA3-02EDCB78A30B\", \"isCollectionPage\": \"NO\"});\n//--><!]]>"
+    },
+    {
+     "k": "box",
+     "cls": "spacer",
+     "box": {
+      "clear": "both",
+      "height": "0px",
+      "line-height": "0px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  },
+  "header": {
+   "box": {
+    "height": "75px",
+    "margin-left": "0px",
+    "position": "relative",
+    "width": "700px",
+    "z-index": "10"
+   },
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "box": {
+      "height": "0px",
+      "line-height": "0px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id1",
+     "cls": "style_SkipStroke shape-with-text",
+     "box": {
+      "height": "40px",
+      "left": "19px",
+      "position": "absolute",
+      "top": "18px",
+      "width": "637px",
+      "z-index": "1"
+     },
+     "contentCls": "text-content style_External_637_40",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; padding-top: 0pt; ",
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Grand Teton National Park"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    }
+   ]
+  },
+  "body": {
+   "box": {
+    "margin-left": "0px",
+    "position": "relative",
+    "width": "700px",
+    "z-index": "5"
+   },
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "box": {
+      "height": "0px",
+      "line-height": "0px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText",
+     "box": {
+      "height": "1px",
+      "line-height": "1px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": null,
+     "cls": "style_SkipStroke_1 shape-with-text flowDefining",
+     "box": {
+      "margin-left": "20px",
+      "margin-top": "-1px",
+      "position": "relative",
+      "width": "478px",
+      "z-index": "1"
+     },
+     "contentCls": "text-content style_External_478_84",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style_1"
+       }
+      },
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "style": "height: 84px; line-height: 84px; ",
+        "class": "tinyText"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": " "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "grid",
+     "id": "id2",
+     "box": {
+      "height": "0px",
+      "left": "20px",
+      "position": "absolute",
+      "top": "137px",
+      "width": "660px",
+      "z-index": "1"
+     }
+    },
+    {
+     "k": "widget",
+     "name": "headerControls",
+     "id": "widget1",
+     "cls": "com-apple-iweb-widget-headercontrols",
+     "box": {
+      "height": "27px",
+      "left": "20px",
+      "position": "absolute",
+      "top": "137px",
+      "width": "660px",
+      "z-index": "1"
+     },
+     "init": "<!--//--><![CDATA[//><!--\nnew HeaderControls('widget1', '../archive/Scripts/Widgets/HeaderControls', '../archive/Scripts/Widgets/SharedResources', '.', {\"showSubscribe\": true, \"gridID\": \"id2\", \"showBackToIndex\": false, \"showSlideshow\": true, \"feedURL\": \"/feeds/tetons-2011.xml\", \"entryCount\": \"0\", \"canvas controls\": {\"canvas_transport-left-N\": \"../archive/Media\\/canvas_transport-left-N_03.png\", \"canvas_transport-right-D\": \"../archive/Media\\/canvas_transport-right-D_03.png\", \"canvas_thumbs_off-S\": \"../archive/Media\\/canvas_thumbs_off-S_03.png\", \"canvas_back\": \"../archive/Media\\/canvas_back_03.png\", \"canvas_thumbs_off-N\": \"../archive/Media\\/canvas_thumbs_off-N_03.png\", \"canvas_transport-right-N\": \"../archive/Media\\/canvas_transport-right-N_03.png\", \"canvas_arrow-left-D\": \"../archive/Media\\/canvas_arrow-left-D_03.png\", \"canvas_arrow-right\": \"../archive/Media\\/canvas_arrow-right_03.png\", \"canvas_play\": \"../archive/Media\\/canvas_play_03.png\", \"canvas_arrow-left\": \"../archive/Media\\/canvas_arrow-left_03.png\", \"canvas_download\": \"../archive/Media\\/canvas_download_03.png\", \"canvas_thumbs_on-S\": \"../archive/Media\\/canvas_thumbs_on-S_03.png\", \"canvas_thumbs_on-N\": \"../archive/Media\\/canvas_thumbs_on-N_03.png\", \"canvas_arrow-right-D\": \"../archive/Media\\/canvas_arrow-right-D_03.png\", \"canvas_transport-left-D\": \"../archive/Media\\/canvas_transport-left-D_03.png\", \"canvas_add\": \"../archive/Media\\/canvas_add_03.png\", \"canvas_subscribe\": \"../archive/Media\\/canvas_subscribe_03.png\"}, \"entriesPerPage\": 104});\n//--><!]]>"
+    },
+    {
+     "k": "widget",
+     "name": "detailView",
+     "id": "widget2",
+     "cls": "com-apple-iweb-widget-detailview",
+     "box": {
+      "height": "1217px",
+      "left": "20px",
+      "position": "absolute",
+      "top": "137px",
+      "width": "660px",
+      "z-index": "1"
+     },
+     "init": "<!--//--><![CDATA[//><!--\nnew DetailView('widget2', '../archive/Scripts/Widgets/DetailView', '../archive/Scripts/Widgets/SharedResources', '.', {\"showSlideshow\": true, \"gridID\": \"id2\", \"showThumbnails\": true, \"canvas controls\": {\"canvas_transport-left-N\": \"../archive/Media\\/canvas_transport-left-N_03.png\", \"canvas_transport-right-D\": \"../archive/Media\\/canvas_transport-right-D_03.png\", \"canvas_thumbs_off-S\": \"../archive/Media\\/canvas_thumbs_off-S_03.png\", \"canvas_back\": \"../archive/Media\\/canvas_back_03.png\", \"canvas_thumbs_off-N\": \"../archive/Media\\/canvas_thumbs_off-N_03.png\", \"canvas_transport-right-N\": \"../archive/Media\\/canvas_transport-right-N_03.png\", \"canvas_arrow-left-D\": \"../archive/Media\\/canvas_arrow-left-D_03.png\", \"canvas_arrow-right\": \"../archive/Media\\/canvas_arrow-right_03.png\", \"canvas_play\": \"../archive/Media\\/canvas_play_03.png\", \"canvas_arrow-left\": \"../archive/Media\\/canvas_arrow-left_03.png\", \"canvas_download\": \"../archive/Media\\/canvas_download_03.png\", \"canvas_thumbs_on-S\": \"../archive/Media\\/canvas_thumbs_on-S_03.png\", \"canvas_thumbs_on-N\": \"../archive/Media\\/canvas_thumbs_on-N_03.png\", \"canvas_arrow-right-D\": \"../archive/Media\\/canvas_arrow-right-D_03.png\", \"canvas_transport-left-D\": \"../archive/Media\\/canvas_transport-left-D_03.png\", \"canvas_add\": \"../archive/Media\\/canvas_add_03.png\", \"canvas_subscribe\": \"../archive/Media\\/canvas_subscribe_03.png\"}, \"color\": \"transparent\", \"photoSize\": 1});\n//--><!]]>"
+    },
+    {
+     "k": "widget",
+     "name": "footerControls",
+     "id": "widget3",
+     "cls": "com-apple-iweb-widget-footercontrols",
+     "box": {
+      "height": "27px",
+      "left": "20px",
+      "position": "absolute",
+      "top": "137px",
+      "width": "660px",
+      "z-index": "1"
+     },
+     "init": "<!--//--><![CDATA[//><!--\nnew FooterControls('widget3', '../archive/Scripts/Widgets/FooterControls', '../archive/Scripts/Widgets/SharedResources', '.', {\"gridID\": \"id2\"});\n//--><!]]>"
+    },
+    {
+     "k": "text",
+     "id": "id3",
+     "cls": "style_SkipStroke_2 shape-with-text",
+     "box": {
+      "height": "176px",
+      "left": "532px",
+      "position": "absolute",
+      "top": "-14px",
+      "width": "154px",
+      "z-index": "1"
+     },
+     "contentCls": "text-content graphic_textbox_layout_style_default_External_154_176",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "graphic_textbox_layout_style_default"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Photos on this page were taken with a Canon 5D Mark II or Canon 1D Mark IV camera."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "High-res versions of the photos can be found "
+          },
+          {
+           "tag": "a",
+           "attrs": {
+            "class": "class1",
+            "title": "http://erictraut.smugmug.com/Travel/Tetons-2011",
+            "href": "http://erictraut.smugmug.com/Travel/Tetons-2011"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "here"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": "."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Copyright © 2011"
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; ",
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Eric Traut"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id4",
+     "cls": "style_SkipStroke_1 shape-with-text",
+     "box": {
+      "height": "72px",
+      "left": "24px",
+      "position": "absolute",
+      "top": "-10px",
+      "width": "483px",
+      "z-index": "1"
+     },
+     "contentCls": "text-content style_External_483_72",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style_1"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; padding-top: 0pt; ",
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "My father and I spent an extended weekend in the Jackson Hole, WY region. Our goal was to catch the fall colors in the Tetons. We were lucky because a snow had blanketed the mountains the day before our arrival, and a rainstorm on our departure day knocked all the remaining leaves off the trees. We couldn’t have timed it better!"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "spacer",
+     "box": {
+      "height": "396px",
+      "line-height": "396px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  },
+  "footer": {
+   "box": {
+    "height": "75px",
+    "margin-left": "0px",
+    "position": "relative",
+    "width": "700px",
+    "z-index": "15"
+   },
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "box": {
+      "height": "0px",
+      "line-height": "0px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

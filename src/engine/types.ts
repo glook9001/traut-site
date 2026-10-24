@@ -1,6 +1,31 @@
-// Types for the ported iWeb page model (see scripts/extract_pages.py).
+// Types for the ported iWeb page model (see scripts/extract_pages.py and
+// src/content.config.ts, whose Zod schema is the runtime-checked twin of this).
 
 export type Attrs = Record<string, string>;
+
+/** The CSS declarations an iWeb layout box may carry. */
+export type BoxProp =
+  | 'position'
+  | 'left'
+  | 'top'
+  | 'width'
+  | 'height'
+  | 'z-index'
+  | 'margin-left'
+  | 'margin-top'
+  | 'opacity'
+  | 'line-height'
+  | 'float'
+  | 'clear';
+
+/**
+ * An iWeb layout box, as data: `{ height: '40px', left: '19px', … }`.
+ *
+ * Order is the archive's own (it survives JSON), and it is rendered back to an
+ * inline `style` attribute by engine/geometry.ts `styleOf()` -- iWeb's runtime
+ * reads those values off the DOM.
+ */
+export type Box = Partial<Record<BoxProp, string>>;
 
 /** One node of an iWeb rich-text block: text, <br>, <a>, <span>, <img>, … */
 export type RichNode =
@@ -12,8 +37,7 @@ export interface TextItem {
   k: 'text';
   id: string | null;
   cls: string;
-  /** The archive's inline style, verbatim: iWeb's runtime reads it back. */
-  style: string;
+  box: Box;
   contentCls: string;
   contentStyle: string;
   nodes: RichNode[];
@@ -23,7 +47,7 @@ export interface TextItem {
 export interface BoxItem {
   k: 'box';
   cls: string;
-  style: string;
+  box: Box;
   nodes: RichNode[];
 }
 
@@ -35,7 +59,7 @@ export interface WidgetItem {
   name: WidgetName;
   id: string;
   cls: string;
-  style: string;
+  box: Box;
   /** The page's own `new Widget(...)` call, verbatim. */
   init: string;
 }
@@ -50,13 +74,13 @@ export interface WidgetSegment {
 export interface GridItem {
   k: 'grid';
   id: string;
-  style: string;
+  box: Box;
 }
 
 export type LayerItem = TextItem | BoxItem | WidgetItem | GridItem;
 
 export interface Layer {
-  style: string;
+  box: Box;
   items: LayerItem[];
 }
 
@@ -80,6 +104,7 @@ export interface Page {
   head: { title: string; items: HeadItem[] };
   body: {
     attrs: Attrs;
+    /** The centred wrapper and #body_content box; page-level CSS, kept verbatim. */
     wrapperStyle: string;
     contentStyle: string;
     nav: Layer;

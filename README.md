@@ -31,7 +31,7 @@ Nothing here ever writes to `Traut.com/`.
 A page is built in three steps, none of which hand-writes archive content:
 
 ```
-Traut.com/Peru.html ──scripts/extract_pages.py──▶ src/data/pages/peru.json
+Traut.com/Peru.html ──scripts/extract_pages.py──▶ src/content/pages/peru.json
                                                   src/data/widgets.json
 src/pages/[slug].astro ──layouts/Page.astro──▶ dist/peru/index.html
 ```
@@ -61,11 +61,15 @@ their inline `<script>` nodes. The split matters: scripts injected through
 localized labels ("Subscribe", "Play Slideshow", "n of m"). `Widget.astro` emits
 them as real `<script>` elements, in place, in order.
 
-**3. Astro renders it.** `src/pages/[slug].astro` builds one route per model with
-`getStaticPaths()` over `import.meta.glob('../data/pages/*.json')`; `/` is the
-Welcome page. Both hand the model to `layouts/Page.astro`, which renders the
-`<html>` shell, `Head.astro`, and the four layers through `Layer.astro` →
-`TextBlock` / `Widget` / `PhotoGrid` / boxes.
+**3. Astro renders it.** The models are a **content collection**
+(`src/content.config.ts`): `getCollection('pages')` drives `getStaticPaths()` in
+`src/pages/[slug].astro`, and `getEntry('pages', 'index')` is the Welcome page.
+The Zod schema is the contract between the extractor and the components — a
+model that loses a field fails the build with a path like
+`body.body.items.3.box.height: Required` instead of rendering `undefined`. Both
+routes hand the entry's data to `layouts/Page.astro`, which renders the `<html>`
+shell, `Head.astro`, and the four layers through `Layer.astro` → `TextBlock` /
+`Widget` / `PhotoGrid` / boxes.
 
 **4. The CSS is the archive's, imported through Astro.** iWeb generated one
 stylesheet per page (`Peru_files/Peru.css`) plus three widget stylesheets; those
@@ -91,9 +95,19 @@ markup, not a re-implementation of iWeb.
 
 ### Why the geometry stays an inline `style`
 
-Every layer, text block, spacer and photo grid carries the archive's original
-inline `style` attribute verbatim, and the components render it as-is. That is
-not laziness: iWeb's runtime *reads it back off the DOM*.
+Every layer, text block, spacer and photo grid carries the archive's geometry as
+an inline `style` attribute. It is stored as *data*, not as a CSS string —
+`"box": { "height": "0px", "line-height": "0px" }` — and rendered by one helper,
+`src/engine/geometry.ts`:
+
+```ts
+styleOf({ height: '0px', 'line-height': '0px' })
+// -> "height: 0px; line-height: 0px;"
+```
+
+The declaration order is the archive's own (it survives JSON, and a repeated
+property keeps its last value, as CSS does). The reason it has to reach the DOM
+as an attribute at all is that iWeb's runtime *reads it back*.
 
 ```js
 // Scripts/iWebMediaGrid.js -- grow the layer's last spacer to fit the grid
@@ -149,7 +163,7 @@ will not let a template control.
 
 | Step | Command | What it does |
 | --- | --- | --- |
-| `predev` / `prebuild` | `scripts/extract_pages.py` | archive → `src/data/pages/*.json`, `src/data/widgets.json` |
+| `predev` / `prebuild` | `scripts/extract_pages.py` | archive → `src/content/pages/*.json`, `src/data/widgets.json` |
 | `predev` / `prebuild` | `scripts/mirror_archive.py` | writes `public/page-js/*.js`, `public/feeds/*.xml`, `public/feed.xml`, `public/archive` symlink and the 31 redirect stubs |
 | `predev` / `prebuild` | `scripts/sync_styles.py --check` | fails the build if `src/styles/**` drifted from the archive's CSS |
 | `build` | `astro build` | renders the 31 routes and bundles the stylesheets; `integrations/iweb-doctype.mjs` restores the doctype |
@@ -324,9 +338,10 @@ ok welcome alias: /Welcome.html == /
 `mirror_archive.rewrite_page_html()` — the archive HTML with only the URL
 plumbing applied — so a dropped block, changed class, lost caption or mangled
 script fails the build. The only attributes it normalises are the stylesheet
-URLs Astro content-hashes (`/_astro/peru.<hash>.css`); `test_stylesheets` checks
-those links and imports separately, plus that `src/styles/**` still matches the
-archive byte for byte. Byte equality is not the bar: Astro rewrites the
+URLs Astro content-hashes (`/_astro/peru.<hash>.css`) and the `style` attributes,
+which it compares as declaration sets (`height: 0px; line-height: 0px`) rather
+than as formatted strings; `test_stylesheets` checks the links and imports
+separately, plus that `src/styles/**` still matches the archive byte for byte. Byte equality is not the bar: Astro rewrites the
 doctype, self-closing tags and inter-element whitespace by design. The bar is
 the DOM plus the pixels.
 
@@ -388,9 +403,11 @@ src/components/           Head, Layer, TextBlock, Node, Widget, PhotoGrid
 src/styles/pages/*.css    the archive's per-page stylesheets (generated copies)
 src/styles/widgets/*.css  the three archive widget stylesheets (generated copies)
 src/engine/styles.ts      ?url globs: page/widget stylesheet -> bundled asset URL
-src/data/pages/*.json     one model per archive page (generated)
+src/content.config.ts     the `pages` collection + its Zod schema
+src/content/pages/*.json  one model per archive page (generated)
 src/data/widgets.json     the four widget chrome blocks (generated)
 src/engine/types.ts       the model types the components consume
+src/engine/geometry.ts    box (declarations as data) -> inline style attribute
 scripts/extract_pages.py  archive -> models (strict)
 scripts/sync_styles.py    archive CSS -> src/styles (byte-equal, --check)
 scripts/mirror_archive.py URL plumbing, page scripts, feeds, stubs, oracle

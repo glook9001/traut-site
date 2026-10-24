@@ -1,0 +1,2607 @@
+{
+ "key": "index",
+ "stem": "Welcome",
+ "slug": "/",
+ "htmlAttrs": {
+  "xmlns": "http://www.w3.org/1999/xhtml",
+  "xml:lang": "en",
+  "lang": "en"
+ },
+ "head": {
+  "title": "Eric’s Home on the Web",
+  "items": [
+   {
+    "k": "meta",
+    "attrs": {
+     "http-equiv": "Content-Type",
+     "content": "text/html; charset=UTF-8"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "Generator",
+     "content": "iWeb 3.0.4"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "iWeb-Build",
+     "content": "local-build-20140520"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "http-equiv": "X-UA-Compatible",
+     "content": "IE=EmulateIE7"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "viewport",
+     "content": "width=700"
+    }
+   },
+   {
+    "k": "title",
+    "text": "Eric’s Home on the Web"
+   },
+   {
+    "k": "pageCss",
+    "attrs": {
+     "rel": "stylesheet",
+     "type": "text/css",
+     "media": "screen,print"
+    }
+   },
+   {
+    "k": "comment",
+    "text": "[if lt IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='../archive/Welcome_files/WelcomeIE.css'/><![endif]"
+   },
+   {
+    "k": "comment",
+    "text": "[if gte IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='../archive/Media/IE8.css'/><![endif]"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebSite.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebImage.js"
+   },
+   {
+    "k": "script",
+    "src": "/page-js/index.js"
+   }
+  ]
+ },
+ "body": {
+  "attrs": {
+   "style": "background: rgb(101, 101, 101); margin: 0pt; ",
+   "onload": "onPageLoad();"
+  },
+  "wrapperStyle": "text-align: center; ",
+  "contentStyle": "margin-bottom: 10px; margin-left: auto; margin-right: auto; margin-top: 10px; overflow: hidden; position: relative; word-wrap: break-word;  background: rgb(255, 255, 255); text-align: left; width: 700px; ",
+  "nav": {
+   "box": {
+    "float": "left",
+    "margin-left": "0px",
+    "position": "relative",
+    "width": "700px",
+    "z-index": "0"
+   },
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "box": {
+      "height": "0px",
+      "line-height": "0px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "spacer",
+     "box": {
+      "clear": "both",
+      "height": "0px",
+      "line-height": "0px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  },
+  "header": {
+   "box": {
+    "height": "75px",
+    "margin-left": "0px",
+    "position": "relative",
+    "width": "700px",
+    "z-index": "10"
+   },
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "box": {
+      "height": "0px",
+      "line-height": "0px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id1",
+     "cls": "style_SkipStroke shape-with-text",
+     "box": {
+      "height": "43px",
+      "left": "20px",
+      "position": "absolute",
+      "top": "17px",
+      "width": "515px",
+      "z-index": "1"
+     },
+     "contentCls": "text-content style_External_515_43",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; padding-top: 0pt; ",
+          "class": "Header"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Eric’s Home on the Web"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    }
+   ]
+  },
+  "body": {
+   "box": {
+    "margin-left": "0px",
+    "position": "relative",
+    "width": "700px",
+    "z-index": "5"
+   },
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "box": {
+      "height": "0px",
+      "line-height": "0px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText",
+     "box": {
+      "height": "1px",
+      "line-height": "1px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": null,
+     "cls": "style_SkipStroke_1 shape-with-text flowDefining",
+     "box": {
+      "margin-left": "236px",
+      "margin-top": "353px",
+      "position": "relative",
+      "width": "431px",
+      "z-index": "1"
+     },
+     "contentCls": "text-content style_External_431_1395",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style_1"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Wrangell_Island_2013.html",
+            "href": "/wrangell-island-2013"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "August 2013 — Wrangell Island, Siberia"
+            }
+           ]
+          },
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_2"
+           },
+           "c": [
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "I spent a three weeks on a ship that sailed from an Eastern Russian port through the Bering Straight up to Wrangell Island in the Arctic Ocean."
+            },
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Yellowstone_2013.html",
+            "href": "/yellowstone-2013"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "January 2013 — Yellowstone National Park"
+            }
+           ]
+          },
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_2"
+           },
+           "c": [
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "I spent a week braving temperatures as low as -40F in Yellowstone. The park is beautiful in the winter when the crowds are gone."
+            },
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Antarctica_2011.html",
+            "href": "/antarctica-2011"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "November 2011 — Falklands, South Georgia and Antarctica"
+            }
+           ]
+          },
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_2"
+           },
+           "c": [
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "I spent nearly a month on a ship visiting and photographing some amazing locations at the bottom of the globe."
+            }
+           ]
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Tetons_2011.html",
+            "href": "/tetons-2011"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "October 2011 — Grand Teton National Park"
+            }
+           ]
+          },
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_2"
+           },
+           "c": [
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "This was a quick trip to the Tetons to catch the fall colors."
+            },
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Iceland_2011.html",
+            "href": "/iceland-2011"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "June 2011 — Iceland"
+            }
+           ]
+          },
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_2"
+           },
+           "c": [
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "I spent two weeks on the southern and western coasts of Iceland photographing glaciers, waterfalls, horses and birds"
+            }
+           ]
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Yosemite_2010.html",
+            "href": "/yosemite-2010"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "October 2010 — Yosemite National Park"
+            }
+           ]
+          },
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_2"
+           },
+           "c": [
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "Continuing on my national park theme, I spent a weekend in Yosemite, one of the most beautiful areas of the United States."
+            }
+           ]
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Glacier_2010.html",
+            "href": "/glacier-2010"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "September 2010 — Glacier National Park"
+            }
+           ]
+          },
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_2"
+           },
+           "c": [
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "I spent a week in Glacier camping, hiking and photographing the fall scenery."
+            }
+           ]
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Patagonia.html",
+            "href": "/patagonia"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "April 2010 — Patagonia"
+            }
+           ]
+          },
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_2"
+           },
+           "c": [
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_3"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "I spent several weeks on a photo tour in southern Chile and Argentina. I visited Los Glaciares National Park in Argentina and Torres del Paine National Park in Chile."
+            }
+           ]
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Utah_&_Arizona.html",
+            "href": "/utah-arizona"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "September 2009 — American Southwest"
+            }
+           ]
+          },
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_2"
+           },
+           "c": [
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "style": "line-height: 17px; ",
+            "class": "style_4"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "A friend and I spent a week traveling through the national parks in southern Utah and northern Arizona."
+            }
+           ]
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Southern_Africa.html",
+            "href": "/southern-africa"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "May 2009 — Southern Africa"
+            }
+           ]
+          },
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_2"
+           },
+           "c": [
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "style": "line-height: 17px; ",
+            "class": "style_4"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "I vacationed in Namibia and Botswana for three weeks with my brother. We also spent a few days in Cape Town (South Africa) and Livingstone (Zambia)."
+            }
+           ]
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Mediterranean_Cruise.html",
+            "href": "/mediterranean-cruise"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "May 2008 — Mediterranean"
+            }
+           ]
+          },
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_2"
+           },
+           "c": [
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "style": "line-height: 17px; ",
+            "class": "style_4"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "I vacationed in Europe for almost three weeks with my brother and parents. Our journey started in Munich and took us to Barcelona, Marseilles, Pisa, Florence, Rome, Naples, Istanbul, Athens, and Venice."
+            }
+           ]
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "Around_The_World.html",
+            "href": "/around-the-world"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "May 2007 — Around The World Trip"
+            }
+           ]
+          },
+          {
+           "tag": "span",
+           "attrs": {
+            "class": "style_2"
+           },
+           "c": [
+            {
+             "tag": "br"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Body"
+         },
+         "c": [
+          {
+           "tag": "span",
+           "attrs": {
+            "style": "line-height: 17px; ",
+            "class": "style_4"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "The trip of a lifetime! I spent three weeks on a National Geographic trip around the world. I joined 88 other travelers on a chartered jet. We started in Washington DC and continued to fly west until we had visited over a dozen countries, eventually returning to where we started."
+            }
+           ]
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "style": "height: 34px; line-height: 34px; ",
+        "class": "tinyText"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": " "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id2",
+     "cls": "style_SkipStroke_2 shape-with-text",
+     "box": {
+      "height": "24px",
+      "left": "39px",
+      "position": "absolute",
+      "top": "296px",
+      "width": "448px",
+      "z-index": "1"
+     },
+     "contentCls": "text-content Normal_External_448_24",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "Normal"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; padding-top: 0pt; ",
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Recent Travels"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText",
+     "box": {
+      "height": "280px",
+      "width": "399px",
+      "left": "286px",
+      "position": "absolute",
+      "top": "-4px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "style": "position: relative; width: 399px; "
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n              "
+        },
+        {
+         "tag": "a",
+         "attrs": {
+          "href": "/easter-island",
+          "title": "Easter_Island.html"
+         },
+         "c": [
+          {
+           "tag": "img",
+           "attrs": {
+            "src": "../archive/Welcome_files/shapeimage_1.png",
+            "alt": "",
+            "style": "height: 280px; left: 0px; position: absolute; top: 0px; width: 399px; "
+           }
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n            "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText",
+     "box": {
+      "height": "105px",
+      "width": "260px",
+      "left": "15px",
+      "position": "absolute",
+      "top": "-4px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "style": "position: relative; width: 260px; "
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n              "
+        },
+        {
+         "tag": "a",
+         "attrs": {
+          "href": "/peru",
+          "title": "Peru.html"
+         },
+         "c": [
+          {
+           "tag": "img",
+           "attrs": {
+            "src": "../archive/Welcome_files/shapeimage_2.png",
+            "alt": "",
+            "style": "height: 105px; left: 0px; position: absolute; top: 0px; width: 260px; "
+           }
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n            "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3 shadow_0",
+     "box": {
+      "height": "88px",
+      "width": "128px",
+      "left": "74px",
+      "position": "absolute",
+      "top": "1627px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/around-the-world",
+        "title": "Around_The_World.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Welcome_files/Egypt-204.jpg",
+          "alt": "",
+          "style": "border: none; height: 89px; width: 128px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id3",
+     "cls": "style_SkipStroke_4 shape-with-text",
+     "box": {
+      "height": "25px",
+      "left": "36px",
+      "position": "absolute",
+      "top": "322px",
+      "width": "643px",
+      "z-index": "1"
+     },
+     "contentCls": "text-content graphic_textbox_layout_style_default_External_643_25",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "graphic_textbox_layout_style_default"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; padding-top: 0pt; ",
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "One of my passions is traveling. Another is photography. Here are some photos from my recent travels."
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3 shadow_1",
+     "box": {
+      "height": "96px",
+      "width": "128px",
+      "left": "74px",
+      "position": "absolute",
+      "top": "1506px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/mediterranean-cruise",
+        "title": "Mediterranean_Cruise.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Welcome_files/DSC_1918.jpg",
+          "alt": "",
+          "style": "border: none; height: 96px; width: 128px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3 shadow_2",
+     "box": {
+      "height": "96px",
+      "width": "128px",
+      "left": "74px",
+      "position": "absolute",
+      "top": "1388px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/southern-africa",
+        "title": "Southern_Africa.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Welcome_files/IMG_6676.jpg",
+          "alt": "",
+          "style": "border: none; height: 96px; width: 128px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3 shadow_3",
+     "box": {
+      "height": "96px",
+      "width": "128px",
+      "left": "74px",
+      "position": "absolute",
+      "top": "1270px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/utah-arizona",
+        "title": "Utah_&_Arizona.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Welcome_files/Utah2009-1.jpg",
+          "alt": "",
+          "style": "border: none; height: 96px; width: 128px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3 shadow_4",
+     "box": {
+      "height": "96px",
+      "width": "128px",
+      "left": "74px",
+      "position": "absolute",
+      "top": "1152px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/patagonia",
+        "title": "Patagonia.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Welcome_files/droppedImage.jpg",
+          "alt": "",
+          "style": "border: none; height: 96px; width: 128px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3 shadow_5",
+     "box": {
+      "height": "96px",
+      "width": "128px",
+      "left": "74px",
+      "position": "absolute",
+      "top": "1034px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/glacier-2010",
+        "title": "Glacier_2010.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Welcome_files/Glacier-17.jpg",
+          "alt": "",
+          "style": "border: none; height: 96px; width: 128px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3 shadow_6",
+     "box": {
+      "height": "96px",
+      "width": "128px",
+      "left": "74px",
+      "position": "absolute",
+      "top": "916px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/yosemite-2010",
+        "title": "Yosemite_2010.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Welcome_files/Yosemite-13.jpg",
+          "alt": "",
+          "style": "border: none; height: 96px; width: 128px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3 shadow_7",
+     "box": {
+      "height": "96px",
+      "width": "128px",
+      "left": "74px",
+      "position": "absolute",
+      "top": "799px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/iceland-2011",
+        "title": "Iceland_2011.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Welcome_files/Horse.jpg",
+          "alt": "",
+          "style": "border: none; height: 96px; width: 128px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3 shadow_8",
+     "box": {
+      "height": "96px",
+      "width": "128px",
+      "left": "74px",
+      "position": "absolute",
+      "top": "568px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/antarctica-2011",
+        "title": "Antarctica_2011.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Welcome_files/Antarctica-101.jpg",
+          "alt": "",
+          "style": "border: none; height: 96px; width: 128px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id4",
+     "cls": "style_SkipStroke_4 shape-with-text",
+     "box": {
+      "height": "33px",
+      "left": "415px",
+      "position": "absolute",
+      "top": "1813px",
+      "width": "236px",
+      "z-index": "1"
+     },
+     "contentCls": "text-content graphic_textbox_layout_style_default_External_236_33",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "graphic_textbox_layout_style_default"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; padding-top: 0pt; ",
+          "class": "paragraph_style_2"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Copyright © 2011 Eric Traut"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id5",
+     "cls": "style_SkipStroke_4 shape-with-text",
+     "box": {
+      "height": "33px",
+      "left": "49px",
+      "position": "absolute",
+      "top": "1813px",
+      "width": "223px",
+      "z-index": "1"
+     },
+     "contentCls": "text-content graphic_textbox_layout_style_default_External_223_33",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "graphic_textbox_layout_style_default"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; padding-top: 0pt; ",
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Contact: "
+          },
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "mailto:webmaster@traut.com",
+            "href": "mailto:webmaster@traut.com"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "webmaster@traut.com"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_5",
+     "box": {
+      "height": "164px",
+      "width": "260px",
+      "left": "15px",
+      "position": "absolute",
+      "top": "113px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/antarctica-2011",
+        "title": "Antarctica_2011.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Welcome_files/Antarctica-162.jpg",
+          "alt": "",
+          "style": "border: none; height: 164px; width: 260px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3 shadow_9",
+     "box": {
+      "height": "96px",
+      "width": "128px",
+      "left": "74px",
+      "position": "absolute",
+      "top": "683px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/tetons-2011",
+        "title": "Tetons_2011.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Welcome_files/Tetons-11.jpg",
+          "alt": "",
+          "style": "border: none; height: 96px; width: 128px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3 shadow_10",
+     "box": {
+      "height": "84px",
+      "width": "125px",
+      "left": "75px",
+      "position": "absolute",
+      "top": "465px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/yellowstone-2013",
+        "title": "Yellowstone_2013.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Welcome_files/Screen%20Shot%202014-05-20%20at%2010.59.55%20PM.jpg",
+          "alt": "",
+          "style": "border: none; height: 84px; width: 126px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3 shadow_11",
+     "box": {
+      "height": "87px",
+      "width": "128px",
+      "left": "74px",
+      "position": "absolute",
+      "top": "356px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "a",
+       "attrs": {
+        "href": "/wrangell-island-2013",
+        "title": "Wrangell_Island_2013.html"
+       },
+       "c": [
+        {
+         "tag": "img",
+         "attrs": {
+          "src": "../archive/Welcome_files/Screen%20Shot%202014-05-20%20at%2011.04.49%20PM.jpg",
+          "alt": "",
+          "style": "border: none; height: 87px; width: 129px; "
+         }
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "spacer",
+     "box": {
+      "height": "97px",
+      "line-height": "97px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  },
+  "footer": {
+   "box": {
+    "height": "75px",
+    "margin-left": "0px",
+    "position": "relative",
+    "width": "700px",
+    "z-index": "15"
+   },
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "box": {
+      "height": "0px",
+      "line-height": "0px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

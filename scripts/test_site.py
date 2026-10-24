@@ -42,7 +42,7 @@ from mirror_archive import (  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
-MODELS = ROOT / "src" / "data" / "pages"
+MODELS = ROOT / "src" / "content" / "pages"
 
 # Assets the archive itself is missing (its <img> tags 404 on traut.com too).
 # They must stay missing -- we never invent files the original never had.
@@ -149,11 +149,13 @@ class Skeleton(HTMLParser):
 
     @staticmethod
     def _attrs(attrs) -> dict[str, str]:
-        return {
-            name: (value if value is not None else "")
-            for name, value in attrs
-            if not name.startswith("data-astro-")
-        }
+        out = {}
+        for name, value in attrs:
+            if name.startswith("data-astro-"):
+                continue
+            value = value if value is not None else ""
+            out[name] = canonical_style(value) if name == "style" else value
+        return out
 
 
 CSS_REF_RE = re.compile(
@@ -170,6 +172,23 @@ def canonical_css(html: str) -> str:
     only cares that the same link/import blocks are present, in the same order.
     """
     return CSS_REF_RE.sub(lambda m: f'{m.group(1)}{m.group(2)}CSS{m.group(2)}', html)
+
+
+def canonical_style(value: str) -> str:
+    """A style attribute as a comparable declaration set.
+
+    The model stores geometry as data and renders it back (`styleOf()`), so the
+    declaration order is the archive's but a repeated property collapses to its
+    last value -- which is also what CSS does. Comparing the parsed map keeps
+    the test about the layout, not about formatting.
+    """
+    declarations: dict[str, str] = {}
+    for declaration in value.split(";"):
+        if not declaration.strip():
+            continue
+        name, _, val = declaration.partition(":")
+        declarations[name.strip()] = re.sub(r"\s+", " ", val.strip())
+    return "; ".join(f"{name}: {declarations[name]}" for name in sorted(declarations))
 
 
 def skeleton(html: str) -> list:

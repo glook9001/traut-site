@@ -7,6 +7,7 @@
 // geometry back off the DOM (see TextBlock.astro and PhotoGrid.astro), so the
 // numbers cannot move into a stylesheet.
 import type { Layer as LayerModel } from '../engine/types';
+import { styleOf } from '../engine/geometry';
 import TextBlock from './TextBlock.astro';
 import Node from './Node.astro';
 import Widget from './Widget.astro';
@@ -20,7 +21,7 @@ interface Props {
 const { id, layer } = Astro.props;
 ---
 
-<div id={id} style={layer.style}>{layer.items.map((item) =>
+<div id={id} style={styleOf(layer.box)}>{layer.items.map((item) =>
   item.k === 'text' ? (
     <TextBlock block={item} />
   ) : item.k === 'widget' ? (
@@ -28,6 +29,6 @@ const { id, layer } = Astro.props;
   ) : item.k === 'grid' ? (
     <PhotoGrid item={item} />
   ) : (
-    <div class={item.cls} style={item.style}>{item.nodes.map((node) => <Node node={node} />)}</div>
+    <div class={item.cls} style={styleOf(item.box)}>{item.nodes.map((node) => <Node node={node} />)}</div>
   )
 )}</div>

@@ -135,6 +135,17 @@ await send('Page.enable', {}, sessionId);
  * `.framedImage` wrappers, the shadows, the captions, the widget labels.
  */
 const SNAPSHOT = `(() => {
+  // The model stores geometry as data and renders it back (styleOf()), so a
+  // repeated declaration collapses to its last value -- same as CSS.
+  const canonicalStyle = (value) => {
+    const decls = {};
+    for (const declaration of value.split(';')) {
+      if (!declaration.trim()) continue;
+      const i = declaration.indexOf(':');
+      decls[declaration.slice(0, i).trim()] = declaration.slice(i + 1).trim().replace(/\\s+/g, ' ');
+    }
+    return Object.keys(decls).sort().map((name) => name + ': ' + decls[name]).join('; ');
+  };
   const walk = (el) => {
     if (el.nodeType === 3) {
       const text = el.nodeValue.replace(/\\s+/g, ' ');
@@ -146,7 +157,7 @@ const SNAPSHOT = `(() => {
     for (const a of el.attributes) {
       if (a.name.startsWith('data-astro-')) continue;
       if (a.name === 'href' || a.name === 'src') continue;
-      attrs[a.name] = a.value;
+      attrs[a.name] = a.name === 'style' ? canonicalStyle(a.value) : a.value;
     }
     const kids = [];
     if (tag !== 'script' && tag !== 'style') {

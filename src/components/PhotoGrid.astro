@@ -4,6 +4,7 @@
 // grid script reads `photogrid.style.top` and writes `style.height` back, and
 // IWSetSpacerHeight() grows the layer's last `.spacer` to match.
 import type { GridItem } from '../engine/types';
+import { styleOf } from '../engine/geometry';
 
 interface Props {
   item: GridItem;
@@ -12,4 +13,4 @@ interface Props {
 const { item } = Astro.props;
 ---
 
-<div id={item.id} style={item.style}></div>
+<div id={item.id} style={styleOf(item.box)}></div>

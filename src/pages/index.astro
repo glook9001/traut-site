@@ -1,9 +1,11 @@
 ---
+import { getEntry } from 'astro:content';
 import Page from '../layouts/Page.astro';
-import welcome from '../data/pages/index.json';
-import type { Page as PageModel } from '../engine/types';
 
-const page = welcome as PageModel;
+// `/` is the archive's Welcome.html, not an invented index page.
+const entry = await getEntry('pages', 'index');
+if (!entry) throw new Error('no ported Welcome page (src/content/pages/index.json)');
+const page = entry.data;
 ---
 
 <Page page={page} />

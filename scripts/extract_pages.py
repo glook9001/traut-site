@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Port Traut.com's iWeb pages into Astro data models.
 
-Reads `Traut.com/<Stem>.html`, writes `src/data/pages/<key>.json` (one per page)
-and `src/data/widgets.json` (the four iWeb widget chrome blocks, which are
+Reads `Traut.com/<Stem>.html`, writes `src/content/pages/<key>.json` (one per
+page, loaded by the `pages` content collection) and `src/data/widgets.json` (the
+four iWeb widget chrome blocks, which are
 identical on every page except their instance id and position).
 
 Nothing is invented: every string in the model comes from the archive page, and
@@ -34,7 +35,7 @@ from mirror_archive import (  # noqa: E402
 )
 
 ROOT = Path(__file__).resolve().parent.parent
-PAGES_DIR = ROOT / "src" / "data" / "pages"
+PAGES_DIR = ROOT / "src" / "content" / "pages"
 WIDGETS_JSON = ROOT / "src" / "data" / "widgets.json"
 
 # `<style><!-- @import "Scripts/Widgets/HeaderControls/HeaderControls.css"; --></style>`
@@ -142,44 +143,45 @@ def norm_ws(value: str) -> str:
 # iWeb writes a page's whole layout as inline `style` attributes, and its own
 # runtime reads them back off the DOM: `spacer.style.height` in
 # IWSetSpacerHeight(), `textBlock.style.height` in adjustLineHeightIfTooBig(),
-# `photogrid.style.top` in the media grid. The port therefore keeps the geometry
-# inline, verbatim -- a stylesheet or a custom property would be invisible to
-# those reads and the page would not lay out. Anything outside this vocabulary
-# aborts the extraction.
+# `photogrid.style.top` in the media grid. So the geometry has to reach the DOM
+# as an inline style attribute -- a stylesheet or a custom property would be
+# invisible to those reads and the page would not lay out.
+#
+# The model stores it as data, not as a CSS string: `box` is an ordered map of
+# declarations, rendered back by engine/geometry.ts `styleOf()`. Anything
+# outside this vocabulary aborts the extraction.
 GEOM_KEYS = {
-    "position": "pos",
-    "left": "left",
-    "top": "top",
-    "width": "width",
-    "height": "height",
-    "z-index": "z",
-    "margin-left": "ml",
-    "margin-top": "mt",
-    "opacity": "opacity",
-    "line-height": "lh",
-    "float": "float",
-    "clear": "clear",
+    "position",
+    "left",
+    "top",
+    "width",
+    "height",
+    "z-index",
+    "margin-left",
+    "margin-top",
+    "opacity",
+    "line-height",
+    "float",
+    "clear",
 }
 
 
-def checked_style(style: str, where: str) -> str:
-    """Validate an inline style and return it unchanged, for the template."""
-    geom(style, where)
-    return style
+def box(style: str, where: str) -> dict[str, str]:
+    """`"height: 40px; left: 19px; …"` -> `{"height": "40px", "left": "19px", …}`.
 
-
-def geom(style: str, where: str) -> dict[str, Any]:
-    """`"height: 40px; left: 19px; …"` -> `{"height": "40px", "left": "19px", …}`."""
-    out: dict[str, Any] = {}
+    Insertion order is the archive's own, and it survives JSON, so the rendered
+    declaration list stays in the original order. A duplicate property keeps
+    the last value, which is also what CSS does.
+    """
+    out: dict[str, str] = {}
     for declaration in style.split(";"):
         if not declaration.strip():
             continue
         name, _, value = declaration.partition(":")
         name, value = name.strip(), value.strip()
-        key = GEOM_KEYS.get(name)
-        if key is None:
+        if name not in GEOM_KEYS:
             raise SystemExit(f"unsupported style declaration {name!r} in {where}")
-        out[key] = True if key == "clear" else value
+        out[name] = value
     return out
 
 
@@ -313,7 +315,7 @@ def port_text_block(node: Node) -> dict[str, Any]:
         "k": "text",
         "id": node.attrs.get("id") or None,
         "cls": node.attrs.get("class", ""),
-        "style": checked_style(node.attrs.get("style", ""), f"text block {node.attrs.get('id')}"),
+        "box": box(node.attrs.get("style", ""), f"text block {node.attrs.get('id')}"),
         "contentCls": content.attrs.get("class", ""),
         "contentStyle": content.attrs.get("style", ""),
         "nodes": [n for n in (rich_node(c) for c in children(content)) if n],
@@ -340,7 +342,7 @@ def port_widget(node: Node, init: str) -> dict[str, Any]:
         "name": name,
         "id": node.attrs["id"],
         "cls": node.attrs.get("class", ""),
-        "style": checked_style(node.attrs.get("style", ""), f"widget {node.attrs['id']}"),
+        "box": box(node.attrs.get("style", ""), f"widget {node.attrs['id']}"),
         "init": init,
         "segments": segments,
     }
@@ -403,7 +405,7 @@ def port_layer(node: Node, stem: str, feed_key: str) -> dict[str, Any]:
                 {
                     "k": "box",
                     "cls": cls,
-                    "style": checked_style(child.attrs.get("style", ""), f"box {cls}"),
+                    "box": box(child.attrs.get("style", ""), f"box {cls}"),
                     "nodes": [n for n in (rich_node(c) for c in children(child)) if n],
                 }
             )
@@ -418,7 +420,7 @@ def port_layer(node: Node, stem: str, feed_key: str) -> dict[str, Any]:
                 {
                     "k": "grid",
                     "id": child.attrs["id"],
-                    "style": checked_style(child.attrs.get("style", ""), f"grid {child.attrs['id']}"),
+                    "box": box(child.attrs.get("style", ""), f"grid {child.attrs['id']}"),
                 }
             )
         else:
@@ -426,7 +428,7 @@ def port_layer(node: Node, stem: str, feed_key: str) -> dict[str, Any]:
     if pending is not None:
         raise SystemExit(f"{stem}: widget {pending['id']} has no init script")
     return {
-        "style": checked_style(node.attrs.get("style", ""), f"layer {node.attrs.get('id')}"),
+        "box": box(node.attrs.get("style", ""), f"layer {node.attrs.get('id')}"),
         "items": items,
     }
 

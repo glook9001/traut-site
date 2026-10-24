@@ -1,0 +1,1263 @@
+{
+ "key": "south-georgia",
+ "stem": "South_Georgia",
+ "slug": "/south-georgia",
+ "htmlAttrs": {
+  "xmlns": "http://www.w3.org/1999/xhtml",
+  "xml:lang": "en",
+  "lang": "en"
+ },
+ "head": {
+  "title": "South Georgia",
+  "items": [
+   {
+    "k": "meta",
+    "attrs": {
+     "http-equiv": "Content-Type",
+     "content": "text/html; charset=UTF-8"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "Generator",
+     "content": "iWeb 3.0.4"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "iWeb-Build",
+     "content": "local-build-20130428"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "http-equiv": "X-UA-Compatible",
+     "content": "IE=EmulateIE7"
+    }
+   },
+   {
+    "k": "meta",
+    "attrs": {
+     "name": "viewport",
+     "content": "width=700"
+    }
+   },
+   {
+    "k": "title",
+    "text": "South Georgia"
+   },
+   {
+    "k": "pageCss",
+    "attrs": {
+     "rel": "stylesheet",
+     "type": "text/css",
+     "media": "screen,print"
+    }
+   },
+   {
+    "k": "comment",
+    "text": "[if lt IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='../archive/South_Georgia_files/South_GeorgiaIE.css'/><![endif]"
+   },
+   {
+    "k": "comment",
+    "text": "[if gte IE 8]><link rel='stylesheet' type='text/css' media='screen,print' href='../archive/Media/IE8.css'/><![endif]"
+   },
+   {
+    "k": "comment",
+    "text": " No code to add to head "
+   },
+   {
+    "k": "widgetCss",
+    "name": "headerControls",
+    "attrs": {
+     "type": "text/css"
+    }
+   },
+   {
+    "k": "comment",
+    "text": " No code to add to head "
+   },
+   {
+    "k": "widgetCss",
+    "name": "detailView",
+    "attrs": {
+     "type": "text/css"
+    }
+   },
+   {
+    "k": "comment",
+    "text": " No code to add to head "
+   },
+   {
+    "k": "widgetCss",
+    "name": "footerControls",
+    "attrs": {
+     "type": "text/css"
+    }
+   },
+   {
+    "k": "link",
+    "attrs": {
+     "rel": "alternate",
+     "type": "application/rss+xml",
+     "title": "RSS",
+     "href": "/feeds/south-georgia.xml"
+    }
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebSite.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/SharedResources/WidgetCommon.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/Navbar/navbar.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/HeaderControls/localizedStrings.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/HeaderControls/HeaderControls.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebDebug.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebImage.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/iWebMediaGrid.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/DetailView/localizedStrings.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/DetailView/DetailView.js"
+   },
+   {
+    "k": "script",
+    "src": "../archive/Scripts/Widgets/FooterControls/FooterControls.js"
+   },
+   {
+    "k": "script",
+    "src": "/page-js/south-georgia.js"
+   }
+  ]
+ },
+ "body": {
+  "attrs": {
+   "style": "background: rgb(101, 101, 101); margin: 0pt; ",
+   "onload": "onPageLoad();",
+   "onunload": "onPageUnload();"
+  },
+  "wrapperStyle": "text-align: center; ",
+  "contentStyle": "margin-bottom: 10px; margin-left: auto; margin-right: auto; margin-top: 10px; overflow: hidden; position: relative; word-wrap: break-word;  background: rgb(255, 255, 255); text-align: left; width: 700px; ",
+  "nav": {
+   "box": {
+    "margin-left": "0px",
+    "position": "relative",
+    "width": "700px",
+    "z-index": "0"
+   },
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "box": {
+      "height": "0px",
+      "line-height": "0px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "widget",
+     "name": "navbar",
+     "id": "widget0",
+     "cls": "com-apple-iweb-widget-navbar flowDefining",
+     "box": {
+      "margin-left": "20px",
+      "margin-top": "0px",
+      "opacity": "1.00",
+      "position": "relative",
+      "width": "660px",
+      "z-index": "1"
+     },
+     "init": "<!--//--><![CDATA[//><!--\nnew NavBar('widget0', '../archive/Scripts/Widgets/Navbar', '../archive/Scripts/Widgets/SharedResources', '..', {\"path-to-root\": \"\", \"navbar-css\": \".navbar {\\n\\tfont-family: 'Helvetica Neue', Arial, sans-serif;\\n\\tfont-size: .8em;\\n\\tcolor: #666666;\\n\\tline-height: 30px;\\n\\tborder-bottom: 3px solid #ccc;\\n}\\n\\n.navbar-bg {\\n\\ttext-align: right;}\\n\\n.navbar-bg ul {\\n\\tlist-style: none;\\n\\tmargin: 0px;\\n\\tpadding: 0px;\\n}\\n\\n\\nli {\\n\\tlist-style-type: none;\\n\\tdisplay: inline;\\n\\tpadding: 0px 5px 0px 0px;\\n}\\n\\n\\nli a {\\n\\ttext-decoration: none;\\n\\tpadding: 10px;\\n\\tcolor: #666666;\\n\\tfont-weight: bold;\\n}\\n\\nli a:visited {\\n\\ttext-decoration: none;\\n\\tpadding: 10px;\\n\\tcolor: #666666;\\n\\tfont-weight: bold;\\n}\\n\\nli a:hover\\r{\\r\\n \\tcolor: #999999;\\n\\ttext-decoration: none;\\r}\\n\\n\\nli.current-page a\\r{\\r\\t color: #66ABC5;\\n\\ttext-decoration: none;\\r}\", \"current-page-GUID\": \"B0E77A6F-3D23-439D-84AD-E8CCC09C30F1\", \"isCollectionPage\": \"NO\"});\n//--><!]]>"
+    },
+    {
+     "k": "box",
+     "cls": "spacer",
+     "box": {
+      "clear": "both",
+      "height": "0px",
+      "line-height": "0px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  },
+  "header": {
+   "box": {
+    "height": "75px",
+    "margin-left": "0px",
+    "position": "relative",
+    "width": "700px",
+    "z-index": "10"
+   },
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "box": {
+      "height": "0px",
+      "line-height": "0px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id1",
+     "cls": "style_SkipStroke shape-with-text",
+     "box": {
+      "height": "40px",
+      "left": "17px",
+      "position": "absolute",
+      "top": "18px",
+      "width": "333px",
+      "z-index": "1"
+     },
+     "contentCls": "text-content style_External_333_40",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; padding-top: 0pt; ",
+          "class": "paragraph_style"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "South Georgia"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    }
+   ]
+  },
+  "body": {
+   "box": {
+    "margin-left": "0px",
+    "position": "relative",
+    "width": "700px",
+    "z-index": "5"
+   },
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "box": {
+      "height": "0px",
+      "line-height": "0px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText",
+     "box": {
+      "height": "1px",
+      "line-height": "1px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": null,
+     "cls": "style_SkipStroke_1 shape-with-text flowDefining",
+     "box": {
+      "margin-left": "33px",
+      "margin-top": "2px",
+      "position": "relative",
+      "width": "328px",
+      "z-index": "1"
+     },
+     "contentCls": "text-content style_External_328_156",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style_1"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "South Georgia is a remote island in the south Atlantic. It’s ecologically important because it’s far enough north to avoid the pack ice that forms around Antarctica each winter. This makes it a fertile breeding ground for a variety of birds and mammals."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; ",
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "The weather in South Georgia is notoriously harsh — and varied. We were lucky enough to have beautiful weather several days, but we also experienced gale-force winds, fog, rain, and freezing temperatures. The map below shows where we landed or explored by zodiac."
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "grid",
+     "id": "id2",
+     "box": {
+      "height": "0px",
+      "left": "29px",
+      "position": "absolute",
+      "top": "1951px",
+      "width": "642px",
+      "z-index": "1"
+     }
+    },
+    {
+     "k": "widget",
+     "name": "headerControls",
+     "id": "widget1",
+     "cls": "com-apple-iweb-widget-headercontrols",
+     "box": {
+      "height": "27px",
+      "left": "29px",
+      "position": "absolute",
+      "top": "1951px",
+      "width": "642px",
+      "z-index": "1"
+     },
+     "init": "<!--//--><![CDATA[//><!--\nnew HeaderControls('widget1', '../archive/Scripts/Widgets/HeaderControls', '../archive/Scripts/Widgets/SharedResources', '.', {\"showSubscribe\": true, \"gridID\": \"id2\", \"showBackToIndex\": false, \"showSlideshow\": true, \"feedURL\": \"/feeds/south-georgia.xml\", \"entryCount\": \"0\", \"canvas controls\": {\"canvas_transport-left-N\": \"../archive/Media\\/canvas_transport-left-N_03.png\", \"canvas_transport-right-D\": \"../archive/Media\\/canvas_transport-right-D_03.png\", \"canvas_thumbs_off-S\": \"../archive/Media\\/canvas_thumbs_off-S_03.png\", \"canvas_back\": \"../archive/Media\\/canvas_back_03.png\", \"canvas_thumbs_off-N\": \"../archive/Media\\/canvas_thumbs_off-N_03.png\", \"canvas_transport-right-N\": \"../archive/Media\\/canvas_transport-right-N_03.png\", \"canvas_arrow-left-D\": \"../archive/Media\\/canvas_arrow-left-D_03.png\", \"canvas_arrow-right\": \"../archive/Media\\/canvas_arrow-right_03.png\", \"canvas_play\": \"../archive/Media\\/canvas_play_03.png\", \"canvas_arrow-left\": \"../archive/Media\\/canvas_arrow-left_03.png\", \"canvas_download\": \"../archive/Media\\/canvas_download_03.png\", \"canvas_thumbs_on-S\": \"../archive/Media\\/canvas_thumbs_on-S_03.png\", \"canvas_thumbs_on-N\": \"../archive/Media\\/canvas_thumbs_on-N_03.png\", \"canvas_arrow-right-D\": \"../archive/Media\\/canvas_arrow-right-D_03.png\", \"canvas_transport-left-D\": \"../archive/Media\\/canvas_transport-left-D_03.png\", \"canvas_add\": \"../archive/Media\\/canvas_add_03.png\", \"canvas_subscribe\": \"../archive/Media\\/canvas_subscribe_03.png\"}, \"entriesPerPage\": 110});\n//--><!]]>"
+    },
+    {
+     "k": "widget",
+     "name": "detailView",
+     "id": "widget2",
+     "cls": "com-apple-iweb-widget-detailview",
+     "box": {
+      "height": "1210px",
+      "left": "29px",
+      "position": "absolute",
+      "top": "1951px",
+      "width": "642px",
+      "z-index": "1"
+     },
+     "init": "<!--//--><![CDATA[//><!--\nnew DetailView('widget2', '../archive/Scripts/Widgets/DetailView', '../archive/Scripts/Widgets/SharedResources', '.', {\"showSlideshow\": true, \"gridID\": \"id2\", \"showThumbnails\": true, \"canvas controls\": {\"canvas_transport-left-N\": \"../archive/Media\\/canvas_transport-left-N_03.png\", \"canvas_transport-right-D\": \"../archive/Media\\/canvas_transport-right-D_03.png\", \"canvas_thumbs_off-S\": \"../archive/Media\\/canvas_thumbs_off-S_03.png\", \"canvas_back\": \"../archive/Media\\/canvas_back_03.png\", \"canvas_thumbs_off-N\": \"../archive/Media\\/canvas_thumbs_off-N_03.png\", \"canvas_transport-right-N\": \"../archive/Media\\/canvas_transport-right-N_03.png\", \"canvas_arrow-left-D\": \"../archive/Media\\/canvas_arrow-left-D_03.png\", \"canvas_arrow-right\": \"../archive/Media\\/canvas_arrow-right_03.png\", \"canvas_play\": \"../archive/Media\\/canvas_play_03.png\", \"canvas_arrow-left\": \"../archive/Media\\/canvas_arrow-left_03.png\", \"canvas_download\": \"../archive/Media\\/canvas_download_03.png\", \"canvas_thumbs_on-S\": \"../archive/Media\\/canvas_thumbs_on-S_03.png\", \"canvas_thumbs_on-N\": \"../archive/Media\\/canvas_thumbs_on-N_03.png\", \"canvas_arrow-right-D\": \"../archive/Media\\/canvas_arrow-right-D_03.png\", \"canvas_transport-left-D\": \"../archive/Media\\/canvas_transport-left-D_03.png\", \"canvas_add\": \"../archive/Media\\/canvas_add_03.png\", \"canvas_subscribe\": \"../archive/Media\\/canvas_subscribe_03.png\"}, \"color\": \"transparent\", \"photoSize\": 1});\n//--><!]]>"
+    },
+    {
+     "k": "widget",
+     "name": "footerControls",
+     "id": "widget3",
+     "cls": "com-apple-iweb-widget-footercontrols",
+     "box": {
+      "height": "27px",
+      "left": "29px",
+      "position": "absolute",
+      "top": "1951px",
+      "width": "642px",
+      "z-index": "1"
+     },
+     "init": "<!--//--><![CDATA[//><!--\nnew FooterControls('widget3', '../archive/Scripts/Widgets/FooterControls', '../archive/Scripts/Widgets/SharedResources', '.', {\"gridID\": \"id2\"});\n//--><!]]>"
+    },
+    {
+     "k": "text",
+     "id": "id3",
+     "cls": "style_SkipStroke_1 shape-with-text",
+     "box": {
+      "height": "383px",
+      "left": "28px",
+      "position": "absolute",
+      "top": "642px",
+      "width": "624px",
+      "z-index": "1"
+     },
+     "contentCls": "text-content style_External_624_383",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style_1"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "The most numerous animals on South Georgia beaches are fur seals, elephant seals, king penguins, and macaroni penguins. "
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "The fur seals posed a constant threat for us while we were on shore. It’s breeding season, and the males are very territorial. If we got too close (within 25 ft or so), a fur seal would snarl at us and potentially charge. We could usually ward them off by standing our ground and making loud noises. One of our tour guides was not so lucky and was bitten on the knee."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "The elephant seals, while much larger and imposing than the fur seals, were actually much more docile. The males, which can weigh three tons or more and are the size of a small car, were unconcerned if we walked nearby. The beaches were covered with recently-born “weaner” pups which were recently abandoned by their mothers but still working up the courage to hunt for themselves. They’re incredibly cute with their oversized eyes. "
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "We visited several king penguin colonies, which left quite an impression on me. It’s impossible for me to do them justice in words. Hopefully my photos will give you some sense for their size. One of the most memorable parts of the trip was interacting with the fuzzy brown juvenile king penguins. They’re intensely curious and willingly walked up to me when I approached the colony. They would even peck at my tripod legs."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_2"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Right Whale Bay"
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "We arrived in South Georgia slightly ahead of schedule, so our first landing was an unplanned bonus. Once ashore at Right Whale Bay, we had to avoid a number of aggressive fur seals. I found that the best technique was to walk down the middle of the shallow rivers, which was possible because I was wearing hip waders. The large elephant seals remind me of Jabba the Hut. It’s rumored that George Lucas modeled the Huts after elephant seals."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id4",
+     "cls": "style_SkipStroke_2 shape-with-text",
+     "box": {
+      "height": "104px",
+      "left": "394px",
+      "position": "absolute",
+      "top": "0px",
+      "width": "259px",
+      "z-index": "1"
+     },
+     "contentCls": "text-content graphic_textbox_layout_style_default_External_259_104",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "graphic_textbox_layout_style_default"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Photos on this page were taken with a Canon 5D Mark II or Canon 1D Mark IV camera. High-res versions of the photos can be found "
+          },
+          {
+           "tag": "a",
+           "attrs": {
+            "title": "http://erictraut.smugmug.com/Travel/South-Georgia",
+            "href": "http://erictraut.smugmug.com/Travel/South-Georgia"
+           },
+           "c": [
+            {
+             "tag": "#text",
+             "v": "here"
+            }
+           ]
+          },
+          {
+           "tag": "#text",
+           "v": "."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; ",
+          "class": "Free_Form"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Copyright © 2011 Eric Traut"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3",
+     "box": {
+      "height": "440px",
+      "width": "607px",
+      "left": "46px",
+      "position": "absolute",
+      "top": "178px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "img",
+       "attrs": {
+        "src": "../archive/South_Georgia_files/droppedImage.jpg",
+        "alt": "",
+        "style": "border: none; height: 441px; width: 607px; "
+       }
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3",
+     "box": {
+      "height": "200px",
+      "width": "300px",
+      "left": "336px",
+      "position": "absolute",
+      "top": "1055px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "img",
+       "attrs": {
+        "src": "../archive/South_Georgia_files/_MG_1338.jpg",
+        "alt": "",
+        "style": "border: none; height: 200px; width: 300px; "
+       }
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id5",
+     "cls": "style_SkipStroke_1 shape-with-text",
+     "box": {
+      "height": "597px",
+      "left": "28px",
+      "position": "absolute",
+      "top": "1013px",
+      "width": "295px",
+      "z-index": "1"
+     },
+     "contentCls": "text-content style_External_295_597",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style_1"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "paragraph_style_2"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Salisbury Plain"
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "One of the most anticipated landings of the trip, Salisbury Plain is a mile-long beach covered with over 100,000 breeding pairs of king penguins, fur seals and elephant seals. For our visit, it was foggy and a soaking rain fell for the first couple of hours. The rain thankfully stopped around 11am, an hour short of our departure time. I got some good shots of the fuzzy brown juvenile penguins, which were very curious and readily came up to us. "
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "We were scheduled to do a second landing in the afternoon, but the winds picked up over lunch, making a second landing too dangerous."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_2"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Fortuna Bay"
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Fortuna Bay is a beautiful stretch of beach covered with fur seals, elephant seals and king penguins. It has a backdrop of snow-covered peaks. We were scheduled to stay for about four hours, but we needed to leave rather quickly one hour short of our scheduled departure time when the katabatic winds from the glaciers suddenly whipped up."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_2"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Grytviken"
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "We spent one afternoon at Grytviken, an abandoned (and partially restored) whaling station. This stop is mandatory for all visitors because the customs office for South Georgia is located here. Here we visited the museum and explored the rusting dilapidated equipment left by the whaling industry. We ended the day with a customary toast at the old cemetery where Ernest Shackleton is buried."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; ",
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id6",
+     "cls": "style_SkipStroke_1 shape-with-text",
+     "box": {
+      "height": "359px",
+      "left": "28px",
+      "position": "absolute",
+      "top": "1569px",
+      "width": "624px",
+      "z-index": "1"
+     },
+     "contentCls": "text-content style_External_624_359",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "style_1"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-top: 0pt; ",
+          "class": "paragraph_style_2"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "St. Andrews Bay"
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "For many of us, this was the highlight of the trip. St. Andrews Bay is a two-mile stretch of beach cut by several meltwater streams running to the ocean. In the background are layers of snow-covered peaks and glaciers. The beach and plain are covered with elephant seals and king penguins. Many of the penguins were molting. Millions of feathers covered the ground and floated in the streams. I used my 24mm tilt shift lens to capture some wide-angle views of the king penguin colony, but it’s difficult to capture the true scale of the place. My favorite part was interacting with the juvenile penguins, which would readily come up to me and peck at my tripod. At one point, I extended my tripod horizontally with the camera and a fish eye lens at the end. One penguin came up to the camera and pecked at the lens. I was able to get some interesting shots by triggering the shutter with the remote cable release."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_2"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Moltke Harbour"
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "The Ross Glacier spills into Moltke Harbour, which we explored by zodiac. We observed the glacier calving several times. During our visit, the sky was filled with beautiful lenticular clouds."
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "class": "paragraph_style_2"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "Cooper Bay"
+          },
+          {
+           "tag": "br"
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; ",
+          "class": "paragraph_style_1"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "We viewed a macaroni penguin colony in Cooper Bay from the zodiacs. The light was poor, but we made the best of it. The excitement picked up when someone spotted a leopard seal hunting the penguins. We observed it with an unlucky macaroni in its mouth. A collection of birds (mostly fulmars) waited for bits of penguin meat to float to the surface. "
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "tinyText style_SkipStroke_3",
+     "box": {
+      "height": "200px",
+      "width": "300px",
+      "left": "336px",
+      "position": "absolute",
+      "top": "1353px",
+      "z-index": "1"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n            "
+      },
+      {
+       "tag": "img",
+       "attrs": {
+        "src": "../archive/South_Georgia_files/SGeorgia-100-2.jpg",
+        "alt": "",
+        "style": "border: none; height: 201px; width: 300px; "
+       }
+      },
+      {
+       "tag": "#text",
+       "v": "\n          "
+      }
+     ]
+    },
+    {
+     "k": "text",
+     "id": "id7",
+     "cls": "style_SkipStroke_2 shape-with-text",
+     "box": {
+      "height": "50px",
+      "left": "342px",
+      "position": "absolute",
+      "top": "1279px",
+      "width": "288px",
+      "z-index": "1"
+     },
+     "contentCls": "text-content graphic_textbox_layout_style_default_External_288_50",
+     "contentStyle": "padding: 0px; ",
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": "\n              "
+      },
+      {
+       "tag": "div",
+       "attrs": {
+        "class": "graphic_textbox_layout_style_default"
+       },
+       "c": [
+        {
+         "tag": "#text",
+         "v": "\n                "
+        },
+        {
+         "tag": "p",
+         "attrs": {
+          "style": "padding-bottom: 0pt; padding-top: 0pt; ",
+          "class": "paragraph_style_3"
+         },
+         "c": [
+          {
+           "tag": "#text",
+           "v": "The photo above (shot by my friend Vincent Ho) shows me getting a close-up shot of juvenile king penguins. The resulting shot is below."
+          }
+         ]
+        },
+        {
+         "tag": "#text",
+         "v": "\n              "
+        }
+       ]
+      },
+      {
+       "tag": "#text",
+       "v": "\n            "
+      }
+     ]
+    },
+    {
+     "k": "box",
+     "cls": "spacer",
+     "box": {
+      "height": "1769px",
+      "line-height": "1769px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  },
+  "footer": {
+   "box": {
+    "height": "75px",
+    "margin-left": "0px",
+    "position": "relative",
+    "width": "700px",
+    "z-index": "15"
+   },
+   "items": [
+    {
+     "k": "box",
+     "cls": "bumper",
+     "box": {
+      "height": "0px",
+      "line-height": "0px"
+     },
+     "nodes": [
+      {
+       "tag": "#text",
+       "v": " "
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
